@@ -1,0 +1,333 @@
+\hypertarget{classQCPItemTracer}{\section{Q\-C\-P\-Item\-Tracer Class Reference}
+\label{classQCPItemTracer}\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}
+}
+
+
+Item that sticks to \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} data points.  
+
+
+Inheritance diagram for Q\-C\-P\-Item\-Tracer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classQCPItemTracer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500}{Tracer\-Style} \{ \\*
+\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4}{ts\-None}, 
+\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa}{ts\-Plus}, 
+\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f}{ts\-Crosshair}, 
+\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e}{ts\-Circle}, 
+\\*
+\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b}{ts\-Square}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPItemTracer_adc5ca846eeac323db4aa1fc4081e36be}{Q\-C\-P\-Item\-Tracer} (\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$parent\-Plot)
+\item 
+\hypertarget{classQCPItemTracer_a1f51b61e98c276298a0874d5e89707f0}{Q\-Pen {\bfseries pen} () const }\label{classQCPItemTracer_a1f51b61e98c276298a0874d5e89707f0}
+
+\item 
+\hypertarget{classQCPItemTracer_ad75e5d2d868dbedc176f7911091f379b}{Q\-Pen {\bfseries selected\-Pen} () const }\label{classQCPItemTracer_ad75e5d2d868dbedc176f7911091f379b}
+
+\item 
+\hypertarget{classQCPItemTracer_af07527750cfb6afc3c0ba4bec012011f}{Q\-Brush {\bfseries brush} () const }\label{classQCPItemTracer_af07527750cfb6afc3c0ba4bec012011f}
+
+\item 
+\hypertarget{classQCPItemTracer_afed284222253083375bfd21d3d4dbc30}{Q\-Brush {\bfseries selected\-Brush} () const }\label{classQCPItemTracer_afed284222253083375bfd21d3d4dbc30}
+
+\item 
+\hypertarget{classQCPItemTracer_a2607fcb3d01e90773ea1532fd6803760}{double {\bfseries size} () const }\label{classQCPItemTracer_a2607fcb3d01e90773ea1532fd6803760}
+
+\item 
+\hypertarget{classQCPItemTracer_a871832dace1709f877c3136fac7ae1ec}{\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500}{Tracer\-Style} {\bfseries style} () const }\label{classQCPItemTracer_a871832dace1709f877c3136fac7ae1ec}
+
+\item 
+\hypertarget{classQCPItemTracer_a74c90da0e6730839b8d7cf6445a4ec1f}{\hyperlink{classQCPGraph}{Q\-C\-P\-Graph} $\ast$ {\bfseries graph} () const }\label{classQCPItemTracer_a74c90da0e6730839b8d7cf6445a4ec1f}
+
+\item 
+\hypertarget{classQCPItemTracer_a361c5c9b93bdf4588fc49bc3097529ad}{double {\bfseries graph\-Key} () const }\label{classQCPItemTracer_a361c5c9b93bdf4588fc49bc3097529ad}
+
+\item 
+\hypertarget{classQCPItemTracer_ab318c233fa35c17a317af38ce7b3c312}{bool {\bfseries interpolating} () const }\label{classQCPItemTracer_ab318c233fa35c17a317af38ce7b3c312}
+
+\item 
+void \hyperlink{classQCPItemTracer_af8048636fc1ef0152e51809b008df2ca}{set\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPItemTracer_ae1bf70db7f13f928660168cd3e5069f3}{set\-Selected\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPItemTracer_a2c303f7470a30084daa201ed556b3c36}{set\-Brush} (const Q\-Brush \&brush)
+\item 
+void \hyperlink{classQCPItemTracer_a0f55c084980a7a312af859d3e7b558ef}{set\-Selected\-Brush} (const Q\-Brush \&brush)
+\item 
+void \hyperlink{classQCPItemTracer_ae47fe0617f5fef5fdb766999569be10a}{set\-Size} (double size)
+\item 
+void \hyperlink{classQCPItemTracer_a41a2ac4f1acd7897b4e2a2579c03204e}{set\-Style} (\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500}{Tracer\-Style} style)
+\item 
+void \hyperlink{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}{set\-Graph} (\hyperlink{classQCPGraph}{Q\-C\-P\-Graph} $\ast$graph)
+\item 
+void \hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key} (double key)
+\item 
+void \hyperlink{classQCPItemTracer_a6c244a9d1175bef12b50afafd4f5fcd2}{set\-Interpolating} (bool enabled)
+\item 
+virtual double \hyperlink{classQCPItemTracer_a5a7297a98b14664e2dc16cba28e51192}{select\-Test} (const Q\-Point\-F \&pos) const 
+\item 
+void \hyperlink{classQCPItemTracer_a5b90296109e36384aedbc8908a670413}{update\-Position} ()
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemTracer_a69917e2fdb2b3a929c196958feee7cbe}{\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$const {\bfseries position}}\label{classQCPItemTracer_a69917e2fdb2b3a929c196958feee7cbe}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemTracer_aaaf49b48382c730ec9be0e74c2538315}{virtual void {\bfseries draw} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter)}\label{classQCPItemTracer_aaaf49b48382c730ec9be0e74c2538315}
+
+\item 
+\hypertarget{classQCPItemTracer_af87132b7698d5bb35c96a8a0b9e7180e}{Q\-Pen {\bfseries main\-Pen} () const }\label{classQCPItemTracer_af87132b7698d5bb35c96a8a0b9e7180e}
+
+\item 
+\hypertarget{classQCPItemTracer_aaf4e72e2d87f53279b9f9ba624961bf5}{Q\-Brush {\bfseries main\-Brush} () const }\label{classQCPItemTracer_aaf4e72e2d87f53279b9f9ba624961bf5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemTracer_a579e3bd6bd16d6aaff03638dc8a99a69}{Q\-Pen {\bfseries m\-Pen}}\label{classQCPItemTracer_a579e3bd6bd16d6aaff03638dc8a99a69}
+
+\item 
+\hypertarget{classQCPItemTracer_a3f61829784200819661d1e2a5354d866}{Q\-Pen {\bfseries m\-Selected\-Pen}}\label{classQCPItemTracer_a3f61829784200819661d1e2a5354d866}
+
+\item 
+\hypertarget{classQCPItemTracer_a6597be63a17a266233941354200b2340}{Q\-Brush {\bfseries m\-Brush}}\label{classQCPItemTracer_a6597be63a17a266233941354200b2340}
+
+\item 
+\hypertarget{classQCPItemTracer_a1c15d2adde40efdcc0ef1ff78fd256a6}{Q\-Brush {\bfseries m\-Selected\-Brush}}\label{classQCPItemTracer_a1c15d2adde40efdcc0ef1ff78fd256a6}
+
+\item 
+\hypertarget{classQCPItemTracer_a575153a24bb357d1e006f6bc3bd099b9}{double {\bfseries m\-Size}}\label{classQCPItemTracer_a575153a24bb357d1e006f6bc3bd099b9}
+
+\item 
+\hypertarget{classQCPItemTracer_afb1f236bebf417544e0138fef22a292e}{\hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500}{Tracer\-Style} {\bfseries m\-Style}}\label{classQCPItemTracer_afb1f236bebf417544e0138fef22a292e}
+
+\item 
+\hypertarget{classQCPItemTracer_a2d70cf616b579563aa15f796dfc143ac}{\hyperlink{classQCPGraph}{Q\-C\-P\-Graph} $\ast$ {\bfseries m\-Graph}}\label{classQCPItemTracer_a2d70cf616b579563aa15f796dfc143ac}
+
+\item 
+\hypertarget{classQCPItemTracer_a8fa20f2e9ee07d21fd7c8d30ba4702ca}{double {\bfseries m\-Graph\-Key}}\label{classQCPItemTracer_a8fa20f2e9ee07d21fd7c8d30ba4702ca}
+
+\item 
+\hypertarget{classQCPItemTracer_afab37c22ad39f235921e86f93cd84595}{bool {\bfseries m\-Interpolating}}\label{classQCPItemTracer_afab37c22ad39f235921e86f93cd84595}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Item that sticks to \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} data points. 
+
+ The tracer can be connected with a \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} via \hyperlink{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}{set\-Graph}. Then it will automatically adopt the coordinate axes of the graph and update its {\itshape position} to be on the graph's data. This means the key stays controllable via \hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key}, but the value will follow the graph data. If a \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} is connected, note that setting the coordinates directly via {\itshape position} will have no effect, i.\-e. be overriden in the next redraw (this is when the coodinate update happens).
+
+If the specified key in \hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key} is outside the key bounds of the graph, the tracer will stay at the respective end of the graph.
+
+With \hyperlink{classQCPItemTracer_a6c244a9d1175bef12b50afafd4f5fcd2}{set\-Interpolating} you may specify whether the tracer may only stay exactly on data points or whether it interpolates data points linearly, if given a key that lies between two data points of the graph.
+
+The tracer has different visual styles, see \hyperlink{classQCPItemTracer_a41a2ac4f1acd7897b4e2a2579c03204e}{set\-Style}. It is also possible to make the tracer have no own visual appearance (set the style to \hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4}{ts\-None}), and just connect other item positions to the tracer {\itshape position} (used as an anchor) via \hyperlink{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{Q\-C\-P\-Item\-Position\-::set\-Parent\-Anchor}.
+
+\begin{DoxyNote}{Note}
+The tracer position is only automatically updated upon redraws. This means when, for example, the data of the graph changes and you immediately afterwards (without a redraw) read the {\itshape position} coordinates of the tracer, they will not reflect the updated data of the graph. In this case you should call \hyperlink{classQCPItemTracer_a5b90296109e36384aedbc8908a670413}{update\-Position} manually, prior to reading the tracer coordinates. 
+\end{DoxyNote}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!Tracer\-Style@{Tracer\-Style}}
+\index{Tracer\-Style@{Tracer\-Style}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{Tracer\-Style}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-C\-P\-Item\-Tracer\-::\-Tracer\-Style}}}\label{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500}
+The different visual appearances a tracer item can have. Some styles size may be controlled with \hyperlink{classQCPItemTracer_ae47fe0617f5fef5fdb766999569be10a}{set\-Size}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_a41a2ac4f1acd7897b4e2a2579c03204e}{set\-Style} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ts\-None@{ts\-None}!Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!ts\-None@{ts\-None}}\item[{\em 
+\hypertarget{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4}{ts\-None}\label{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4}
+}]The tracer is not visible. \index{ts\-Plus@{ts\-Plus}!Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!ts\-Plus@{ts\-Plus}}\item[{\em 
+\hypertarget{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa}{ts\-Plus}\label{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a3323fb04017146e4885e080a459472fa}
+}]A plus shaped crosshair with limited size. \index{ts\-Crosshair@{ts\-Crosshair}!Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!ts\-Crosshair@{ts\-Crosshair}}\item[{\em 
+\hypertarget{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f}{ts\-Crosshair}\label{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f}
+}]A plus shaped crosshair which spans the complete axis rect. \index{ts\-Circle@{ts\-Circle}!Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!ts\-Circle@{ts\-Circle}}\item[{\em 
+\hypertarget{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e}{ts\-Circle}\label{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500ae2252c28f4842880d71e9f94e69de94e}
+}]A circle. \index{ts\-Square@{ts\-Square}!Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!ts\-Square@{ts\-Square}}\item[{\em 
+\hypertarget{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b}{ts\-Square}\label{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b}
+}]A square. \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPItemTracer_adc5ca846eeac323db4aa1fc4081e36be}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}}
+\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{Q\-C\-P\-Item\-Tracer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Item\-Tracer\-::\-Q\-C\-P\-Item\-Tracer (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_adc5ca846eeac323db4aa1fc4081e36be}
+Creates a tracer item and sets default values.
+
+The constructed item can be added to the plot with \hyperlink{classQCustomPlot_aa500620379262321685cb7a7674cbd2a}{Q\-Custom\-Plot\-::add\-Item}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPItemTracer_a5a7297a98b14664e2dc16cba28e51192}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!select\-Test@{select\-Test}}
+\index{select\-Test@{select\-Test}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{select\-Test}]{\setlength{\rightskip}{0pt plus 5cm}double Q\-C\-P\-Item\-Tracer\-::select\-Test (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pos}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classQCPItemTracer_a5a7297a98b14664e2dc16cba28e51192}
+This function is used to decide whether a click hits an item or not.
+
+{\itshape pos} is a point in pixel coordinates on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. This function returns the shortest pixel distance of this point to the item. If the item is either invisible or the distance couldn't be determined, -\/1.\-0 is returned. \hyperlink{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}{set\-Selectable} has no influence on the return value of this function.
+
+If the item is represented not by single lines but by an area like \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect} or \hyperlink{classQCPItemText}{Q\-C\-P\-Item\-Text}, a click inside the area returns a constant value greater zero (typically 99\% of the selection\-Tolerance of the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}). If the click lies outside the area, this function returns -\/1.\-0.
+
+Providing a constant value for area objects allows selecting line objects even when they are obscured by such area objects, by clicking close to the lines (i.\-e. closer than 0.\-99$\ast$selection\-Tolerance).
+
+The actual setting of the selection state is not done by this function. This is handled by the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} when the mouse\-Release\-Event occurs.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected}, \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{Q\-C\-P\-Abstract\-Item}.
+
+\hypertarget{classQCPItemTracer_a2c303f7470a30084daa201ed556b3c36}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Brush@{set\-Brush}}
+\index{set\-Brush@{set\-Brush}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Brush (
+\begin{DoxyParamCaption}
+\item[{const Q\-Brush \&}]{brush}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_a2c303f7470a30084daa201ed556b3c36}
+Sets the brush that will be used to draw any fills of the tracer
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_a0f55c084980a7a312af859d3e7b558ef}{set\-Selected\-Brush}, \hyperlink{classQCPItemTracer_af8048636fc1ef0152e51809b008df2ca}{set\-Pen} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Graph@{set\-Graph}}
+\index{set\-Graph@{set\-Graph}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Graph} $\ast$}]{graph}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}
+Sets the \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} this tracer sticks to. The tracer {\itshape position} will be set to type \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{Q\-C\-P\-Item\-Position\-::pt\-Plot\-Coords} and the axes will be set to the axes of {\itshape graph}.
+
+To free the tracer from any graph, set {\itshape graph} to 0. The tracer {\itshape position} can then be placed freely like any other item position. This is the state the tracer will assume when its graph gets deleted while still attached to it.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Graph\-Key@{set\-Graph\-Key}}
+\index{set\-Graph\-Key@{set\-Graph\-Key}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Graph\-Key}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Graph\-Key (
+\begin{DoxyParamCaption}
+\item[{double}]{key}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}
+Sets the key of the graph's data point the tracer will be positioned at. This is the only free cordinate of a tracer when attached to a graph.
+
+Depending on \hyperlink{classQCPItemTracer_a6c244a9d1175bef12b50afafd4f5fcd2}{set\-Interpolating}, the tracer will be either positioned on the data point closest to {\itshape key}, or will stay exactly at {\itshape key} and interpolate the value linearly.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}{set\-Graph}, \hyperlink{classQCPItemTracer_a6c244a9d1175bef12b50afafd4f5fcd2}{set\-Interpolating} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_a6c244a9d1175bef12b50afafd4f5fcd2}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Interpolating@{set\-Interpolating}}
+\index{set\-Interpolating@{set\-Interpolating}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Interpolating}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Interpolating (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_a6c244a9d1175bef12b50afafd4f5fcd2}
+Sets whether the value of the graph's data points shall be interpolated, when positioning the tracer.
+
+If {\itshape enabled} is set to false and a key is given with \hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key}, the tracer is placed on the data point of the graph which is closest to the key, but which is not necessarily exactly there. If {\itshape enabled} is true, the tracer will be positioned exactly at the specified key, and the appropriate value will be interpolated from the graph's data points linearly.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}{set\-Graph}, \hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_af8048636fc1ef0152e51809b008df2ca}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Pen@{set\-Pen}}
+\index{set\-Pen@{set\-Pen}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_af8048636fc1ef0152e51809b008df2ca}
+Sets the pen that will be used to draw the line of the tracer
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_ae1bf70db7f13f928660168cd3e5069f3}{set\-Selected\-Pen}, \hyperlink{classQCPItemTracer_a2c303f7470a30084daa201ed556b3c36}{set\-Brush} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_a0f55c084980a7a312af859d3e7b558ef}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Selected\-Brush@{set\-Selected\-Brush}}
+\index{set\-Selected\-Brush@{set\-Selected\-Brush}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Selected\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Selected\-Brush (
+\begin{DoxyParamCaption}
+\item[{const Q\-Brush \&}]{brush}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_a0f55c084980a7a312af859d3e7b558ef}
+Sets the brush that will be used to draw any fills of the tracer, when selected.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_a2c303f7470a30084daa201ed556b3c36}{set\-Brush}, \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_ae1bf70db7f13f928660168cd3e5069f3}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Selected\-Pen@{set\-Selected\-Pen}}
+\index{set\-Selected\-Pen@{set\-Selected\-Pen}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Selected\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Selected\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_ae1bf70db7f13f928660168cd3e5069f3}
+Sets the pen that will be used to draw the line of the tracer when selected
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemTracer_af8048636fc1ef0152e51809b008df2ca}{set\-Pen}, \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemTracer_ae47fe0617f5fef5fdb766999569be10a}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Size@{set\-Size}}
+\index{set\-Size@{set\-Size}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Size (
+\begin{DoxyParamCaption}
+\item[{double}]{size}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_ae47fe0617f5fef5fdb766999569be10a}
+Sets the size of the tracer in pixels, if the style supports setting a size (e.\-g. \hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500a4ed5f01f2c5fd86d980366d79f481b9b}{ts\-Square} does, \hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500af562ec81ac3ba99e26ef8540cf1ec16f}{ts\-Crosshair} does not). \hypertarget{classQCPItemTracer_a41a2ac4f1acd7897b4e2a2579c03204e}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!set\-Style@{set\-Style}}
+\index{set\-Style@{set\-Style}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{set\-Style}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::set\-Style (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Item\-Tracer\-::\-Tracer\-Style}}]{style}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_a41a2ac4f1acd7897b4e2a2579c03204e}
+Sets the style/visual appearance of the tracer.
+
+If you only want to use the tracer {\itshape position} as an anchor for other items, set {\itshape style} to \hyperlink{classQCPItemTracer_a2f05ddb13978036f902ca3ab47076500aac27462c79146225bfa8fba24d2ee8a4}{ts\-None}. \hypertarget{classQCPItemTracer_a5b90296109e36384aedbc8908a670413}{\index{Q\-C\-P\-Item\-Tracer@{Q\-C\-P\-Item\-Tracer}!update\-Position@{update\-Position}}
+\index{update\-Position@{update\-Position}!QCPItemTracer@{Q\-C\-P\-Item\-Tracer}}
+\subsubsection[{update\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Tracer\-::update\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemTracer_a5b90296109e36384aedbc8908a670413}
+If the tracer is connected with a graph (\hyperlink{classQCPItemTracer_af5886f4ded8dd68cb4f3388f390790c0}{set\-Graph}), this function updates the tracer's {\itshape position} to reside on the graph data, depending on the configured key (\hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key}).
+
+It is called automatically on every redraw and normally doesn't need to be called manually. One exception is when you want to read the tracer coordinates via {\itshape position} and are not sure that the graph's data (or the tracer key with \hyperlink{classQCPItemTracer_a6840143b42f3b685cedf7c6d83a704c8}{set\-Graph\-Key}) hasn't changed since the last redraw. In that situation, call this function before accessing {\itshape position}, to make sure you don't get out-\/of-\/date coordinates.
+
+If there is no graph set on this tracer, this function does nothing. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.\-cpp\end{DoxyCompactItemize}

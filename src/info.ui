@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Info</class>
+ <widget class="QDialog" name="Info">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>838</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Main Info</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label">
+        <property name="toolTip">
+         <string>Enter 20 character sample name</string>
+        </property>
+        <property name="text">
+         <string>Sample Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="toolTip">
+         <string>Run number within the sequence</string>
+        </property>
+        <property name="text">
+         <string>Run</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="toolTip">
+         <string>Set number in the sequence</string>
+        </property>
+        <property name="text">
+         <string>Set</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="4">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>109</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLineEdit" name="lineEdit_3"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Comment</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QLabel" name="label_4">
+        <property name="toolTip">
+         <string>Sample position on the carousel</string>
+        </property>
+        <property name="text">
+         <string>Carousel Pos.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QLabel" name="label_5">
+        <property name="toolTip">
+         <string>Grain number on a single grain disc</string>
+        </property>
+        <property name="text">
+         <string>Grain Number</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_31">
+        <property name="text">
+         <string>Irr. Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3" colspan="3">
+       <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="3">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Measurement Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="3" colspan="3">
+       <widget class="QDateTimeEdit" name="dateTimeEdit">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2" colspan="4">
+       <widget class="QLineEdit" name="lineEdit_6"/>
+      </item>
+      <item row="0" column="2" colspan="4">
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLineEdit" name="lineEdit_2"/>
+      </item>
+      <item row="1" column="1" colspan="4">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLineEdit" name="lineEdit_4"/>
+      </item>
+      <item row="5" column="5">
+       <widget class="QLineEdit" name="lineEdit_5"/>
+      </item>
+      <item row="5" column="2" colspan="3">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>79</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="2" colspan="3">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>79</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Treatment</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="4" column="2" colspan="2">
+       <widget class="QLabel" name="label_15">
+        <property name="toolTip">
+         <string>Annealing time</string>
+        </property>
+        <property name="text">
+         <string>Anneal. Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QLineEdit" name="lineEdit_14"/>
+      </item>
+      <item row="7" column="4">
+       <widget class="QLineEdit" name="lineEdit_15"/>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="lineEdit_10"/>
+      </item>
+      <item row="8" column="4">
+       <widget class="QLineEdit" name="lineEdit_12"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QLabel" name="label_16">
+        <property name="toolTip">
+         <string>Background level per channel</string>
+        </property>
+        <property name="text">
+         <string>Background</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="toolTip">
+         <string>Irradiation time</string>
+        </property>
+        <property name="text">
+         <string>IRR Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="6">
+       <widget class="QLineEdit" name="lineEdit_13"/>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="lineEdit_11"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="toolTip">
+         <string>Pick a data type from the list</string>
+        </property>
+        <property name="text">
+         <string>Data Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QLabel" name="label_18">
+        <property name="toolTip">
+         <string>High (temprature, time, wavelength)</string>
+        </property>
+        <property name="text">
+         <string>High</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="toolTip">
+         <string>Bleaching time</string>
+        </property>
+        <property name="text">
+         <string>Bleach Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="toolTip">
+         <string>Low (temperature,time,wavelength)</string>
+        </property>
+        <property name="text">
+         <string>Low</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" colspan="2">
+       <widget class="QLabel" name="label_21">
+        <property name="toolTip">
+         <string>Luminiscence type (pick one from the list)</string>
+        </property>
+        <property name="text">
+         <string>Lum. Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="5">
+       <widget class="QLabel" name="label_19">
+        <property name="toolTip">
+         <string>Rate (heating, scan)</string>
+        </property>
+        <property name="text">
+         <string>Rate</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_10">
+        <property name="toolTip">
+         <string>Irradiation type (pick one from list)</string>
+        </property>
+        <property name="text">
+         <string>Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_8"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="toolTip">
+         <string>Annealing temperature [Celsius]</string>
+        </property>
+        <property name="text">
+         <string>Anneal Temp.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_14">
+        <property name="toolTip">
+         <string>Sample temperature [Celsius]</string>
+        </property>
+        <property name="text">
+         <string>Sample Temp.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEdit_9"/>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="label_11">
+        <property name="toolTip">
+         <string>Irradiation unit (pick one from list)</string>
+        </property>
+        <property name="text">
+         <string>Unit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QComboBox" name="comboBox"/>
+      </item>
+      <item row="1" column="6">
+       <widget class="QComboBox" name="comboBox_2"/>
+      </item>
+      <item row="2" column="6">
+       <widget class="QComboBox" name="comboBox_3"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_4"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_17"/>
+      </item>
+      <item row="0" column="4">
+       <widget class="QComboBox" name="comboBox_6"/>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="label_20">
+        <property name="toolTip">
+         <string>Bleach unit (pick one from list)</string>
+        </property>
+        <property name="text">
+         <string>Unit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Setting</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_25">
+        <property name="toolTip">
+         <string>Light source used for illumination</string>
+        </property>
+        <property name="statusTip">
+         <string>Light source used for illumination</string>
+        </property>
+        <property name="text">
+         <string>Light source</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_5"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_26">
+        <property name="toolTip">
+         <string>Power used for optical stimulation</string>
+        </property>
+        <property name="text">
+         <string>Power [%]</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="lineEdit_26"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_16"/>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="lineEdit_27"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_23">
+        <property name="toolTip">
+         <string>Y coordinate of this grain</string>
+        </property>
+        <property name="text">
+         <string>Y Coord</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_22">
+        <property name="acceptDrops">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>X coordinate of this grain</string>
+        </property>
+        <property name="statusTip">
+         <string>X coordinate of this grain</string>
+        </property>
+        <property name="text">
+         <string>X Coord</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_38">
+          <property name="toolTip">
+           <string>Normalization factor (1)</string>
+          </property>
+          <property name="text">
+           <string>Norm1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_32"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_39">
+          <property name="toolTip">
+           <string>Normalization factor (2)</string>
+          </property>
+          <property name="text">
+           <string>Norm2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_33"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_40">
+          <property name="toolTip">
+           <string>Normalization factor (3)</string>
+          </property>
+          <property name="text">
+           <string>Norm3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_34"/>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="4">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_24">
+            <property name="toolTip">
+             <string>Number of channels to shift data</string>
+            </property>
+            <property name="statusTip">
+             <string>Number of channels to shift data</string>
+            </property>
+            <property name="text">
+             <string>Shift</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_18"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_35">
+            <property name="toolTip">
+             <string>TOL &quot;on&quot; channels</string>
+            </property>
+            <property name="text">
+             <string>On</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_29"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_36">
+            <property name="toolTip">
+             <string>TOL &quot;of&quot; channels </string>
+            </property>
+            <property name="text">
+             <string>Off</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_30"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_37">
+            <property name="toolTip">
+             <string>TOL Delay channels</string>
+            </property>
+            <property name="text">
+             <string>Delay</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_31"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Info</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>662</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Info</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>662</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

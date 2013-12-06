@@ -1,0 +1,395 @@
+\hypertarget{classQCPAbstractItem}{\section{Q\-C\-P\-Abstract\-Item Class Reference}
+\label{classQCPAbstractItem}\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}}
+}
+
+
+The abstract base class for all items in a plot.  
+
+
+Inheritance diagram for Q\-C\-P\-Abstract\-Item\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classQCPAbstractItem}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classQCPAbstractItem_aa5cffb034fc65dbb91c77e02c1c14251}{selection\-Changed} (bool selected)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPAbstractItem_a9922507d8b4503a1fe1ed0b1030e23b6}{Q\-C\-P\-Abstract\-Item} (\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$parent\-Plot)
+\item 
+\hypertarget{classQCPAbstractItem_a5b0ea171823033bcb8aee81f4a034871}{bool {\bfseries clip\-To\-Axis\-Rect} () const }\label{classQCPAbstractItem_a5b0ea171823033bcb8aee81f4a034871}
+
+\item 
+\hypertarget{classQCPAbstractItem_aaf1da87df6f5bfed5253b83ddccbee13}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries clip\-Key\-Axis} () const }\label{classQCPAbstractItem_aaf1da87df6f5bfed5253b83ddccbee13}
+
+\item 
+\hypertarget{classQCPAbstractItem_a24e69c6991839f9267e21a42d38aacf2}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries clip\-Value\-Axis} () const }\label{classQCPAbstractItem_a24e69c6991839f9267e21a42d38aacf2}
+
+\item 
+\hypertarget{classQCPAbstractItem_a9189e752025533e1595eaade0009a3bc}{bool {\bfseries selectable} () const }\label{classQCPAbstractItem_a9189e752025533e1595eaade0009a3bc}
+
+\item 
+\hypertarget{classQCPAbstractItem_a225865808640d8d9a7dd19f09a2e93f2}{bool {\bfseries selected} () const }\label{classQCPAbstractItem_a225865808640d8d9a7dd19f09a2e93f2}
+
+\item 
+void \hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect} (bool clip)
+\item 
+void \hyperlink{classQCPAbstractItem_aa80abbbdcbfc40994443b03108160aee}{set\-Clip\-Axes} (\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$key\-Axis, \hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$value\-Axis)
+\item 
+void \hyperlink{classQCPAbstractItem_a8c3e15a8a99fd011c3c017324cd9e4b1}{set\-Clip\-Key\-Axis} (\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$axis)
+\item 
+void \hyperlink{classQCPAbstractItem_a3cf88353e12d1d0d3bdc20a3b17e1a01}{set\-Clip\-Value\-Axis} (\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$axis)
+\item 
+void \hyperlink{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}{set\-Selectable} (bool selectable)
+\item 
+void \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected} (bool selected)
+\item 
+virtual double \hyperlink{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{select\-Test} (const Q\-Point\-F \&pos) const =0
+\item 
+Q\-List$<$ \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$ $>$ \hyperlink{classQCPAbstractItem_adf6a680cc29a6bce8345c3b6af3a91a1}{positions} () const 
+\item 
+Q\-List$<$ \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$ $>$ \hyperlink{classQCPAbstractItem_a8454b9941960b840608a5a1e00b1977d}{anchors} () const 
+\item 
+\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$ \hyperlink{classQCPAbstractItem_af71345bd150f87fa1d2442837b87bb59}{position} (const Q\-String \&name) const 
+\item 
+\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$ \hyperlink{classQCPAbstractItem_abed974cba7cc02608c71dad4638e008d}{anchor} (const Q\-String \&name) const 
+\item 
+bool \hyperlink{classQCPAbstractItem_acbce9e5ba5252541d19db0c40303357a}{has\-Anchor} (const Q\-String \&name) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPAbstractItem_a538e25ff8856534582f5b2b400a46405}{virtual Q\-Rect {\bfseries clip\-Rect} () const }\label{classQCPAbstractItem_a538e25ff8856534582f5b2b400a46405}
+
+\item 
+\hypertarget{classQCPAbstractItem_a0839031abdd71067e2256a4d53c7a011}{virtual void {\bfseries apply\-Default\-Antialiasing\-Hint} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter) const }\label{classQCPAbstractItem_a0839031abdd71067e2256a4d53c7a011}
+
+\item 
+\hypertarget{classQCPAbstractItem_ad0dc056f650c3ca73414e6b4f01674ef}{virtual void {\bfseries draw} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter)=0}\label{classQCPAbstractItem_ad0dc056f650c3ca73414e6b4f01674ef}
+
+\item 
+\hypertarget{classQCPAbstractItem_acdca343717d625b8abb3c3e38c0ed39d}{double {\bfseries dist\-Sqr\-To\-Line} (const Q\-Point\-F \&start, const Q\-Point\-F \&end, const Q\-Point\-F \&point) const }\label{classQCPAbstractItem_acdca343717d625b8abb3c3e38c0ed39d}
+
+\item 
+\hypertarget{classQCPAbstractItem_a4c0e14c4e92df91174cb7183fb363069}{double {\bfseries rect\-Select\-Test} (const Q\-Rect\-F \&rect, const Q\-Point\-F \&pos, bool filled\-Rect) const }\label{classQCPAbstractItem_a4c0e14c4e92df91174cb7183fb363069}
+
+\item 
+\hypertarget{classQCPAbstractItem_a94bde62b8a2fc133666dcbb8035deeed}{virtual Q\-Point\-F {\bfseries anchor\-Pixel\-Point} (int anchor\-Id) const }\label{classQCPAbstractItem_a94bde62b8a2fc133666dcbb8035deeed}
+
+\item 
+\hypertarget{classQCPAbstractItem_a75036d39c4d4e2e1a7dd145fff915d32}{\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$ {\bfseries create\-Position} (const Q\-String \&name)}\label{classQCPAbstractItem_a75036d39c4d4e2e1a7dd145fff915d32}
+
+\item 
+\hypertarget{classQCPAbstractItem_af3fc92527802078ca395138748b629a7}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$ {\bfseries create\-Anchor} (const Q\-String \&name, int anchor\-Id)}\label{classQCPAbstractItem_af3fc92527802078ca395138748b629a7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPAbstractItem_ad2a70ff6b658fcb84a9427f69d3f587d}{bool {\bfseries m\-Clip\-To\-Axis\-Rect}}\label{classQCPAbstractItem_ad2a70ff6b658fcb84a9427f69d3f587d}
+
+\item 
+\hypertarget{classQCPAbstractItem_aa789a7e04cef1f8291409eef58068518}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries m\-Clip\-Key\-Axis}}\label{classQCPAbstractItem_aa789a7e04cef1f8291409eef58068518}
+
+\item 
+\hypertarget{classQCPAbstractItem_a5305649de1638fcd59b4356f101d81a9}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries m\-Clip\-Value\-Axis}}\label{classQCPAbstractItem_a5305649de1638fcd59b4356f101d81a9}
+
+\item 
+\hypertarget{classQCPAbstractItem_ad81eb35c8726a0f458db9df9732e0e41}{bool {\bfseries m\-Selectable}}\label{classQCPAbstractItem_ad81eb35c8726a0f458db9df9732e0e41}
+
+\item 
+\hypertarget{classQCPAbstractItem_a4bdb3457dad1d268c0f78a44152b9645}{bool {\bfseries m\-Selected}}\label{classQCPAbstractItem_a4bdb3457dad1d268c0f78a44152b9645}
+
+\item 
+\hypertarget{classQCPAbstractItem_af94ff71b6a15ea6d028ab8bd8eccd012}{Q\-List$<$ \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$ $>$ {\bfseries m\-Positions}}\label{classQCPAbstractItem_af94ff71b6a15ea6d028ab8bd8eccd012}
+
+\item 
+\hypertarget{classQCPAbstractItem_a909a3abab783de302ebf0a0e6f2bbc15}{Q\-List$<$ \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$ $>$ {\bfseries m\-Anchors}}\label{classQCPAbstractItem_a909a3abab783de302ebf0a0e6f2bbc15}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPAbstractItem_a1cdf9df76adcfae45261690aa0ca2198}{class {\bfseries Q\-Custom\-Plot}}\label{classQCPAbstractItem_a1cdf9df76adcfae45261690aa0ca2198}
+
+\item 
+\hypertarget{classQCPAbstractItem_a61767d414fd57af9eb1741b34268c7fc}{class {\bfseries Q\-C\-P\-Item\-Anchor}}\label{classQCPAbstractItem_a61767d414fd57af9eb1741b34268c7fc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The abstract base class for all items in a plot. 
+
+In \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}, items are supplemental graphical elements that are neither plottables (\hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable}) nor axes (\hyperlink{classQCPAxis}{Q\-C\-P\-Axis}). While plottables are always tied to two axes and thus plot coordinates, items can also be placed in absolute coordinates independent of any axes. Each specific item has at least one \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} member which controls the positioning. Some items are defined by more than one coordinate and thus have two or more \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} members (For example, \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect} has {\itshape top\-Left} and {\itshape bottom\-Right}).
+
+This abstract base class defines a very basic interface like visibility and clipping. Since this class is abstract, it can't be instantiated. Use one of the subclasses or create a subclass yourself to create new items.
+
+The built-\/in items are\-: \begin{TabularC}{2}
+\hline
+\hyperlink{classQCPItemLine}{Q\-C\-P\-Item\-Line}&A line defined by a start and an end point. May have different ending styles on each side (e.\-g. arrows). \\\cline{1-2}
+\hyperlink{classQCPItemStraightLine}{Q\-C\-P\-Item\-Straight\-Line}&A straight line defined by a start and a direction point. Unlike \hyperlink{classQCPItemLine}{Q\-C\-P\-Item\-Line}, the straight line is infinitely long and has no endings. \\\cline{1-2}
+\hyperlink{classQCPItemCurve}{Q\-C\-P\-Item\-Curve}&A curve defined by start, end and two intermediate control points. May have different ending styles on each side (e.\-g. arrows). \\\cline{1-2}
+\hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect}&A rectangle \\\cline{1-2}
+\hyperlink{classQCPItemEllipse}{Q\-C\-P\-Item\-Ellipse}&An ellipse \\\cline{1-2}
+\hyperlink{classQCPItemPixmap}{Q\-C\-P\-Item\-Pixmap}&An arbitrary pixmap \\\cline{1-2}
+\hyperlink{classQCPItemText}{Q\-C\-P\-Item\-Text}&A text label \\\cline{1-2}
+\hyperlink{classQCPItemBracket}{Q\-C\-P\-Item\-Bracket}&A bracket which may be used to reference/highlight certain parts in the plot. \\\cline{1-2}
+\hyperlink{classQCPItemTracer}{Q\-C\-P\-Item\-Tracer}&An item that can be attached to a \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} and sticks to its data points, given a key coordinate. \\\cline{1-2}
+\end{TabularC}
+\hypertarget{classQCPAbstractItem_items-using}{}\subsection{Using items}\label{classQCPAbstractItem_items-using}
+First you instantiate the item you want to use and add it to the plot\-: 
+\begin{DoxyCode}
+\hyperlink{classQCPItemLine}{QCPItemLine} *line = \textcolor{keyword}{new} \hyperlink{classQCPItemLine}{QCPItemLine}(customPlot);
+customPlot->addItem(line);
+\end{DoxyCode}
+ by default, the positions of the item are bound to the x-\/ and y-\/\-Axis of the plot. So we can just set the plot coordinates where the line should start/end\-: 
+\begin{DoxyCode}
+line->start->\hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{setCoords}(-0.1, 0.8);
+line->end->\hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{setCoords}(1.1, 0.2);
+\end{DoxyCode}
+ If we wanted the line to be positioned not in plot coordinates but a different coordinate system, e.\-g. absolute pixel positions on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface, we would have changed the position type like this\-: 
+\begin{DoxyCode}
+line->start->\hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{setType}(\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{QCPItemPosition::ptAbsolute});
+line->end->\hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{setType}(\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{QCPItemPosition::ptAbsolute});
+\end{DoxyCode}
+ Then we can set the coordinates, this time in pixels\-: 
+\begin{DoxyCode}
+line->start->\hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{setCoords}(100, 200);
+line->end->\hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{setCoords}(450, 320);
+\end{DoxyCode}
+\hypertarget{classQCPAbstractItem_items-subclassing}{}\subsection{Creating own items}\label{classQCPAbstractItem_items-subclassing}
+To create an own item, you implement a subclass of \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item}. These are the pure virtual functions, you must implement\-: \begin{DoxyItemize}
+\item \hyperlink{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{select\-Test} \item draw\end{DoxyItemize}
+See the documentation of those functions for what they need to do.\hypertarget{classQCPAbstractItem_items-positioning}{}\subsubsection{Allowing the item to be positioned}\label{classQCPAbstractItem_items-positioning}
+As mentioned, item positions are represented by \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} members. Let's assume the new item shall have only one coordinate as its position (as opposed to two like a rect or multiple like a polygon). You then add a public member of type \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} like so\-:
+
+
+\begin{DoxyCode}
+\hyperlink{classQCPItemPosition}{QCPItemPosition} * \textcolor{keyword}{const} myPosition;
+\end{DoxyCode}
+
+
+the const makes sure the pointer itself can't be modified from the user of your new item (the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} instance it points to, can be modified, of course). The initialization of this pointer is made easy with the create\-Position function. Just assign the return value of this function to each \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} in the constructor of your item. create\-Position takes a string which is the name of the position, typically this is identical to the variable name. For example, the constructor of Q\-C\-P\-Item\-Example could look like this\-:
+
+
+\begin{DoxyCode}
+QCPItemExample::QCPItemExample(\hyperlink{classQCustomPlot}{QCustomPlot} *parentPlot) :
+  \hyperlink{classQCPAbstractItem}{QCPAbstractItem}(parentPlot),
+  myPosition(createPosition(\textcolor{stringliteral}{"myPosition"}))
+\{
+  \textcolor{comment}{// other constructor code}
+\}
+\end{DoxyCode}
+\hypertarget{classQCPAbstractItem_items-drawing}{}\subsubsection{The draw function}\label{classQCPAbstractItem_items-drawing}
+Your implementation of the draw function should check whether the item is visible ({\itshape m\-Visible}) and then draw the item. You can retrieve its position in pixel coordinates from the position member(s) via \hyperlink{classQCPItemPosition_ae490f9c76ee2ba33752c495d3b6e8fb5}{Q\-C\-P\-Item\-Position\-::pixel\-Point}.
+
+To optimize performance you should calculate a bounding rect first (don't forget to take the pen width into account), check whether it intersects the clip\-Rect, and only draw the item at all if this is the case.\hypertarget{classQCPAbstractItem_items-selection}{}\subsubsection{The select\-Test function}\label{classQCPAbstractItem_items-selection}
+Your implementation of the \hyperlink{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{select\-Test} function may use the helpers dist\-Sqr\-To\-Line and rect\-Select\-Test. With these, the implementation of the selection test becomes significantly simpler for most items.\hypertarget{classQCPAbstractItem_anchors}{}\subsubsection{Providing anchors}\label{classQCPAbstractItem_anchors}
+Providing anchors (\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor}) starts off like adding a position. First you create a public member, e.\-g.
+
+
+\begin{DoxyCode}
+\hyperlink{classQCPItemAnchor}{QCPItemAnchor} * \textcolor{keyword}{const} bottom;
+\end{DoxyCode}
+
+
+and create it in the constructor with the create\-Anchor function, assigning it a name and an anchor id (an integer enumerating all anchors on the item, you may create an own enum for this). Since anchors can be placed anywhere, relative to the item's position(s), your item needs to provide the position of every anchor with the reimplementation of the anchor\-Pixel\-Point(int anchor\-Id) function.
+
+In essence the \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} is merely an intermediary that itself asks your item for the pixel position when anything attached to the anchor needs to know the coordinates. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPAbstractItem_a9922507d8b4503a1fe1ed0b1030e23b6}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}}
+\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{Q\-C\-P\-Abstract\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Abstract\-Item\-::\-Q\-C\-P\-Abstract\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_a9922507d8b4503a1fe1ed0b1030e23b6}
+Base class constructor which initializes base class members. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPAbstractItem_abed974cba7cc02608c71dad4638e008d}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!anchor@{anchor}}
+\index{anchor@{anchor}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{anchor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Item\-Anchor} $\ast$ Q\-C\-P\-Abstract\-Item\-::anchor (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{classQCPAbstractItem_abed974cba7cc02608c71dad4638e008d}
+Returns the \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} with the specified {\itshape name}. If this item doesn't have an anchor by that name, returns 0.
+
+This function provides an alternative way to access item anchors. Normally, you access anchors direcly by their member pointers (which typically have the same variable name as {\itshape name}).
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a8454b9941960b840608a5a1e00b1977d}{anchors}, \hyperlink{classQCPAbstractItem_af71345bd150f87fa1d2442837b87bb59}{position} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_a8454b9941960b840608a5a1e00b1977d}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!anchors@{anchors}}
+\index{anchors@{anchors}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{anchors}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ {\bf Q\-C\-P\-Item\-Anchor} $\ast$ $>$ Q\-C\-P\-Abstract\-Item\-::anchors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQCPAbstractItem_a8454b9941960b840608a5a1e00b1977d}
+Returns all anchors of the item in a list. Note that since a position (\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position}) is always also an anchor, the list will also contain the positions of this item.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_adf6a680cc29a6bce8345c3b6af3a91a1}{positions}, \hyperlink{classQCPAbstractItem_abed974cba7cc02608c71dad4638e008d}{anchor} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_acbce9e5ba5252541d19db0c40303357a}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!has\-Anchor@{has\-Anchor}}
+\index{has\-Anchor@{has\-Anchor}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{has\-Anchor}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Abstract\-Item\-::has\-Anchor (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{classQCPAbstractItem_acbce9e5ba5252541d19db0c40303357a}
+Returns whether this item has an anchor with the specified {\itshape name}.
+
+Note that you can check for positions with this function, too, because every position is also an anchor (\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} inherits from \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor}).
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_abed974cba7cc02608c71dad4638e008d}{anchor}, \hyperlink{classQCPAbstractItem_af71345bd150f87fa1d2442837b87bb59}{position} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_af71345bd150f87fa1d2442837b87bb59}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!position@{position}}
+\index{position@{position}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Item\-Position} $\ast$ Q\-C\-P\-Abstract\-Item\-::position (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{classQCPAbstractItem_af71345bd150f87fa1d2442837b87bb59}
+Returns the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} with the specified {\itshape name}. If this item doesn't have a position by that name, returns 0.
+
+This function provides an alternative way to access item positions. Normally, you access positions direcly by their member pointers (which typically have the same variable name as {\itshape name}).
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_adf6a680cc29a6bce8345c3b6af3a91a1}{positions}, \hyperlink{classQCPAbstractItem_abed974cba7cc02608c71dad4638e008d}{anchor} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_adf6a680cc29a6bce8345c3b6af3a91a1}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!positions@{positions}}
+\index{positions@{positions}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{positions}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ {\bf Q\-C\-P\-Item\-Position} $\ast$ $>$ Q\-C\-P\-Abstract\-Item\-::positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQCPAbstractItem_adf6a680cc29a6bce8345c3b6af3a91a1}
+Returns all positions of the item in a list.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a8454b9941960b840608a5a1e00b1977d}{anchors}, \hyperlink{classQCPAbstractItem_af71345bd150f87fa1d2442837b87bb59}{position} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_aa5cffb034fc65dbb91c77e02c1c14251}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!selection\-Changed@{selection\-Changed}}
+\index{selection\-Changed@{selection\-Changed}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{selection\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::selection\-Changed (
+\begin{DoxyParamCaption}
+\item[{bool}]{selected}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classQCPAbstractItem_aa5cffb034fc65dbb91c77e02c1c14251}
+This signal is emitted when the selection state of this item has changed, either by user interaction or by a direct call to \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected}. \hypertarget{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!select\-Test@{select\-Test}}
+\index{select\-Test@{select\-Test}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{select\-Test}]{\setlength{\rightskip}{0pt plus 5cm}double Q\-C\-P\-Abstract\-Item\-::select\-Test (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pos}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}
+This function is used to decide whether a click hits an item or not.
+
+{\itshape pos} is a point in pixel coordinates on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. This function returns the shortest pixel distance of this point to the item. If the item is either invisible or the distance couldn't be determined, -\/1.\-0 is returned. \hyperlink{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}{set\-Selectable} has no influence on the return value of this function.
+
+If the item is represented not by single lines but by an area like \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect} or \hyperlink{classQCPItemText}{Q\-C\-P\-Item\-Text}, a click inside the area returns a constant value greater zero (typically 99\% of the selection\-Tolerance of the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}). If the click lies outside the area, this function returns -\/1.\-0.
+
+Providing a constant value for area objects allows selecting line objects even when they are obscured by such area objects, by clicking close to the lines (i.\-e. closer than 0.\-99$\ast$selection\-Tolerance).
+
+The actual setting of the selection state is not done by this function. This is handled by the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} when the mouse\-Release\-Event occurs.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected}, \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{classQCPItemTracer_a5a7297a98b14664e2dc16cba28e51192}{Q\-C\-P\-Item\-Tracer}, \hyperlink{classQCPItemBracket_a3e4bf2f77e147e46e375b7aa288f52ae}{Q\-C\-P\-Item\-Bracket}, \hyperlink{classQCPItemCurve_ae54055ee1070735155166ecb887a9316}{Q\-C\-P\-Item\-Curve}, \hyperlink{classQCPItemText_a01daa9ff25ec84a738ae05f59af99f4a}{Q\-C\-P\-Item\-Text}, \hyperlink{classQCPItemPixmap_ab725f1025891e9284f75bbe1cb4cabfa}{Q\-C\-P\-Item\-Pixmap}, \hyperlink{classQCPItemRect_a0406a7da87557006f63b5d98ee6c397b}{Q\-C\-P\-Item\-Rect}, \hyperlink{classQCPItemEllipse_ac456143773711ea2e3782e51ff2f7eb4}{Q\-C\-P\-Item\-Ellipse}, \hyperlink{classQCPItemLine_abc195de27d00ffa02c9047489308a6a7}{Q\-C\-P\-Item\-Line}, and \hyperlink{classQCPItemStraightLine_a8cd13e1da2d82613934401e2a9eec26d}{Q\-C\-P\-Item\-Straight\-Line}.
+
+\hypertarget{classQCPAbstractItem_aa80abbbdcbfc40994443b03108160aee}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!set\-Clip\-Axes@{set\-Clip\-Axes}}
+\index{set\-Clip\-Axes@{set\-Clip\-Axes}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{set\-Clip\-Axes}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::set\-Clip\-Axes (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{key\-Axis, }
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{value\-Axis}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_aa80abbbdcbfc40994443b03108160aee}
+Sets both clip axes. Together they define the axis rect that will be used to clip the item when \hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect} is set to true.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect}, \hyperlink{classQCPAbstractItem_a8c3e15a8a99fd011c3c017324cd9e4b1}{set\-Clip\-Key\-Axis}, \hyperlink{classQCPAbstractItem_a3cf88353e12d1d0d3bdc20a3b17e1a01}{set\-Clip\-Value\-Axis} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_a8c3e15a8a99fd011c3c017324cd9e4b1}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!set\-Clip\-Key\-Axis@{set\-Clip\-Key\-Axis}}
+\index{set\-Clip\-Key\-Axis@{set\-Clip\-Key\-Axis}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{set\-Clip\-Key\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::set\-Clip\-Key\-Axis (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{axis}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_a8c3e15a8a99fd011c3c017324cd9e4b1}
+Sets the clip key axis. Together with the clip value axis it defines the axis rect that will be used to clip the item when \hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect} is set to true.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect}, \hyperlink{classQCPAbstractItem_aa80abbbdcbfc40994443b03108160aee}{set\-Clip\-Axes}, \hyperlink{classQCPAbstractItem_a3cf88353e12d1d0d3bdc20a3b17e1a01}{set\-Clip\-Value\-Axis} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!set\-Clip\-To\-Axis\-Rect@{set\-Clip\-To\-Axis\-Rect}}
+\index{set\-Clip\-To\-Axis\-Rect@{set\-Clip\-To\-Axis\-Rect}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{set\-Clip\-To\-Axis\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::set\-Clip\-To\-Axis\-Rect (
+\begin{DoxyParamCaption}
+\item[{bool}]{clip}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}
+Sets whether the item shall be clipped to the axis rect or whether it shall be visible on the entire \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}. The axis rect is defined by the clip axes which can be set via \hyperlink{classQCPAbstractItem_aa80abbbdcbfc40994443b03108160aee}{set\-Clip\-Axes} or individually with \hyperlink{classQCPAbstractItem_a8c3e15a8a99fd011c3c017324cd9e4b1}{set\-Clip\-Key\-Axis} and \hyperlink{classQCPAbstractItem_a3cf88353e12d1d0d3bdc20a3b17e1a01}{set\-Clip\-Value\-Axis}. \hypertarget{classQCPAbstractItem_a3cf88353e12d1d0d3bdc20a3b17e1a01}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!set\-Clip\-Value\-Axis@{set\-Clip\-Value\-Axis}}
+\index{set\-Clip\-Value\-Axis@{set\-Clip\-Value\-Axis}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{set\-Clip\-Value\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::set\-Clip\-Value\-Axis (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{axis}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_a3cf88353e12d1d0d3bdc20a3b17e1a01}
+Sets the clip value axis. Together with the clip key axis it defines the axis rect that will be used to clip the item when \hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect} is set to true.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a39e05b9d4176b9accafc746d16ca6a06}{set\-Clip\-To\-Axis\-Rect}, \hyperlink{classQCPAbstractItem_aa80abbbdcbfc40994443b03108160aee}{set\-Clip\-Axes}, \hyperlink{classQCPAbstractItem_a8c3e15a8a99fd011c3c017324cd9e4b1}{set\-Clip\-Key\-Axis} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!set\-Selectable@{set\-Selectable}}
+\index{set\-Selectable@{set\-Selectable}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{set\-Selectable}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::set\-Selectable (
+\begin{DoxyParamCaption}
+\item[{bool}]{selectable}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}
+Sets whether the user can (de-\/)select this item by clicking on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. (When \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} contains \hyperlink{classQCustomPlot_acc82d021129b61e550e36747d2e76d3aa2f1c34708a97bc30cc14684fa6cb844d}{Q\-Custom\-Plot\-::i\-Select\-Items}.)
+
+However, even when {\itshape selectable} was set to false, it is possible to set the selection manually, by calling \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected} directly.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions}, \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{\index{Q\-C\-P\-Abstract\-Item@{Q\-C\-P\-Abstract\-Item}!set\-Selected@{set\-Selected}}
+\index{set\-Selected@{set\-Selected}!QCPAbstractItem@{Q\-C\-P\-Abstract\-Item}}
+\subsubsection[{set\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Abstract\-Item\-::set\-Selected (
+\begin{DoxyParamCaption}
+\item[{bool}]{selected}
+\end{DoxyParamCaption}
+)}}\label{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}
+Sets whether this item is selected or not. When selected, it might use a different visual appearance (e.\-g. pen and brush), this depends on the specific item, though.
+
+The entire selection mechanism for items is handled automatically when \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} contains \hyperlink{classQCustomPlot_acc82d021129b61e550e36747d2e76d3aa2f1c34708a97bc30cc14684fa6cb844d}{Q\-Custom\-Plot\-::i\-Select\-Items}. You only need to call this function when you wish to change the selection state manually.
+
+This function can change the selection state even when \hyperlink{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}{set\-Selectable} was set to false.
+
+emits the \hyperlink{classQCPAbstractItem_aa5cffb034fc65dbb91c77e02c1c14251}{selection\-Changed} signal when {\itshape selected} is different from the previous selection state.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{select\-Test} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.\-cpp\end{DoxyCompactItemize}

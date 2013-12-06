@@ -1,0 +1,103 @@
+\hypertarget{classQCPItemAnchor}{\section{Q\-C\-P\-Item\-Anchor Class Reference}
+\label{classQCPItemAnchor}\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}}
+}
+
+
+An anchor of an item to which positions can be attached to.  
+
+
+Inheritance diagram for Q\-C\-P\-Item\-Anchor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classQCPItemAnchor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPItemAnchor_aeb6b681d2bf324db40a915d32ec5624f}{Q\-C\-P\-Item\-Anchor} (\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$parent\-Plot, \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item} $\ast$parent\-Item, const Q\-String name, int anchor\-Id=-\/1)
+\item 
+\hypertarget{classQCPItemAnchor_ac93984042a58c875e76847dc3e5f75fe}{Q\-String {\bfseries name} () const }\label{classQCPItemAnchor_ac93984042a58c875e76847dc3e5f75fe}
+
+\item 
+virtual Q\-Point\-F \hyperlink{classQCPItemAnchor_ae92def8f9297c5d73f5806c586517bb3}{pixel\-Point} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemAnchor_ad11517e2ce5c2f9a798e78fb45e2e0d0}{void {\bfseries add\-Child} (\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$pos)}\label{classQCPItemAnchor_ad11517e2ce5c2f9a798e78fb45e2e0d0}
+
+\item 
+\hypertarget{classQCPItemAnchor_ab65ec61984575f737f43c2bb59dd0d76}{void {\bfseries remove\-Child} (\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$pos)}\label{classQCPItemAnchor_ab65ec61984575f737f43c2bb59dd0d76}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemAnchor_a59b968410831ba91a25cc75a77dde6f5}{\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$ {\bfseries m\-Parent\-Plot}}\label{classQCPItemAnchor_a59b968410831ba91a25cc75a77dde6f5}
+
+\item 
+\hypertarget{classQCPItemAnchor_a80fad480ad3bb980446ed6ebc00818ae}{\hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item} $\ast$ {\bfseries m\-Parent\-Item}}\label{classQCPItemAnchor_a80fad480ad3bb980446ed6ebc00818ae}
+
+\item 
+\hypertarget{classQCPItemAnchor_a00c62070333e8345976b579676ad3997}{int {\bfseries m\-Anchor\-Id}}\label{classQCPItemAnchor_a00c62070333e8345976b579676ad3997}
+
+\item 
+\hypertarget{classQCPItemAnchor_a23ad4d0ab0d2cbb41a7baf05bcf996ec}{Q\-String {\bfseries m\-Name}}\label{classQCPItemAnchor_a23ad4d0ab0d2cbb41a7baf05bcf996ec}
+
+\item 
+\hypertarget{classQCPItemAnchor_a5f0e67f395a63e2dd0e29ff1dcaf37b7}{Q\-Set$<$ \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$ $>$ {\bfseries m\-Children}}\label{classQCPItemAnchor_a5f0e67f395a63e2dd0e29ff1dcaf37b7}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemAnchor_aa9b8ddc062778e202a0be06a57d18d17}{class {\bfseries Q\-C\-P\-Item\-Position}}\label{classQCPItemAnchor_aa9b8ddc062778e202a0be06a57d18d17}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An anchor of an item to which positions can be attached to. 
+
+An item (\hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item}) may have one or more anchors. Unlike \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position}, an anchor doesn't control anything on its item, but provides a way to tie other items via their positions to the anchor.
+
+For example, a \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect} is defined by its positions {\itshape top\-Left} and {\itshape bottom\-Right}. Additionally it has various anchors like {\itshape top}, {\itshape top\-Right} or {\itshape bottom\-Left} etc. So you can attach the {\itshape start} (which is a \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position}) of a \hyperlink{classQCPItemLine}{Q\-C\-P\-Item\-Line} to one of the anchors by calling \hyperlink{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{Q\-C\-P\-Item\-Position\-::set\-Parent\-Anchor} on {\itshape start}, passing the wanted anchor of the \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect}. This way the start of the line will now always follow the respective anchor location on the rect item.
+
+Note that \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} derives from \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor}, so every position can also serve as an anchor to other positions.
+
+To learn how to provide anchors in your own item subclasses, see the subclassing section of the \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item} documentation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPItemAnchor_aeb6b681d2bf324db40a915d32ec5624f}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}}
+\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{Q\-C\-P\-Item\-Anchor}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Item\-Anchor\-::\-Q\-C\-P\-Item\-Anchor (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot, }
+\item[{{\bf Q\-C\-P\-Abstract\-Item} $\ast$}]{parent\-Item, }
+\item[{const Q\-String}]{name, }
+\item[{int}]{anchor\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemAnchor_aeb6b681d2bf324db40a915d32ec5624f}
+Creates a new \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor}. You shouldn't create \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} instances directly, even if you want to make a new item subclass. Use Q\-C\-P\-Abstract\-Item\-::create\-Anchor instead, as explained in the subclassing section of the \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item} documentation. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPItemAnchor_ae92def8f9297c5d73f5806c586517bb3}{\index{Q\-C\-P\-Item\-Anchor@{Q\-C\-P\-Item\-Anchor}!pixel\-Point@{pixel\-Point}}
+\index{pixel\-Point@{pixel\-Point}!QCPItemAnchor@{Q\-C\-P\-Item\-Anchor}}
+\subsubsection[{pixel\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Q\-C\-P\-Item\-Anchor\-::pixel\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classQCPItemAnchor_ae92def8f9297c5d73f5806c586517bb3}
+Returns the final absolute pixel position of the \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface.
+
+The pixel information is internally retrieved via Q\-C\-P\-Abstract\-Item\-::anchor\-Pixel\-Position of the parent item, \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} is just an intermediary. 
+
+Reimplemented in \hyperlink{classQCPItemPosition_ae490f9c76ee2ba33752c495d3b6e8fb5}{Q\-C\-P\-Item\-Position}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+qcustomplot.\-cpp\end{DoxyCompactItemize}

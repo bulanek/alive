@@ -1,0 +1,37 @@
+\begin{theindex}
+
+  \item {Bin\discretionary {-}{}{}Reader}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Calibration}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Data}, \hyperpage{16}
+  \item {Data\discretionary {-}{}{}Handle}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Info}, \hyperpage{19}
+
+  \indexspace
+
+  \item {Main\discretionary {-}{}{}Window}, \hyperpage{20}
+  \item {Main\discretionary {-}{}{}Window\discretionary {-}{}{}Data}, 
+		\hyperpage{20}
+
+  \indexspace
+
+  \item {Plateau}, \hyperpage{21}
+
+  \indexspace
+
+  \item {Sql\discretionary {-}{}{}Connection}, \hyperpage{21}
+  \item {Sql\discretionary {-}{}{}Handle}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Ui}, \hyperpage{13}
+
+\end{theindex}

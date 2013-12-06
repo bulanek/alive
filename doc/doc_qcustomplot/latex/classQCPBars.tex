@@ -1,0 +1,363 @@
+\hypertarget{classQCPBars}{\section{Q\-C\-P\-Bars Class Reference}
+\label{classQCPBars}\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}}
+}
+
+
+A plottable representing a bar chart in a plot.  
+
+
+Inheritance diagram for Q\-C\-P\-Bars\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classQCPBars}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPBars_a64006999ad9dff308f40df41cef176ad}{Q\-C\-P\-Bars} (\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$key\-Axis, \hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$value\-Axis)
+\item 
+\hypertarget{classQCPBars_a42798c38abd5f5db22bd45d77f429625}{double {\bfseries width} () const }\label{classQCPBars_a42798c38abd5f5db22bd45d77f429625}
+
+\item 
+\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$ \hyperlink{classQCPBars_a2c46a686cbad95f180ca3c2e88263961}{bar\-Below} () const 
+\item 
+\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$ \hyperlink{classQCPBars_a9ca48a6577586825d85bdc1fbf410803}{bar\-Above} () const 
+\item 
+\hypertarget{classQCPBars_a4938c4eb29e48d4f15037886bcd4082d}{const \hyperlink{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}{Q\-C\-P\-Bar\-Data\-Map} $\ast$ {\bfseries data} () const }\label{classQCPBars_a4938c4eb29e48d4f15037886bcd4082d}
+
+\item 
+void \hyperlink{classQCPBars_afec6116579d44d5b706e0fa5e5332507}{set\-Width} (double width)
+\item 
+void \hyperlink{classQCPBars_aa3435aab19e0a49e4e7b41bd36a8d96b}{set\-Data} (\hyperlink{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}{Q\-C\-P\-Bar\-Data\-Map} $\ast$data, bool copy=false)
+\item 
+void \hyperlink{classQCPBars_a3efded5df4a82ecb201f7c28099fa2e5}{set\-Data} (const Q\-Vector$<$ double $>$ \&key, const Q\-Vector$<$ double $>$ \&value)
+\item 
+void \hyperlink{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}{move\-Below} (\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$bars)
+\item 
+void \hyperlink{classQCPBars_ac22e00a6a41509538c21b04f0a57318c}{move\-Above} (\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$bars)
+\item 
+void \hyperlink{classQCPBars_a1f29cf08615040993209147fa68de3f2}{add\-Data} (const \hyperlink{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}{Q\-C\-P\-Bar\-Data\-Map} \&data\-Map)
+\item 
+void \hyperlink{classQCPBars_a142158b1addefd53259002dd3ab22c3a}{add\-Data} (const \hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data} \&data)
+\item 
+void \hyperlink{classQCPBars_a684dd105403a5497fda42f2094fecbb7}{add\-Data} (double key, double value)
+\item 
+void \hyperlink{classQCPBars_a3679a0a9decab0fa03f8f4c6e3344d52}{add\-Data} (const Q\-Vector$<$ double $>$ \&keys, const Q\-Vector$<$ double $>$ \&values)
+\item 
+void \hyperlink{classQCPBars_a9d12779a3fad4820aad2c428f368298d}{remove\-Data\-Before} (double key)
+\item 
+void \hyperlink{classQCPBars_a99de6e7abbbf03fb41fa604c7f08aa8b}{remove\-Data\-After} (double key)
+\item 
+void \hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data} (double from\-Key, double to\-Key)
+\item 
+void \hyperlink{classQCPBars_a837cc9848ad3edd40a6130b508493f93}{remove\-Data} (double key)
+\item 
+virtual void \hyperlink{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}{clear\-Data} ()
+\item 
+virtual double \hyperlink{classQCPBars_a3b4aeb6d87d57dce496f5f83c21eabba}{select\-Test} (const Q\-Point\-F \&pos) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPBars_a42b894e34dac799f90ff3700706b31df}{virtual void {\bfseries draw} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter)}\label{classQCPBars_a42b894e34dac799f90ff3700706b31df}
+
+\item 
+\hypertarget{classQCPBars_af54543a87581003b3176d8b2931754c5}{virtual void {\bfseries draw\-Legend\-Icon} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter, const Q\-Rect \&rect) const }\label{classQCPBars_af54543a87581003b3176d8b2931754c5}
+
+\item 
+\hypertarget{classQCPBars_a1d118a76662cfd691a78c6f573e3f78c}{Q\-Polygon\-F {\bfseries get\-Bar\-Polygon} (double key, double value) const }\label{classQCPBars_a1d118a76662cfd691a78c6f573e3f78c}
+
+\item 
+\hypertarget{classQCPBars_ab60a3c4b8e7c59f0f14e25590d96fa4e}{double {\bfseries get\-Base\-Value} (double key, bool positive) const }\label{classQCPBars_ab60a3c4b8e7c59f0f14e25590d96fa4e}
+
+\item 
+\hypertarget{classQCPBars_adbf608df1ba1d28c0bc7a929b18d997b}{virtual \hyperlink{classQCPRange}{Q\-C\-P\-Range} {\bfseries get\-Key\-Range} (bool \&valid\-Range, \hyperlink{classQCPAbstractPlottable_a661743478a1d3c09d28ec2711d7653d8}{Sign\-Domain} in\-Sign\-Domain=\hyperlink{classQCPAbstractPlottable_a661743478a1d3c09d28ec2711d7653d8a082b98cfb91a7363a3b5cd17b0c1cd60}{sd\-Both}) const }\label{classQCPBars_adbf608df1ba1d28c0bc7a929b18d997b}
+
+\item 
+\hypertarget{classQCPBars_acbcbf97f591d3b8a130b2fdf0a8af74b}{virtual \hyperlink{classQCPRange}{Q\-C\-P\-Range} {\bfseries get\-Value\-Range} (bool \&valid\-Range, \hyperlink{classQCPAbstractPlottable_a661743478a1d3c09d28ec2711d7653d8}{Sign\-Domain} in\-Sign\-Domain=\hyperlink{classQCPAbstractPlottable_a661743478a1d3c09d28ec2711d7653d8a082b98cfb91a7363a3b5cd17b0c1cd60}{sd\-Both}) const }\label{classQCPBars_acbcbf97f591d3b8a130b2fdf0a8af74b}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPBars_a6ea37802cd22f97235cab614b14b9f19}{static void {\bfseries connect\-Bars} (\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$lower, \hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$upper)}\label{classQCPBars_a6ea37802cd22f97235cab614b14b9f19}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPBars_aef28d29d51ef84b608ecd22c55d531ff}{\hyperlink{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}{Q\-C\-P\-Bar\-Data\-Map} $\ast$ {\bfseries m\-Data}}\label{classQCPBars_aef28d29d51ef84b608ecd22c55d531ff}
+
+\item 
+\hypertarget{classQCPBars_a7c4e0f2246f8133f48a9c3f24cf5b920}{double {\bfseries m\-Width}}\label{classQCPBars_a7c4e0f2246f8133f48a9c3f24cf5b920}
+
+\item 
+\hypertarget{classQCPBars_a02eb7de7a2c03dc5699f329bb1c5f6e1}{\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$ {\bfseries m\-Bar\-Below}}\label{classQCPBars_a02eb7de7a2c03dc5699f329bb1c5f6e1}
+
+\item 
+\hypertarget{classQCPBars_ade19776a2a6d393f15c0e27d4bb8e594}{\hyperlink{classQCPBars}{Q\-C\-P\-Bars} $\ast$ {\bfseries m\-Bar\-Above}}\label{classQCPBars_ade19776a2a6d393f15c0e27d4bb8e594}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPBars_a1cdf9df76adcfae45261690aa0ca2198}{class {\bfseries Q\-Custom\-Plot}}\label{classQCPBars_a1cdf9df76adcfae45261690aa0ca2198}
+
+\item 
+\hypertarget{classQCPBars_a8429035e7adfbd7f05805a6530ad5e3b}{class {\bfseries Q\-C\-P\-Legend}}\label{classQCPBars_a8429035e7adfbd7f05805a6530ad5e3b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A plottable representing a bar chart in a plot. 
+
+To plot data, assign it with the \hyperlink{classQCPBars_aa3435aab19e0a49e4e7b41bd36a8d96b}{set\-Data} or \hyperlink{classQCPBars_a1f29cf08615040993209147fa68de3f2}{add\-Data} functions.\hypertarget{classQCPStatisticalBox_appearance}{}\subsection{Changing the appearance}\label{classQCPStatisticalBox_appearance}
+The appearance of the bars is determined by the pen and the brush (\hyperlink{classQCPAbstractPlottable_ab74b09ae4c0e7e13142fe4b5bf46cac7}{set\-Pen}, \hyperlink{classQCPAbstractPlottable_a7a4b92144dca6453a1f0f210e27edc74}{set\-Brush}).
+
+Bar charts are stackable. This means, Two \hyperlink{classQCPBars}{Q\-C\-P\-Bars} plottables can be placed on top of each other (see \hyperlink{classQCPBars_ac22e00a6a41509538c21b04f0a57318c}{Q\-C\-P\-Bars\-::move\-Above}). Then, when two bars are at the same key position, they will appear stacked.\hypertarget{classQCPStatisticalBox_usage}{}\subsection{Usage}\label{classQCPStatisticalBox_usage}
+Like all data representing objects in \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}, the \hyperlink{classQCPBars}{Q\-C\-P\-Bars} is a plottable (\hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable}). So the plottable-\/interface of \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} applies (\hyperlink{classQCustomPlot_a32de81ff53e263e785b83b52ecd99d6f}{Q\-Custom\-Plot\-::plottable}, \hyperlink{classQCustomPlot_ab7ad9174f701f9c6f64e378df77927a6}{Q\-Custom\-Plot\-::add\-Plottable}, \hyperlink{classQCustomPlot_af3dafd56884208474f311d6226513ab2}{Q\-Custom\-Plot\-::remove\-Plottable}, etc.)
+
+Usually, you first create an instance\-: 
+\begin{DoxyCode}
+\hyperlink{classQCPBars}{QCPBars} *newBars = \textcolor{keyword}{new} \hyperlink{classQCPBars_a64006999ad9dff308f40df41cef176ad}{QCPBars}(customPlot->xAxis, customPlot->yAxis);
+\end{DoxyCode}
+ add it to the custom\-Plot with \hyperlink{classQCustomPlot_ab7ad9174f701f9c6f64e378df77927a6}{Q\-Custom\-Plot\-::add\-Plottable}\-: 
+\begin{DoxyCode}
+customPlot->addPlottable(newBars);
+\end{DoxyCode}
+ and then modify the properties of the newly created plottable, e.\-g.\-: 
+\begin{DoxyCode}
+newBars->\hyperlink{classQCPAbstractPlottable_ab79c7ba76bc7fa89a4b3580e12149f1f}{setName}(\textcolor{stringliteral}{"Country population"});
+newBars->\hyperlink{classQCPBars_aa3435aab19e0a49e4e7b41bd36a8d96b}{setData}(xData, yData);
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPBars_a64006999ad9dff308f40df41cef176ad}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!Q\-C\-P\-Bars@{Q\-C\-P\-Bars}}
+\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{Q\-C\-P\-Bars}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Bars\-::\-Q\-C\-P\-Bars (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{key\-Axis, }
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{value\-Axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classQCPBars_a64006999ad9dff308f40df41cef176ad}
+Constructs a bar chart which uses {\itshape key\-Axis} as its key axis (\char`\"{}x\char`\"{}) and {\itshape value\-Axis} as its value axis (\char`\"{}y\char`\"{}). {\itshape key\-Axis} and {\itshape value\-Axis} must reside in the same \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} instance and not have the same orientation. If either of these restrictions is violated, a corresponding message is printed to the debug output (q\-Debug), the construction is not aborted, though.
+
+The constructed \hyperlink{classQCPBars}{Q\-C\-P\-Bars} can be added to the plot with \hyperlink{classQCustomPlot_ab7ad9174f701f9c6f64e378df77927a6}{Q\-Custom\-Plot\-::add\-Plottable}, \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} then takes ownership of the bar chart. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPBars_a1f29cf08615040993209147fa68de3f2}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!add\-Data@{add\-Data}}
+\index{add\-Data@{add\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{add\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::add\-Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\-C\-P\-Bar\-Data\-Map} \&}]{data\-Map}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a1f29cf08615040993209147fa68de3f2}
+Adds the provided data points in {\itshape data\-Map} to the current data. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a142158b1addefd53259002dd3ab22c3a}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!add\-Data@{add\-Data}}
+\index{add\-Data@{add\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{add\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::add\-Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\-C\-P\-Bar\-Data} \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a142158b1addefd53259002dd3ab22c3a}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Adds the provided single data point in {\itshape data} to the current data. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a684dd105403a5497fda42f2094fecbb7}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!add\-Data@{add\-Data}}
+\index{add\-Data@{add\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{add\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::add\-Data (
+\begin{DoxyParamCaption}
+\item[{double}]{key, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a684dd105403a5497fda42f2094fecbb7}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Adds the provided single data point as {\itshape key} and {\itshape value} tuple to the current data \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a3679a0a9decab0fa03f8f4c6e3344d52}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!add\-Data@{add\-Data}}
+\index{add\-Data@{add\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{add\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::add\-Data (
+\begin{DoxyParamCaption}
+\item[{const Q\-Vector$<$ double $>$ \&}]{keys, }
+\item[{const Q\-Vector$<$ double $>$ \&}]{values}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a3679a0a9decab0fa03f8f4c6e3344d52}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Adds the provided data points as {\itshape key} and {\itshape value} tuples to the current data. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a9ca48a6577586825d85bdc1fbf410803}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!bar\-Above@{bar\-Above}}
+\index{bar\-Above@{bar\-Above}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{bar\-Above}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Bars} $\ast$ Q\-C\-P\-Bars\-::bar\-Above (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQCPBars_a9ca48a6577586825d85bdc1fbf410803}
+Returns the bars plottable that is directly above this bars plottable. If there is no such plottable, returns 0.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a2c46a686cbad95f180ca3c2e88263961}{bar\-Below}, \hyperlink{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}{move\-Below}, \hyperlink{classQCPBars_ac22e00a6a41509538c21b04f0a57318c}{move\-Above} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a2c46a686cbad95f180ca3c2e88263961}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!bar\-Below@{bar\-Below}}
+\index{bar\-Below@{bar\-Below}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{bar\-Below}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Bars} $\ast$ Q\-C\-P\-Bars\-::bar\-Below (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classQCPBars_a2c46a686cbad95f180ca3c2e88263961}
+Returns the bars plottable that is directly below this bars plottable. If there is no such plottable, returns 0.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a9ca48a6577586825d85bdc1fbf410803}{bar\-Above}, \hyperlink{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}{move\-Below}, \hyperlink{classQCPBars_ac22e00a6a41509538c21b04f0a57318c}{move\-Above} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!clear\-Data@{clear\-Data}}
+\index{clear\-Data@{clear\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{clear\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::clear\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}
+Removes all data points. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data}, \hyperlink{classQCPBars_a99de6e7abbbf03fb41fa604c7f08aa8b}{remove\-Data\-After}, \hyperlink{classQCPBars_a9d12779a3fad4820aad2c428f368298d}{remove\-Data\-Before} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classQCPAbstractPlottable_a86e5b8fd4b6ff4f4084e7ea4c573fc53}{Q\-C\-P\-Abstract\-Plottable}.
+
+\hypertarget{classQCPBars_ac22e00a6a41509538c21b04f0a57318c}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!move\-Above@{move\-Above}}
+\index{move\-Above@{move\-Above}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{move\-Above}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::move\-Above (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Bars} $\ast$}]{bars}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_ac22e00a6a41509538c21b04f0a57318c}
+Moves this bars plottable above {\itshape bars}. In other words, the bars of this plottable will appear above the bars of {\itshape bars}. The move target {\itshape bars} must use the same key and value axis as this plottable.
+
+Inserting into and removing from existing bar stacking is handled gracefully. If {\itshape bars} already has a bars object below itself, this bars object is inserted between the two. If this bars object is already between two other bars, the two other bars will be stacked on top of each other after the operation.
+
+To remove this bars plottable from any stacking, set {\itshape bars} to 0.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}{move\-Below}, \hyperlink{classQCPBars_a2c46a686cbad95f180ca3c2e88263961}{bar\-Below}, \hyperlink{classQCPBars_a9ca48a6577586825d85bdc1fbf410803}{bar\-Above} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!move\-Below@{move\-Below}}
+\index{move\-Below@{move\-Below}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{move\-Below}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::move\-Below (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Bars} $\ast$}]{bars}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}
+Moves this bars plottable below {\itshape bars}. In other words, the bars of this plottable will appear below the bars of {\itshape bars}. The move target {\itshape bars} must use the same key and value axis as this plottable.
+
+Inserting into and removing from existing bar stacking is handled gracefully. If {\itshape bars} already has a bars object below itself, this bars object is inserted between the two. If this bars object is already between two other bars, the two other bars will be stacked on top of each other after the operation.
+
+To remove this bars plottable from any stacking, set {\itshape bars} to 0.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a69fc371346980f19177c3d1ecdad78ee}{move\-Below}, \hyperlink{classQCPBars_a9ca48a6577586825d85bdc1fbf410803}{bar\-Above}, \hyperlink{classQCPBars_a2c46a686cbad95f180ca3c2e88263961}{bar\-Below} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!remove\-Data@{remove\-Data}}
+\index{remove\-Data@{remove\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{remove\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::remove\-Data (
+\begin{DoxyParamCaption}
+\item[{double}]{from\-Key, }
+\item[{double}]{to\-Key}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}
+Removes all data points with key between {\itshape from\-Key} and {\itshape to\-Key}. if {\itshape from\-Key} is greater or equal to {\itshape to\-Key}, the function does nothing. To remove a single data point with known key, use \hyperlink{classQCPBars_a837cc9848ad3edd40a6130b508493f93}{remove\-Data(double key)}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1f29cf08615040993209147fa68de3f2}{add\-Data}, \hyperlink{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}{clear\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a837cc9848ad3edd40a6130b508493f93}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!remove\-Data@{remove\-Data}}
+\index{remove\-Data@{remove\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{remove\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::remove\-Data (
+\begin{DoxyParamCaption}
+\item[{double}]{key}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a837cc9848ad3edd40a6130b508493f93}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Removes a single data point at {\itshape key}. If the position is not known with absolute precision, consider using \hyperlink{classQCPBars_a1fe9bcb57d670defea1bb65cadf43765}{remove\-Data(double from\-Key, double to\-Key)} with a small fuzziness interval around the suspected position, depeding on the precision with which the key is known.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1f29cf08615040993209147fa68de3f2}{add\-Data}, \hyperlink{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}{clear\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a99de6e7abbbf03fb41fa604c7f08aa8b}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!remove\-Data\-After@{remove\-Data\-After}}
+\index{remove\-Data\-After@{remove\-Data\-After}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{remove\-Data\-After}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::remove\-Data\-After (
+\begin{DoxyParamCaption}
+\item[{double}]{key}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a99de6e7abbbf03fb41fa604c7f08aa8b}
+Removes all data points with key greater than {\itshape key}. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1f29cf08615040993209147fa68de3f2}{add\-Data}, \hyperlink{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}{clear\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a9d12779a3fad4820aad2c428f368298d}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!remove\-Data\-Before@{remove\-Data\-Before}}
+\index{remove\-Data\-Before@{remove\-Data\-Before}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{remove\-Data\-Before}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::remove\-Data\-Before (
+\begin{DoxyParamCaption}
+\item[{double}]{key}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a9d12779a3fad4820aad2c428f368298d}
+Removes all data points with key smaller than {\itshape key}. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBars_a1f29cf08615040993209147fa68de3f2}{add\-Data}, \hyperlink{classQCPBars_a11dbbd707132f07f862dff13c5789c2b}{clear\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPBars_a3b4aeb6d87d57dce496f5f83c21eabba}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!select\-Test@{select\-Test}}
+\index{select\-Test@{select\-Test}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{select\-Test}]{\setlength{\rightskip}{0pt plus 5cm}double Q\-C\-P\-Bars\-::select\-Test (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pos}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classQCPBars_a3b4aeb6d87d57dce496f5f83c21eabba}
+This function is used to decide whether a click hits a plottable or not.
+
+{\itshape pos} is a point in pixel coordinates on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. This function returns the shortest pixel distance of this point to the plottable (e.\-g. to the scatters/lines of a graph). If the plottable is either invisible, contains no data or the distance couldn't be determined, -\/1.\-0 is returned. \hyperlink{classQCPAbstractPlottable_a22c69299eb5569e0f6bf084877a37dc4}{set\-Selectable} has no influence on the return value of this function.
+
+If the plottable is represented not by single lines but by an area like \hyperlink{classQCPBars}{Q\-C\-P\-Bars} or \hyperlink{classQCPStatisticalBox}{Q\-C\-P\-Statistical\-Box}, a click inside the area returns a constant value greater zero (typically 99\% of the selection\-Tolerance of the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}). If the click lies outside the area, this function returns -\/1.\-0.
+
+Providing a constant value for area objects allows selecting line objects even when they are obscured by such area objects, by clicking close to the lines (i.\-e. closer than 0.\-99$\ast$selection\-Tolerance).
+
+The actual setting of the selection state is not done by this function. This is handled by the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} when the mouse\-Release\-Event occurs.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractPlottable_afbd5428c2952f59d952e11ab5cd79176}{set\-Selected}, \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classQCPAbstractPlottable_a0fd218d6c4974b6ab05bd2f688818556}{Q\-C\-P\-Abstract\-Plottable}.
+
+\hypertarget{classQCPBars_aa3435aab19e0a49e4e7b41bd36a8d96b}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!set\-Data@{set\-Data}}
+\index{set\-Data@{set\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::set\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Bar\-Data\-Map} $\ast$}]{data, }
+\item[{bool}]{copy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_aa3435aab19e0a49e4e7b41bd36a8d96b}
+Replaces the current data with the provided {\itshape data}.
+
+If {\itshape copy} is set to true, data points in {\itshape data} will only be copied. if false, the plottable takes ownership of the passed data and replaces the internal data pointer with it. This is significantly faster than copying for large datasets. \hypertarget{classQCPBars_a3efded5df4a82ecb201f7c28099fa2e5}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!set\-Data@{set\-Data}}
+\index{set\-Data@{set\-Data}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::set\-Data (
+\begin{DoxyParamCaption}
+\item[{const Q\-Vector$<$ double $>$ \&}]{key, }
+\item[{const Q\-Vector$<$ double $>$ \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_a3efded5df4a82ecb201f7c28099fa2e5}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Replaces the current data with the provided points in {\itshape key} and {\itshape value} tuples. The provided vectors should have equal length. Else, the number of added points will be the size of the smallest vector. \hypertarget{classQCPBars_afec6116579d44d5b706e0fa5e5332507}{\index{Q\-C\-P\-Bars@{Q\-C\-P\-Bars}!set\-Width@{set\-Width}}
+\index{set\-Width@{set\-Width}!QCPBars@{Q\-C\-P\-Bars}}
+\subsubsection[{set\-Width}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Bars\-::set\-Width (
+\begin{DoxyParamCaption}
+\item[{double}]{width}
+\end{DoxyParamCaption}
+)}}\label{classQCPBars_afec6116579d44d5b706e0fa5e5332507}
+Sets the width of the bars in plot (key) coordinates. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.\-cpp\end{DoxyCompactItemize}

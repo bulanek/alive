@@ -1,0 +1,173 @@
+\hypertarget{classDataHandle}{\section{Data\-Handle Class Reference}
+\label{classDataHandle}\index{Data\-Handle@{Data\-Handle}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDataHandle_ae1667fdd8c3e7dc4f949b828302fee0a}{const vector$<$ vector$<$ int $>$ $>$ \& {\bfseries get\-Data\-Points} ()}\label{classDataHandle_ae1667fdd8c3e7dc4f949b828302fee0a}
+
+\item 
+\hypertarget{classDataHandle_a0c73485b27cb84a81e8ce8687cadb0be}{const vector$<$ \hyperlink{classData}{Data} $>$ \& {\bfseries get\-Data} ()}\label{classDataHandle_a0c73485b27cb84a81e8ce8687cadb0be}
+
+\item 
+\hypertarget{classDataHandle_a6fa18d21b416a4a878734fdf80a51161}{int {\bfseries get\-Configuration\-Data} (const string \&conf\-Data\-Name)}\label{classDataHandle_a6fa18d21b416a4a878734fdf80a51161}
+
+\item 
+\hypertarget{classDataHandle_ae851018a34b27dd9864707078b3658a5}{const double $\ast$ {\bfseries get\-Fad\-Parameters} (const int which) const }\label{classDataHandle_ae851018a34b27dd9864707078b3658a5}
+
+\item 
+\hypertarget{classDataHandle_a39aa5ab26ae6cdad163aeede417ca7b8}{const double $\ast$ {\bfseries get\-E\-Fad\-Parameters} (const int which) const }\label{classDataHandle_a39aa5ab26ae6cdad163aeede417ca7b8}
+
+\item 
+\hypertarget{classDataHandle_a0409902e4f2fad832cca5f313db34ee0}{void {\bfseries set\-Fad\-Parameters} (const double $\ast$parameters, gsl\-\_\-matrix $\ast$fad\-Covariant\-Matrix, const Fad\-Function fad\-Function, const int which)}\label{classDataHandle_a0409902e4f2fad832cca5f313db34ee0}
+
+\item 
+\hypertarget{classDataHandle_ac6ff603576fc66ad42fa713109e046ae}{void {\bfseries set\-Data} (const vector$<$ \hyperlink{classData}{Data} $>$ data)}\label{classDataHandle_ac6ff603576fc66ad42fa713109e046ae}
+
+\item 
+\hypertarget{classDataHandle_a50550680c45eb39c456e189a622c284d}{void {\bfseries set\-Data\-Not\-Points} (const int which, const \hyperlink{classData}{Data} \&data)}\label{classDataHandle_a50550680c45eb39c456e189a622c284d}
+
+\item 
+\hypertarget{classDataHandle_a0e83770b88b152cb4e4f04658446e46d}{void {\bfseries set\-Range\-Signal\-Background} (const double $\ast$signal, const double $\ast$background, const int which)}\label{classDataHandle_a0e83770b88b152cb4e4f04658446e46d}
+
+\item 
+\hypertarget{classDataHandle_a1aee5afea4b6ad49fa6eeafa63696600}{set$<$ int $>$ {\bfseries get\-Which\-D\-Type} (const string \&which\-Type)}\label{classDataHandle_a1aee5afea4b6ad49fa6eeafa63696600}
+
+\item 
+\hypertarget{classDataHandle_a88984a5bf8769adecd11ec0df1dddce3}{\hyperlink{classBinReader}{Bin\-Reader} $\ast$ {\bfseries get\-Bin\-Reader} ()}\label{classDataHandle_a88984a5bf8769adecd11ec0df1dddce3}
+
+\item 
+\hypertarget{classDataHandle_a4ef0bd4b1ee9051b4a3d150b740dc6cd}{void {\bfseries create\-Data} (string name)}\label{classDataHandle_a4ef0bd4b1ee9051b4a3d150b740dc6cd}
+
+\item 
+\hypertarget{classDataHandle_a03cfb29618f9d46d4c1207ecfb9a743f}{void {\bfseries create\-Db} (const Q\-String db\-Name, const Q\-String user\-Name=\char`\"{}root\char`\"{}, const Q\-String host\-Name=\char`\"{}localhost\char`\"{}, const Q\-String password=\char`\"{}\char`\"{})}\label{classDataHandle_a03cfb29618f9d46d4c1207ecfb9a743f}
+
+\item 
+\hypertarget{classDataHandle_a5510a603caa75344006b1d8d74e801df}{pair$<$ double, double $>$ {\bfseries compute\-General\-Dose} (const pair$<$ double, double $>$ \&signal, Function function, const double resolution=1e-\/1)}\label{classDataHandle_a5510a603caa75344006b1d8d74e801df}
+
+\item 
+\hypertarget{classDataHandle_a9ee8fcf0076b08f37c6276cdc47a8973}{pair$<$ double, double $>$ {\bfseries compute\-Fad\-Corr} (const int which, const Fad\-Function fad\-Func) const }\label{classDataHandle_a9ee8fcf0076b08f37c6276cdc47a8973}
+
+\item 
+\hypertarget{classDataHandle_ae8f3562cfc85d429977c4fb6dc5559a1}{double {\bfseries get\-Integral} (const int which, const double $\ast$integral\-Range) const }\label{classDataHandle_ae8f3562cfc85d429977c4fb6dc5559a1}
+
+\item 
+\hypertarget{classDataHandle_a923935abbf57334773e277fe78960c19}{std\-::pair$<$ double, double $>$ {\bfseries get\-Signal} (const int which, const double $\ast$signal\-Range=N\-U\-L\-L, const double $\ast$background\-Range=N\-U\-L\-L)}\label{classDataHandle_a923935abbf57334773e277fe78960c19}
+
+\item 
+\hypertarget{classDataHandle_a969c18ae3f2bc8782ab02959a244e965}{void {\bfseries set\-Main\-Window\-Data} (\hyperlink{structMainWindowData}{Main\-Window\-Data} \&data)}\label{classDataHandle_a969c18ae3f2bc8782ab02959a244e965}
+
+\item 
+\hypertarget{classDataHandle_af005735776acdb074212d5c82224a306}{const double $\ast$ {\bfseries compute\-Calibration} (const double $\ast$signal\-Range=N\-U\-L\-L, const double $\ast$background\-Range=N\-U\-L\-L, Function function=Linear)}\label{classDataHandle_af005735776acdb074212d5c82224a306}
+
+\item 
+\hypertarget{classDataHandle_a8aebf9e31648489bed13d51ca965a91a}{const double $\ast$ {\bfseries chi\-Square\-Compute\-G\-S\-L} (const vector$<$ pair$<$ pair$<$ double, double $>$, pair$<$ double, double $>$ $>$ $>$ \&input\-Data, Function function)}\label{classDataHandle_a8aebf9e31648489bed13d51ca965a91a}
+
+\item 
+\hypertarget{classDataHandle_aeeedcdce39700e848e80bef4f3d70a69}{const double $\ast$ {\bfseries get\-Parameters} () const }\label{classDataHandle_aeeedcdce39700e848e80bef4f3d70a69}
+
+\item 
+\hypertarget{classDataHandle_ab020432837359dc871d483c329aa6f2b}{const gsl\-\_\-matrix $\ast$ {\bfseries get\-Covariant\-Matrix} () const }\label{classDataHandle_ab020432837359dc871d483c329aa6f2b}
+
+\item 
+\hypertarget{classDataHandle_ad27a12a6bd6bb3b72c4ea008599c7de1}{Q\-Sql\-Database \& {\bfseries get\-Db} ()}\label{classDataHandle_ad27a12a6bd6bb3b72c4ea008599c7de1}
+
+\item 
+\hypertarget{classDataHandle_a138330c0f643216df97c21ba9a66f39d}{const \hyperlink{structMainWindowData}{Main\-Window\-Data} \& {\bfseries get\-Main\-Window\-Data} ()}\label{classDataHandle_a138330c0f643216df97c21ba9a66f39d}
+
+\item 
+\hypertarget{classDataHandle_a43f94cde8228583790f7c279df9ef8e8}{double {\bfseries get\-Dose\-Unc} (const double signal, const double $\ast$calibration\-Parameters) const }\label{classDataHandle_a43f94cde8228583790f7c279df9ef8e8}
+
+\item 
+\hypertarget{classDataHandle_a2273fbb63ac6b5b88f2fcd10b6578a24}{const double $\ast$ {\bfseries get\-Initial\-Parameters} () const }\label{classDataHandle_a2273fbb63ac6b5b88f2fcd10b6578a24}
+
+\item 
+\hypertarget{classDataHandle_a6ded2edbe17f9dc2ceeb6306c0ae4684}{void {\bfseries set\-Initial\-Parameters} (const double $\ast$initial\-Parameters)}\label{classDataHandle_a6ded2edbe17f9dc2ceeb6306c0ae4684}
+
+\item 
+\hypertarget{classDataHandle_a5f8951671ff5d22b39c0e85931552135}{const vector$<$ vector$<$ int $>$ $>$ \& {\bfseries get\-Values} () const }\label{classDataHandle_a5f8951671ff5d22b39c0e85931552135}
+
+\item 
+\hypertarget{classDataHandle_a6eda37bc92ad512e273d341aff1abbd7}{void {\bfseries set\-Values} (vector$<$ vector$<$ int $>$ $>$ \&values)}\label{classDataHandle_a6eda37bc92ad512e273d341aff1abbd7}
+
+\item 
+\hypertarget{classDataHandle_a16aa7bd6d05c938a919e8c36a570890d}{void {\bfseries set\-Used\-Measurements} (const set$<$ int $>$ measurements)}\label{classDataHandle_a16aa7bd6d05c938a919e8c36a570890d}
+
+\item 
+\hypertarget{classDataHandle_a8dd3496a7e7c942f5833f074a4045d3b}{const set$<$ int $>$ \& {\bfseries get\-Used\-Measurements} ()}\label{classDataHandle_a8dd3496a7e7c942f5833f074a4045d3b}
+
+\item 
+\hypertarget{classDataHandle_a34932be9a3d0e4dd5eaf1ebc6644c65d}{void {\bfseries set\-Fad\-Correction} (const pair$<$ double, double $>$ \&fad\-Correction)}\label{classDataHandle_a34932be9a3d0e4dd5eaf1ebc6644c65d}
+
+\item 
+\hypertarget{classDataHandle_ae42ee5520c137810b47aae715a61b5e4}{const pair$<$ double, double $>$ \& {\bfseries get\-Fad\-Correction} () const }\label{classDataHandle_ae42ee5520c137810b47aae715a61b5e4}
+
+\item 
+\hypertarget{classDataHandle_a9ce1a40b516cbdce59cafee6d51e9cde}{void {\bfseries set\-Time\-Unit} (const Time\-Unit time\-Unit)}\label{classDataHandle_a9ce1a40b516cbdce59cafee6d51e9cde}
+
+\item 
+\hypertarget{classDataHandle_a0337fa2debd248143d1768223e39c34d}{Time\-Unit {\bfseries get\-Time\-Unit} () const }\label{classDataHandle_a0337fa2debd248143d1768223e39c34d}
+
+\item 
+\hypertarget{classDataHandle_a1955ab18952eddd0523e11d0bb786323}{void {\bfseries set\-Function} (const Function function)}\label{classDataHandle_a1955ab18952eddd0523e11d0bb786323}
+
+\item 
+\hypertarget{classDataHandle_aa42c616fdecac50471e58244caa24bbd}{Function {\bfseries get\-Function} () const }\label{classDataHandle_aa42c616fdecac50471e58244caa24bbd}
+
+\item 
+\hypertarget{classDataHandle_a845b2bb0537fb34e4ad037beb453e36b}{void {\bfseries set\-Database\-Path} (const string \&database\-Path)}\label{classDataHandle_a845b2bb0537fb34e4ad037beb453e36b}
+
+\item 
+\hypertarget{classDataHandle_a0a6efa3f5bc4f09a72299135e91b7c36}{const string \& {\bfseries get\-Database\-Path} () const }\label{classDataHandle_a0a6efa3f5bc4f09a72299135e91b7c36}
+
+\item 
+\hypertarget{classDataHandle_a302e1fc204cb37b5bb5ad339e8366160}{void {\bfseries set\-Database\-Name} (const string \&database\-Name)}\label{classDataHandle_a302e1fc204cb37b5bb5ad339e8366160}
+
+\item 
+\hypertarget{classDataHandle_aea4035af37d6f02460fcabd3667738f9}{const string \& {\bfseries get\-Database\-Name} () const }\label{classDataHandle_aea4035af37d6f02460fcabd3667738f9}
+
+\item 
+\hypertarget{classDataHandle_a3c279ceb4671d757033fa1211f594bff}{pair$<$ double, double $>$ {\bfseries get\-Dose\-Corrected} (const pair$<$ double, double $>$ \&dose\-Unc, const pair$<$ double, double $>$ fad\-Correction=pair$<$ double, double $>$(0, 0))}\label{classDataHandle_a3c279ceb4671d757033fa1211f594bff}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDataHandle_ace9a04d469e246e810d0953801eed10c}{static \hyperlink{classDataHandle}{Data\-Handle} $\ast$ {\bfseries get\-Instance} ()}\label{classDataHandle_ace9a04d469e246e810d0953801eed10c}
+
+\item 
+\hypertarget{classDataHandle_af126956f60c91b8a1a6e05c5d43c1c99}{static T\-O\-O\-L\-S\-::func {\bfseries get\-Function} (Function function)}\label{classDataHandle_af126956f60c91b8a1a6e05c5d43c1c99}
+
+\item 
+\hypertarget{classDataHandle_af87301e4edc221aefa777be9ec348368}{static T\-O\-O\-L\-S\-::fad\-Func {\bfseries get\-Fad\-Function} (Fad\-Function function)}\label{classDataHandle_af87301e4edc221aefa777be9ec348368}
+
+\item 
+\hypertarget{classDataHandle_ab0c8ed010b5f8a04bbb6bfa0055cda3b}{static T\-O\-O\-L\-S\-::e\-Fad\-Func {\bfseries get\-E\-Fad\-Function} (E\-Fad\-Function function)}\label{classDataHandle_ab0c8ed010b5f8a04bbb6bfa0055cda3b}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDataHandle_a7cefcf02c9a59b111225dfc5491a8160}{static const vector$<$ string $>$ {\bfseries F\-I\-T\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S}}\label{classDataHandle_a7cefcf02c9a59b111225dfc5491a8160}
+
+\item 
+\hypertarget{classDataHandle_a8ea25e4b96194720f7f1133d9b560637}{static const vector$<$ string $>$ {\bfseries F\-I\-T\-\_\-\-F\-O\-R\-M\-U\-L\-A}}\label{classDataHandle_a8ea25e4b96194720f7f1133d9b560637}
+
+\item 
+\hypertarget{classDataHandle_af754b84ee488b481af4f4ada4e7c7a97}{static bool {\bfseries I\-S\-\_\-\-N\-E\-W}}\label{classDataHandle_af754b84ee488b481af4f4ada4e7c7a97}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDataHandle_a1e7c71a630f82999e0d0899a03a17f2b}{ostream \& {\bfseries operator$<$$<$} (ostream \&stream, const \hyperlink{classDataHandle}{Data\-Handle} \&data\-Handle)}\label{classDataHandle_a1e7c71a630f82999e0d0899a03a17f2b}
+
+\item 
+\hypertarget{classDataHandle_a405632c8edc40837fe270361ea4a7d05}{ostream \& {\bfseries operator$<$$<$} (ostream \&stream, const \hyperlink{classDataHandle}{Data\-Handle} $\ast$data\-Handle)}\label{classDataHandle_a405632c8edc40837fe270361ea4a7d05}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/datahandle.\-h\end{DoxyCompactItemize}

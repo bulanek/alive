@@ -1,0 +1,92 @@
+\begin{DoxyAuthor}{Author}
+Boris Bulanek  National Radiation Protection Institute, Bartoskova 28, 140 00, Praha 4  \href{mailto:boris.bulanek@suro.cz}{\tt boris.\-bulanek@suro.\-cz}  00420 226 518 279 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/19/13
+\end{DoxyDate}
+\hypertarget{index_about}{}\section{About the program}\label{index_about}
+Program Alive ({\bfseries A}nalyst {\bfseries li}ght {\bfseries ve}rsion) is created in order to provide simple and fast O\-S\-L dose estimation. Program allow user to calculate a dose using at least one calibration and one natural signal. Signal is corrected on fading. Definition of a signal value is tested by \hyperlink{index_plateau_test}{Plateau test}.
+
+A binary file from the Sequence reader of \href{http://www.nutech.dtu.dk/Produkter/Dosimetri/NUK_instruments/TL_OSL_readers.aspx?sc_lang=en}{\tt Risø software} can be used as an input. Program allow user to obtain and store data using \href{http://www.sqlite.org}{\tt Sqlite} database. User can dump all data to txt file as well.
+
+The program uses some additional packages\-:
+\begin{DoxyItemize}
+\item U\-I (User Interface) framework \href{http://qt-project.org/}{\tt Qt}
+\item a package for minimization \href{http://www.gnu.org/software/gsl/}{\tt G\-S\-L}
+\item collection of {\ttfamily C++} tools \href{http://www.boost.org/}{\tt Boost}
+\item database software called \href{http://www.sqlite.org}{\tt Sqlite}
+\end{DoxyItemize}\hypertarget{index_Installation}{}\section{Installation}\label{index_Installation}
+A single executable file {\bfseries alive.\-exe} is created for Windows (7 or X\-P) users using \href{http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.prftungd%2Fdoc%2Fprftungd%2Fwhen_dyn_linking_static_linking.htm}{\tt static linking}. Linux users can execute {\ttfamily alive.\-exe} using program \href{http://www.winehq.org/}{\tt wine}. I haven't tried to install the program on Mac but I believe that the installation is similar to installation on Linux. \hypertarget{index_Linux}{}\subsection{Linux}\label{index_Linux}
+All of needed packages have to be in official repositories of your distribution as all of them are open source programs. For example in case of \href{https://www.archlinux.org/}{\tt Arch Linux} distribution, you have only to write down command like\-:\par
+ {\ttfamily sudo pacman -\/\-S cmake boost boost-\/build boost-\/libs gsl qt sqlite3 sqliteman}.\par
+ After installation you have to go to the src directory and e.\-g. follow these steps\-:\par
+ {\ttfamily  mkdir build\par
+ cd build\par
+ qmake-\/qt4 ..\par
+ make\par
+ ./alive\par
+ } This approach uses shared library linking where the size of the executable {\ttfamily alive} is considerably smaller and you can use all of additional packages mentioned in the beginning of the section.\hypertarget{index_sql_win}{}\subsection{Sqlite database}\label{index_sql_win}
+All the information from binary file and some additional parameters can be stored in a simple database called \href{http://www.sqlite.org}{\tt Sqlite}. There exist graphical tool for working with a Sqlite database called \href{http://www.sqliteman.com}{\tt Sqliteman}.\hypertarget{index_running_code}{}\section{Program user guide}\label{index_running_code}
+\hypertarget{index_algorithm}{}\subsection{Algorithm}\label{index_algorithm}
+The signal is defined as a sum of first $N$ channels signal value minus signal of the next $N$ channels due to background substraction. Error of signal in channels is given by Poisson distribution. In order to compute dose of the \char`\"{}\-Natural\char`\"{} signal, there is minimum one \char`\"{}\-Dose\char`\"{} signal with known irradiation time required. User can choose functions following calibration functions\-:
+\begin{DoxyItemize}
+\item linear $a+bx$; used by default; in case of one calibration point only $a=0$
+\item quadratic $a+bx+cx^2$
+\item cubic $a+bx+cx^2+dx^3$
+\item exponential $a*\exp((x-b)/|c|)$
+\item line+exponential $a*\exp((x-b)/|c|)+d*x$
+\end{DoxyItemize}
+
+Parameters $a,\dots ,d$ are written in program as $[0],\dots ,[3]$.
+
+The proper parameters of function are estimated using $\chi^2$ minimization. The error of the dose is computed using assumption of linear behaviour of function at the point of the signal in error range\-: $\delta(dose)=\delta(signal)/\frac{\partial f(x)}{\partial x}_{|f(x)=signal}$.
+
+The fading function value is defined as a value which you have to multiply by the hypothetical unfaded signal value in order to get the measured (faded) value. \par
+ User can choose one of three possible fading functions for every measurement\-:
+\begin{DoxyItemize}
+\item constant $a$ used default with $a=1$ (no fading)
+\item logarithmic $a-b\ln(t)$
+\item exponential $a*t^{-b}$ , where $t$ is the time between irradiation and measurement.\par
+ Fading parameters $a,b$ are written in the program as $fad\_0,fad\_1$. User can adjust as the fading parameters as the time-\/unit. Dose $D$ is corrected by fading of signal itself and fading of the calibration signal using formula\-:\par
+ $D_{corrected}=\frac{F_{calibration}}{F_{natural}}\cdot D_{uncorrected}$, where $F$ is previously mentioned fading correction. Because of assumption of the same time between calibration irradiation and measurement of the signal for all the calibration points there is no separate correction of calibration signal. It can be easily changed in the future.
+\end{DoxyItemize}\hypertarget{index_running_program}{}\subsection{Running program}\label{index_running_program}
+The program is executed by opening the binary file {\ttfamily alive.\-exe}. The program is reading a configuration file {\ttfamily alive.\-xml} where e.\-g. the default path to the database is written. It has to be in the same directory as an executable file. After executing alive executable and open file (database entry) through {\ttfamily  File-\/$>$Open File (Db) } you will see \par
+ 
+\begin{DoxyEnumerate}
+\item Graphs of all measurements in the binary file (database). \par
+
+\item The table of single measurements information. You can select, which variable to show by clicking on the button {\ttfamily Variables}. Then you will see the window with all the variables. They are divided in two groups. First group are the variables, which are stored in the origin binary file created by {\ttfamily Sequence Viewer}. The second group are variables created for this program. While clicking and staying with the mouse on the name, you can see the help information. This information is provided by the manual for {\ttfamily Analyst} by Risø. The same names of variables are used while saving information into {\ttfamily Sqlite} database.
+\end{DoxyEnumerate}
+
+You can select a subset of measurements for analysis editing a line {\ttfamily  Edit Measurement } in a main window. You can select as a single measurement as a range of measurements (e.\-g. 1,2-\/4). In order to adjust informations as irradiation and measurement time due to fading correction or irradiation time and type of data for calibration and subsequent dose estimation, you have to edit the needed variables by selecting proper measurement number and clicking on {\ttfamily Edit Measurement} button.  After adjusting of all parameters, you can see the signal-\/dose graph with calibration fit by clicking on {\ttfamily Dose estimation} button.  You can see the table with variables needed to estimate uncorrected signal from data(signal and background range), fading correction (fading function and parameters) and informations about data type and irradiation time. You can select time unit of time in a fading function, show uncorrected signal data by clicking on {\ttfamily  Show signal data}, change calibration function, show parameters of calibration function (you have to click on replot in order to change the parameters) by clicking on {\ttfamily  Fit result} button. By clicking on {\ttfamily  Compute Dose} button and writting down the particular measurement, you will see the table of computed dose with(out) fading correction and fading correction itself. \par
+
+
+In order to save data for further processing you can save all the data to the txt file by clicking on {\ttfamily  File-\/$>$Save txt} in a main window. Until now there is not a possibility to read such a txt file for further processing. But you have a possibility to store and reuse of all data by using the {\ttfamily  Sqlite } database. In order to save all the information to a database, you have first to create the database. You can save the database by clicking {\ttfamily  File-\/$>$Save db} in main window.  You will see the window where you have to type the name of the database and in case of saving data the name of database entry. After typing the database name and clicking on the {\ttfamily Connect to database} button you will see the table of all already saved binary files. Right clicking on the particular line, you will see the possibility of deletion of {\ttfamily Sqlite} data from particular binary file with deletion of all subtables or looking deeper on measurements for particular saved binary file. After right clicking on the particular measurement, you can look on the measurement data. All the tables are editable and by editing them you are changing directly the information in the {\ttfamily Sqlite} database. More about organization of database tables is written in section \hyperlink{index_db_tables}{Database tables}.\hypertarget{index_plateau_test}{}\subsection{Plateau test}\label{index_plateau_test}
+Clicking on the {\ttfamily \char`\"{}\-Show Plateau\char`\"{}} button in the main window, you can see the graph of the dependence of the calculated uncorrected dose on the range of a signal and background interval. The range value {\ttfamily V\-A\-L\-U\-E} on the x-\/axis means that the signal for the dose calculation is evaluated as integral (0,{\ttfamily V\-A\-L\-U\-E}) minus background integral ({\ttfamily V\-A\-L\-U\-E+1},2$\ast${\ttfamily V\-A\-L\-U\-E+1}). \hypertarget{index_db_tables}{}\subsection{Database tables}\label{index_db_tables}
+All of the tables are generated automaticaly while saving the database. Tables in the {\ttfamily Sqlite} database are divided into three levels. First-\/level table called I\-N\-F\-O\-\_\-1 is a table of saved binary files. Every line is connected to informations of particular binary file. This table included only information like I\-D(identification number, automaticaly incrementaly generated from 1), number of measurements, time of saving data. Second-\/level of tables called I\-N\-F\-O\-\_\-2\-\_\-$<$\-I\-D$>$ are tables of information for particular file where I\-D is mentioned identification number. Every line is connected to information of one single measurement of original binary file. This tables include information like data type of measurement, luminiscence type, irradiation time etc. The third level of tables called I\-N\-F\-O\-\_\-3\-\_\-$<$\-I\-D$>$\-\_\-$<$num\-\_\-measurement$>$ are tables of data of particular measurement where num\-\_\-measurement is a number of measurement of particular database entry from binary file with identification number I\-D.\par
+
+
+E.\-g. if i've saved two binary files into {\ttfamily Sqlite} database and want to see data of the fourth measurement of the second binary file, have a look into {\ttfamily I\-N\-F\-O\-\_\-1} table and look on the I\-D of the second measurement (have to be 2), and show the {\ttfamily I\-N\-F\-O\-\_\-3\-\_\-2\-\_\-4}. If you are using the {\ttfamily Sqlite} database window table of the program ({\ttfamily File-\/$>$Open db} or {\ttfamily File-\/$>$Save db}) you can show this table by clicking on the line with the correct I\-D in I\-N\-F\-O\-\_\-1 table and then on the line of the right measurement in the second-\/level table.
+
+There is a possibility to dump all the information from run to the txt file.\hypertarget{index_devel}{}\section{Developement of the program}\label{index_devel}
+The code is developed using C++ programming language and files developed in {\ttfamily C++} are all file with .cc (source) and .h (header) sufix. Files with .ui sufix are created by using Qt designer tools for U\-I (User interface) developement. Compilation generate files with ui and moc prefixes (more \href{http://qt-project.org/doc/qt-4.8/qmake-manual.html}{\tt here}).
+
+The documentation of the code is created by \href{http://www.stack.nl/~dimitri/doxygen/}{\tt doxygen}. This document page is created by it as well. Clicking on the {\ttfamily  \char`\"{}\-Data Structures -\/$>$ Class Hierarchy\char`\"{} } at the top of this page you can see the objects (classes) of this program. Following is the brief description of all classes.\hypertarget{index_brief_dev}{}\subsection{Program structure overview}\label{index_brief_dev}
+Obtain data from binary file is provided by \hyperlink{classBinReader}{Bin\-Reader} class. Storage of data for one single measurement is provided by \hyperlink{classData}{Data} class. Computing of needed observables asi the dose and fading correction is provided by \hyperlink{classDataHandle}{Data\-Handle} class. Reading and writting the {\ttfamily Sqlite} database is provided by \hyperlink{classSqlHandle}{Sql\-Handle} class.
+
+Classes which provide the user interface are classes inherited by Q\-Main\-Window and Q\-Dialog. There are also .ui files with the same name providing the design of windows only.
+\begin{DoxyItemize}
+\item \hyperlink{classMainWindow}{Main\-Window} is the class of the window, which you can see after executing the program executable.
+\item \hyperlink{classInfo}{Info} is connected to the window, which you can see after clicking on Edit Measurement button in \hyperlink{classMainWindow}{Main\-Window}.
+\item \hyperlink{classCalibration}{Calibration} is connected to the window, which you can see after clicking on Dose estimation button in \hyperlink{classMainWindow}{Main\-Window}
+\item \hyperlink{classPlateau}{Plateau} is connected to the windo, which you can see after clicking on \hyperlink{classPlateau}{Plateau} button in \hyperlink{classMainWindow}{Main\-Window}
+\item \hyperlink{classSqlConnection}{Sql\-Connection} is connected to the window, which you can see while opening or saving {\ttfamily Sqlite} database
+\item \hyperlink{classDbSave}{Db\-Save} is connected to the window with progress bar, which appeares while saving the database entry
+\item \hyperlink{classMyThread}{My\-Thread} is a class withou the .ui file which provide separate thread for saving the database entry
+\end{DoxyItemize}
+
+In order to develope program you have to develope an user interface as well. For that purpose you can use {\ttfamily Qt\-Designer} or the developement tool \href{http://qt.digia.com/Product/Developer-Tools/}{\tt Qt\-Creator}.
+
+The code itself has not been documented until now. Everybody is welcome to help with the code developement. The developement of the code and documentation can and be managed using \href{http://git-scm.com/}{\tt git} version system and all the code with possible developement branches stored in \href{https://github.com/bulanek/alive}{\tt https\-://github.\-com/bulanek/alive}. In order to commit your code and documentation changes to the web page which will be the storage of the newest code with all the history changes and possible branches you have to create (free) \href{https://github.com/}{\tt Git\-Hub} account and send me an email with your user name. I will then put yourself to the list of contributors.
+
+If you have any question, please send me a mail to\-: \href{mailto:boris.bulanek@suro.cz}{\tt boris.\-bulanek@suro.\-cz} 

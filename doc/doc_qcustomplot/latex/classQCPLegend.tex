@@ -1,0 +1,909 @@
+\hypertarget{classQCPLegend}{\section{Q\-C\-P\-Legend Class Reference}
+\label{classQCPLegend}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}
+}
+
+
+Manages a legend inside a \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}.  
+
+
+Inheritance diagram for Q\-C\-P\-Legend\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQCPLegend}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049f}{Position\-Style} \{ \\*
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}, 
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa1f5bb82f19be99ee3722a540b76c3c85}{ps\-Top\-Left}, 
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa7ca820289c7938092f497fbd4d706f5d}{ps\-Top}, 
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadc969b13706ba4fd802bbc27e0abb18a}{ps\-Top\-Right}, 
+\\*
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa71969c414ec15afabe2761131ad85766}{ps\-Right}, 
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049faf4120842dbc223cf8523188f15146d31}{ps\-Bottom\-Right}, 
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fac32970f4bf28ef780f15365abcc9fbd3}{ps\-Bottom}, 
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa36e2c1900a0d39596ee26074c7815ee9}{ps\-Bottom\-Left}, 
+\\*
+\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fac9c7c1c0f8d1894792fbb71854002ebe}{ps\-Left}
+ \}
+\item 
+enum \hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1}{Selectable\-Part} \{ \hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7}{sp\-None} = 0, 
+\hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4}{sp\-Legend\-Box} = 0x001, 
+\hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7}{sp\-Items} = 0x002
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classQCPLegend_a286149b644d5f5c884a0140219d979f6}{selection\-Changed} (Q\-C\-P\-Legend\-::\-Selectable\-Parts selection)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPLegend_a5dc42d73df80e7294414aee1170c4d2b}{Q\-C\-P\-Legend} (\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$parent\-Plot)
+\item 
+\hypertarget{classQCPLegend_a8ffd92df86ddf43696d95f04a20e3226}{Q\-Pen {\bfseries border\-Pen} () const }\label{classQCPLegend_a8ffd92df86ddf43696d95f04a20e3226}
+
+\item 
+\hypertarget{classQCPLegend_a7e5d2766e7d724f399022be8a4e8a2cb}{Q\-Brush {\bfseries brush} () const }\label{classQCPLegend_a7e5d2766e7d724f399022be8a4e8a2cb}
+
+\item 
+\hypertarget{classQCPLegend_a5cf8b840bc02f7bf4edb8dde400d0f41}{Q\-Font {\bfseries font} () const }\label{classQCPLegend_a5cf8b840bc02f7bf4edb8dde400d0f41}
+
+\item 
+\hypertarget{classQCPLegend_ad60a058af7491f6b140c104c6a0f9458}{Q\-Color {\bfseries text\-Color} () const }\label{classQCPLegend_ad60a058af7491f6b140c104c6a0f9458}
+
+\item 
+\hypertarget{classQCPLegend_ae31325a461a55e24f63e63e1419406e8}{\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049f}{Position\-Style} {\bfseries position\-Style} () const }\label{classQCPLegend_ae31325a461a55e24f63e63e1419406e8}
+
+\item 
+\hypertarget{classQCPLegend_a2a70d25376ce4a38949900de6bd6b771}{Q\-Point {\bfseries position} () const }\label{classQCPLegend_a2a70d25376ce4a38949900de6bd6b771}
+
+\item 
+\hypertarget{classQCPLegend_a71c85db6086156ba661006c9c6f295ee}{bool {\bfseries auto\-Size} () const }\label{classQCPLegend_a71c85db6086156ba661006c9c6f295ee}
+
+\item 
+\hypertarget{classQCPLegend_a0b03b2516ddb99965125e20ba1674e78}{Q\-Size {\bfseries size} () const }\label{classQCPLegend_a0b03b2516ddb99965125e20ba1674e78}
+
+\item 
+\hypertarget{classQCPLegend_ad8c34b228818aaf8de59678bf66a0b65}{Q\-Size {\bfseries minimum\-Size} () const }\label{classQCPLegend_ad8c34b228818aaf8de59678bf66a0b65}
+
+\item 
+\hypertarget{classQCPLegend_a772a4e26da843ef51be0dba3b8886560}{int {\bfseries padding\-Left} () const }\label{classQCPLegend_a772a4e26da843ef51be0dba3b8886560}
+
+\item 
+\hypertarget{classQCPLegend_acda9542f0f2ea1aa2b5055296983830f}{int {\bfseries padding\-Right} () const }\label{classQCPLegend_acda9542f0f2ea1aa2b5055296983830f}
+
+\item 
+\hypertarget{classQCPLegend_a4fb5c81e387cd69d24b5e5281ae8df66}{int {\bfseries padding\-Top} () const }\label{classQCPLegend_a4fb5c81e387cd69d24b5e5281ae8df66}
+
+\item 
+\hypertarget{classQCPLegend_ad05073acac01b5668f49b853c74a6eaf}{int {\bfseries padding\-Bottom} () const }\label{classQCPLegend_ad05073acac01b5668f49b853c74a6eaf}
+
+\item 
+\hypertarget{classQCPLegend_a4d1b0a9189b2759df1d11ebbfda63ea2}{int {\bfseries margin\-Left} () const }\label{classQCPLegend_a4d1b0a9189b2759df1d11ebbfda63ea2}
+
+\item 
+\hypertarget{classQCPLegend_ab61f154c055f84928eda616362c75e1e}{int {\bfseries margin\-Right} () const }\label{classQCPLegend_ab61f154c055f84928eda616362c75e1e}
+
+\item 
+\hypertarget{classQCPLegend_a9702d38c10a36e89225e7dd8828ccb9b}{int {\bfseries margin\-Top} () const }\label{classQCPLegend_a9702d38c10a36e89225e7dd8828ccb9b}
+
+\item 
+\hypertarget{classQCPLegend_aff09593e267f188d9ac23469afc18293}{int {\bfseries margin\-Bottom} () const }\label{classQCPLegend_aff09593e267f188d9ac23469afc18293}
+
+\item 
+\hypertarget{classQCPLegend_aba70a2a3b1f6aff62ec9338372afd681}{int {\bfseries item\-Spacing} () const }\label{classQCPLegend_aba70a2a3b1f6aff62ec9338372afd681}
+
+\item 
+\hypertarget{classQCPLegend_a27dfb770b14adc0e8811bef8129780a5}{Q\-Size {\bfseries icon\-Size} () const }\label{classQCPLegend_a27dfb770b14adc0e8811bef8129780a5}
+
+\item 
+\hypertarget{classQCPLegend_a9d6d07042a284c4ba5f9e3cb5c9281ef}{int {\bfseries icon\-Text\-Padding} () const }\label{classQCPLegend_a9d6d07042a284c4ba5f9e3cb5c9281ef}
+
+\item 
+\hypertarget{classQCPLegend_a2c4719d79630b0d0c75ef2333c59a912}{Q\-Pen {\bfseries icon\-Border\-Pen} () const }\label{classQCPLegend_a2c4719d79630b0d0c75ef2333c59a912}
+
+\item 
+\hypertarget{classQCPLegend_a459f39581d1eba9ee80557837601e21c}{Selectable\-Parts {\bfseries selectable} () const }\label{classQCPLegend_a459f39581d1eba9ee80557837601e21c}
+
+\item 
+\hypertarget{classQCPLegend_a10948e896935ad14f374e6f712afaae9}{Selectable\-Parts {\bfseries selected} () const }\label{classQCPLegend_a10948e896935ad14f374e6f712afaae9}
+
+\item 
+\hypertarget{classQCPLegend_a63156bc4ce64431bada7415cfa2b4dd1}{Q\-Pen {\bfseries selected\-Border\-Pen} () const }\label{classQCPLegend_a63156bc4ce64431bada7415cfa2b4dd1}
+
+\item 
+\hypertarget{classQCPLegend_a165630cad7e41f89b54f65cdef3310e8}{Q\-Pen {\bfseries selected\-Icon\-Border\-Pen} () const }\label{classQCPLegend_a165630cad7e41f89b54f65cdef3310e8}
+
+\item 
+\hypertarget{classQCPLegend_a600dde0d207ddc6f5a603767360cceac}{Q\-Brush {\bfseries selected\-Brush} () const }\label{classQCPLegend_a600dde0d207ddc6f5a603767360cceac}
+
+\item 
+\hypertarget{classQCPLegend_a4c1b08fc0afacb4ffd54f6a49737fa77}{Q\-Font {\bfseries selected\-Font} () const }\label{classQCPLegend_a4c1b08fc0afacb4ffd54f6a49737fa77}
+
+\item 
+\hypertarget{classQCPLegend_a08005f3c17728c2c4e23b8ffc0842ffb}{Q\-Color {\bfseries selected\-Text\-Color} () const }\label{classQCPLegend_a08005f3c17728c2c4e23b8ffc0842ffb}
+
+\item 
+void \hyperlink{classQCPLegend_a866a9e3f5267de7430a6c7f26a61db9f}{set\-Border\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPLegend_a497bbcd38baa3598c08e2b3f48103f23}{set\-Brush} (const Q\-Brush \&brush)
+\item 
+void \hyperlink{classQCPLegend_aa4cda8499e3cb0f3be415edc02984c73}{set\-Font} (const Q\-Font \&font)
+\item 
+void \hyperlink{classQCPLegend_ae1eb239ff4a4632fe1b6c3e668d845c6}{set\-Text\-Color} (const Q\-Color \&color)
+\item 
+void \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} (\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049f}{Position\-Style} legend\-Position\-Style)
+\item 
+void \hyperlink{classQCPLegend_a228788ae4caa5b5b269309bb32b54046}{set\-Position} (const Q\-Point \&pixel\-Position)
+\item 
+void \hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size} (bool on)
+\item 
+void \hyperlink{classQCPLegend_ae1d42dbf91b0046f7324dd07a16dd43f}{set\-Size} (const Q\-Size \&size)
+\item 
+void \hyperlink{classQCPLegend_a17d4fdebb8dd8a4b0afcd56555c78f6e}{set\-Size} (int width, int height)
+\item 
+void \hyperlink{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{set\-Minimum\-Size} (const Q\-Size \&size)
+\item 
+void \hyperlink{classQCPLegend_ae0e264950b0df9abd8e840e513df737b}{set\-Minimum\-Size} (int width, int height)
+\item 
+void \hyperlink{classQCPLegend_afde46ae0e759e58380bdb01df4aab1ce}{set\-Padding\-Left} (int padding)
+\item 
+void \hyperlink{classQCPLegend_a6d8b14e2f92130f8af1d66dd28691736}{set\-Padding\-Right} (int padding)
+\item 
+void \hyperlink{classQCPLegend_a6f8c6efe6a0a446ece7c1c44a7e31177}{set\-Padding\-Top} (int padding)
+\item 
+void \hyperlink{classQCPLegend_a396fa209cb63f6fa650951c291af8d0f}{set\-Padding\-Bottom} (int padding)
+\item 
+void \hyperlink{classQCPLegend_a6dec710ef473c79c96e92feb7528ae7d}{set\-Padding} (int left, int right, int top, int bottom)
+\item 
+void \hyperlink{classQCPLegend_ab4993084ae32855a5b1d8436b5f90721}{set\-Margin\-Left} (int margin)
+\item 
+void \hyperlink{classQCPLegend_a6da7cc21b66f427b7cebe2c180541f4b}{set\-Margin\-Right} (int margin)
+\item 
+void \hyperlink{classQCPLegend_a264f28f7983dbc9e3a063001eebfff2d}{set\-Margin\-Top} (int margin)
+\item 
+void \hyperlink{classQCPLegend_a1b8f2a9d47982cd8d7a126be026b831a}{set\-Margin\-Bottom} (int margin)
+\item 
+void \hyperlink{classQCPLegend_afa9e9681dbe3fa05302353a78cb34588}{set\-Margin} (int left, int right, int top, int bottom)
+\item 
+void \hyperlink{classQCPLegend_a1bb966ee2b5f05b9d7e4866d2b1114c0}{set\-Item\-Spacing} (int spacing)
+\item 
+void \hyperlink{classQCPLegend_a8b0740cce488bf7010da6beda6898984}{set\-Icon\-Size} (const Q\-Size \&size)
+\item 
+void \hyperlink{classQCPLegend_a96b1a37fd4ee6a9778e6e54fe56ab6c2}{set\-Icon\-Size} (int width, int height)
+\item 
+void \hyperlink{classQCPLegend_a62973bd69d5155e8ea3141366e8968f6}{set\-Icon\-Text\-Padding} (int padding)
+\item 
+void \hyperlink{classQCPLegend_a2f2c93d18a651f4ff294bb3f026f49b8}{set\-Icon\-Border\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable} (const Selectable\-Parts \&selectable)
+\item 
+void \hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected} (const Selectable\-Parts \&selected)
+\item 
+void \hyperlink{classQCPLegend_a2c35d262953a25d96b6112653fbefc88}{set\-Selected\-Border\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPLegend_ade93aabe9bcccaf9cf46cec22c658027}{set\-Selected\-Icon\-Border\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPLegend_a875227f3219c9799464631dec5e8f1bd}{set\-Selected\-Brush} (const Q\-Brush \&brush)
+\item 
+void \hyperlink{classQCPLegend_ab580a01c3c0a239374ed66c29edf5ad2}{set\-Selected\-Font} (const Q\-Font \&font)
+\item 
+void \hyperlink{classQCPLegend_a7674dfc7a1f30e1abd1018c0ed45e0bc}{set\-Selected\-Text\-Color} (const Q\-Color \&color)
+\item 
+\hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ \hyperlink{classQCPLegend_a454272d7094437beb3278a2294006da5}{item} (int index) const 
+\item 
+\hyperlink{classQCPPlottableLegendItem}{Q\-C\-P\-Plottable\-Legend\-Item} $\ast$ \hyperlink{classQCPLegend_a5ee80cf83f65e3b6dd386942ee3cc1ee}{item\-With\-Plottable} (const \hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable} $\ast$plottable) const 
+\item 
+int \hyperlink{classQCPLegend_a198228e9cdc78d3a3c306fa6763d0404}{item\-Count} () const 
+\item 
+bool \hyperlink{classQCPLegend_a380dd19eb631592e1ebb9b24cc5b398a}{has\-Item} (\hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$\hyperlink{classQCPLegend_a454272d7094437beb3278a2294006da5}{item}) const 
+\item 
+bool \hyperlink{classQCPLegend_a2eb1d24bdf5658e64962a656303fd61a}{has\-Item\-With\-Plottable} (const \hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable} $\ast$plottable) const 
+\item 
+bool \hyperlink{classQCPLegend_a3ab274de52d2951faea45a6d975e6b3f}{add\-Item} (\hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$\hyperlink{classQCPLegend_a454272d7094437beb3278a2294006da5}{item})
+\item 
+bool \hyperlink{classQCPLegend_ac91595c3eaa746fe6321d2eb952c63bb}{remove\-Item} (int index)
+\item 
+bool \hyperlink{classQCPLegend_a2aea4ec6da2d454dd0b241a254d65082}{remove\-Item} (\hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$\hyperlink{classQCPLegend_a454272d7094437beb3278a2294006da5}{item})
+\item 
+void \hyperlink{classQCPLegend_a24795c7250eb5214fcea16b7217b4dfb}{clear\-Items} ()
+\item 
+Q\-List$<$ \hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ $>$ \hyperlink{classQCPLegend_ac93eaf236e911d67aa8b88942ef45c5e}{selected\-Items} () const 
+\item 
+void \hyperlink{classQCPLegend_ad7fd50e5478b0da477d9cc74b7204caf}{re\-Arrange} ()
+\item 
+bool \hyperlink{classQCPLegend_a6388446e0906b21ebf3a92310570e73e}{select\-Test\-Legend} (const Q\-Point\-F \&pos) const 
+\item 
+\hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ \hyperlink{classQCPLegend_a8bbb0b003cc93f07dff1d69416b606f0}{select\-Test\-Item} (const Q\-Point pos) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPLegend_ac214f7503cf46225f08f91003f554bdd}{virtual void {\bfseries update\-Selection\-State} ()}\label{classQCPLegend_ac214f7503cf46225f08f91003f554bdd}
+
+\item 
+\hypertarget{classQCPLegend_a44cdc6af6cd6e62a2bd827c3236c7261}{virtual bool {\bfseries handle\-Legend\-Selection} (Q\-Mouse\-Event $\ast$event, bool additive\-Selection, bool \&modified)}\label{classQCPLegend_a44cdc6af6cd6e62a2bd827c3236c7261}
+
+\item 
+\hypertarget{classQCPLegend_a26307f532c3458b379663b7d517a5f47}{virtual void {\bfseries apply\-Default\-Antialiasing\-Hint} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter) const }\label{classQCPLegend_a26307f532c3458b379663b7d517a5f47}
+
+\item 
+\hypertarget{classQCPLegend_a4462151bf875ca85fa3815457c683fdc}{virtual void {\bfseries draw} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter)}\label{classQCPLegend_a4462151bf875ca85fa3815457c683fdc}
+
+\item 
+\hypertarget{classQCPLegend_aefb91ff99ea360dede1a96b91e14fcd2}{virtual void {\bfseries calculate\-Auto\-Size} ()}\label{classQCPLegend_aefb91ff99ea360dede1a96b91e14fcd2}
+
+\item 
+\hypertarget{classQCPLegend_a1e81744daf2b51ed7025e7357d6f88a1}{virtual void {\bfseries calculate\-Auto\-Position} ()}\label{classQCPLegend_a1e81744daf2b51ed7025e7357d6f88a1}
+
+\item 
+\hypertarget{classQCPLegend_a60172c9d2212584f38f5d0c1e50970c7}{Q\-Pen {\bfseries get\-Border\-Pen} () const }\label{classQCPLegend_a60172c9d2212584f38f5d0c1e50970c7}
+
+\item 
+\hypertarget{classQCPLegend_a236fe4cd617c9f88620fd9de74417f20}{Q\-Brush {\bfseries get\-Brush} () const }\label{classQCPLegend_a236fe4cd617c9f88620fd9de74417f20}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPLegend_a52ab8342a382456131d567f962d7f9d0}{Q\-Pen {\bfseries m\-Border\-Pen}}\label{classQCPLegend_a52ab8342a382456131d567f962d7f9d0}
+
+\item 
+\hypertarget{classQCPLegend_a773ae518c3149fcabff4a2906fdacbc4}{Q\-Pen {\bfseries m\-Icon\-Border\-Pen}}\label{classQCPLegend_a773ae518c3149fcabff4a2906fdacbc4}
+
+\item 
+\hypertarget{classQCPLegend_a9bd7cd05a9a485e06eda513a348baf80}{Q\-Brush {\bfseries m\-Brush}}\label{classQCPLegend_a9bd7cd05a9a485e06eda513a348baf80}
+
+\item 
+\hypertarget{classQCPLegend_a56ffacb184a99eefe09a0c7181d0713d}{Q\-Font {\bfseries m\-Font}}\label{classQCPLegend_a56ffacb184a99eefe09a0c7181d0713d}
+
+\item 
+\hypertarget{classQCPLegend_a478b2d809a7390e9ff8f8bb70d6bd9fe}{Q\-Color {\bfseries m\-Text\-Color}}\label{classQCPLegend_a478b2d809a7390e9ff8f8bb70d6bd9fe}
+
+\item 
+\hypertarget{classQCPLegend_a1a1033e581aba17a234a320b7fffc739}{Q\-Point {\bfseries m\-Position}}\label{classQCPLegend_a1a1033e581aba17a234a320b7fffc739}
+
+\item 
+\hypertarget{classQCPLegend_aa55b33bf64e26c76e6475fd3140af8a2}{Q\-Size {\bfseries m\-Size}}\label{classQCPLegend_aa55b33bf64e26c76e6475fd3140af8a2}
+
+\item 
+\hypertarget{classQCPLegend_a52f5ad2b7fe948e98286447165953c40}{Q\-Size {\bfseries m\-Minimum\-Size}}\label{classQCPLegend_a52f5ad2b7fe948e98286447165953c40}
+
+\item 
+\hypertarget{classQCPLegend_a39b972aae6c6a3fa5aa73313ab7a5765}{Q\-Size {\bfseries m\-Icon\-Size}}\label{classQCPLegend_a39b972aae6c6a3fa5aa73313ab7a5765}
+
+\item 
+\hypertarget{classQCPLegend_abd6cf2517b85e73c98b8f00c3a4104c0}{\hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049f}{Position\-Style} {\bfseries m\-Position\-Style}}\label{classQCPLegend_abd6cf2517b85e73c98b8f00c3a4104c0}
+
+\item 
+\hypertarget{classQCPLegend_af4667ced12f959e20da2eb34d4383008}{bool {\bfseries m\-Auto\-Size}}\label{classQCPLegend_af4667ced12f959e20da2eb34d4383008}
+
+\item 
+\hypertarget{classQCPLegend_ab7b535988eb6f9d0e4ae6c33ca0e5b03}{int {\bfseries m\-Padding\-Left}}\label{classQCPLegend_ab7b535988eb6f9d0e4ae6c33ca0e5b03}
+
+\item 
+\hypertarget{classQCPLegend_a99eb704ee554eece4dac0833cbc5ee91}{int {\bfseries m\-Padding\-Right}}\label{classQCPLegend_a99eb704ee554eece4dac0833cbc5ee91}
+
+\item 
+\hypertarget{classQCPLegend_aea0340bde711162822811bcc4ebc3c74}{int {\bfseries m\-Padding\-Top}}\label{classQCPLegend_aea0340bde711162822811bcc4ebc3c74}
+
+\item 
+\hypertarget{classQCPLegend_a49f6b31aeee68cfce9fe57aaf0cc6ce1}{int {\bfseries m\-Padding\-Bottom}}\label{classQCPLegend_a49f6b31aeee68cfce9fe57aaf0cc6ce1}
+
+\item 
+\hypertarget{classQCPLegend_abc32b5c03a201ff2a4225503c0f5c8e0}{int {\bfseries m\-Margin\-Left}}\label{classQCPLegend_abc32b5c03a201ff2a4225503c0f5c8e0}
+
+\item 
+\hypertarget{classQCPLegend_ab2c36e6f547421ca9800b8025db745ce}{int {\bfseries m\-Margin\-Right}}\label{classQCPLegend_ab2c36e6f547421ca9800b8025db745ce}
+
+\item 
+\hypertarget{classQCPLegend_a1eb13f7b277274a6de2d739a2498d2d5}{int {\bfseries m\-Margin\-Top}}\label{classQCPLegend_a1eb13f7b277274a6de2d739a2498d2d5}
+
+\item 
+\hypertarget{classQCPLegend_a3df9b3c2d4af5f8b484cc7c4b64b20c8}{int {\bfseries m\-Margin\-Bottom}}\label{classQCPLegend_a3df9b3c2d4af5f8b484cc7c4b64b20c8}
+
+\item 
+\hypertarget{classQCPLegend_acb16d1d1f6289185e8a5be2ea7f7d635}{int {\bfseries m\-Item\-Spacing}}\label{classQCPLegend_acb16d1d1f6289185e8a5be2ea7f7d635}
+
+\item 
+\hypertarget{classQCPLegend_a8abf8843864ee9afc3f54f906c062240}{int {\bfseries m\-Icon\-Text\-Padding}}\label{classQCPLegend_a8abf8843864ee9afc3f54f906c062240}
+
+\item 
+\hypertarget{classQCPLegend_a735cbf24a0cd72b712bb01dfa7d909b2}{Selectable\-Parts {\bfseries m\-Selected}}\label{classQCPLegend_a735cbf24a0cd72b712bb01dfa7d909b2}
+
+\item 
+\hypertarget{classQCPLegend_ad8d87239c5522b661b788d00b6f8c7ce}{Selectable\-Parts {\bfseries m\-Selectable}}\label{classQCPLegend_ad8d87239c5522b661b788d00b6f8c7ce}
+
+\item 
+\hypertarget{classQCPLegend_a62906c996906ae23e9f724b6ac1f7334}{Q\-Pen {\bfseries m\-Selected\-Border\-Pen}}\label{classQCPLegend_a62906c996906ae23e9f724b6ac1f7334}
+
+\item 
+\hypertarget{classQCPLegend_a7429ac0e64c7b90b649b4d8f4cc5fa55}{Q\-Pen {\bfseries m\-Selected\-Icon\-Border\-Pen}}\label{classQCPLegend_a7429ac0e64c7b90b649b4d8f4cc5fa55}
+
+\item 
+\hypertarget{classQCPLegend_ab3c7567c86d4784b1e48f76a84b3a1e2}{Q\-Brush {\bfseries m\-Selected\-Brush}}\label{classQCPLegend_ab3c7567c86d4784b1e48f76a84b3a1e2}
+
+\item 
+\hypertarget{classQCPLegend_a86ce8f6c20a2f51a48eaf3c24ce16805}{Q\-Font {\bfseries m\-Selected\-Font}}\label{classQCPLegend_a86ce8f6c20a2f51a48eaf3c24ce16805}
+
+\item 
+\hypertarget{classQCPLegend_a6c25c8796c6e73e983aae6024965f2be}{Q\-Color {\bfseries m\-Selected\-Text\-Color}}\label{classQCPLegend_a6c25c8796c6e73e983aae6024965f2be}
+
+\item 
+\hypertarget{classQCPLegend_a9ae61eaf9434d9f315696bf03c8e4455}{Q\-List$<$ \hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ $>$ {\bfseries m\-Items}}\label{classQCPLegend_a9ae61eaf9434d9f315696bf03c8e4455}
+
+\item 
+\hypertarget{classQCPLegend_ae3cf93cee4fa6e7b1966e3c5597004c3}{Q\-Map$<$ \hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item} \\*
+$\ast$, Q\-Rect $>$ {\bfseries m\-Item\-Bounding\-Boxes}}\label{classQCPLegend_ae3cf93cee4fa6e7b1966e3c5597004c3}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPLegend_a1cdf9df76adcfae45261690aa0ca2198}{class {\bfseries Q\-Custom\-Plot}}\label{classQCPLegend_a1cdf9df76adcfae45261690aa0ca2198}
+
+\item 
+\hypertarget{classQCPLegend_a8a375e31e42c68de049fcf0fd35db5b0}{class {\bfseries Q\-C\-P\-Abstract\-Legend\-Item}}\label{classQCPLegend_a8a375e31e42c68de049fcf0fd35db5b0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages a legend inside a \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}. 
+
+Doesn't need to be instantiated externally, rather access Q\-Custom\-Plot\-::legend 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049f}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!Position\-Style@{Position\-Style}}
+\index{Position\-Style@{Position\-Style}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{Position\-Style}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-C\-P\-Legend\-::\-Position\-Style}}}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049f}
+Defines where the legend is positioned inside the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} axis rect. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ps\-Manual@{ps\-Manual}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Manual@{ps\-Manual}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}
+}]Position is not changed automatically. Set manually via \hyperlink{classQCPLegend_a228788ae4caa5b5b269309bb32b54046}{set\-Position}. \index{ps\-Top\-Left@{ps\-Top\-Left}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Top\-Left@{ps\-Top\-Left}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa1f5bb82f19be99ee3722a540b76c3c85}{ps\-Top\-Left}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa1f5bb82f19be99ee3722a540b76c3c85}
+}]Legend is positioned in the top left corner of the axis rect with distance to the border corresponding to the currently set top and left margins. \index{ps\-Top@{ps\-Top}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Top@{ps\-Top}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa7ca820289c7938092f497fbd4d706f5d}{ps\-Top}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa7ca820289c7938092f497fbd4d706f5d}
+}]Legend is horizontally centered at the top of the axis rect with distance to the border corresponding to the currently set top margin. \index{ps\-Top\-Right@{ps\-Top\-Right}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Top\-Right@{ps\-Top\-Right}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadc969b13706ba4fd802bbc27e0abb18a}{ps\-Top\-Right}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadc969b13706ba4fd802bbc27e0abb18a}
+}]Legend is positioned in the top right corner of the axis rect with distance to the border corresponding to the currently set top and right margins. \index{ps\-Right@{ps\-Right}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Right@{ps\-Right}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa71969c414ec15afabe2761131ad85766}{ps\-Right}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa71969c414ec15afabe2761131ad85766}
+}]Legend is vertically centered at the right of the axis rect with distance to the border corresponding to the currently set right margin. \index{ps\-Bottom\-Right@{ps\-Bottom\-Right}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Bottom\-Right@{ps\-Bottom\-Right}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049faf4120842dbc223cf8523188f15146d31}{ps\-Bottom\-Right}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049faf4120842dbc223cf8523188f15146d31}
+}]Legend is positioned in the bottom right corner of the axis rect with distance to the border corresponding to the currently set bottom and right margins. \index{ps\-Bottom@{ps\-Bottom}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Bottom@{ps\-Bottom}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fac32970f4bf28ef780f15365abcc9fbd3}{ps\-Bottom}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fac32970f4bf28ef780f15365abcc9fbd3}
+}]Legend is horizontally centered at the bottom of the axis rect with distance to the border corresponding to the currently set bottom margin. \index{ps\-Bottom\-Left@{ps\-Bottom\-Left}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Bottom\-Left@{ps\-Bottom\-Left}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa36e2c1900a0d39596ee26074c7815ee9}{ps\-Bottom\-Left}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fa36e2c1900a0d39596ee26074c7815ee9}
+}]Legend is positioned in the bottom left corner of the axis rect with distance to the border corresponding to the currently set bottom and left margins. \index{ps\-Left@{ps\-Left}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!ps\-Left@{ps\-Left}}\item[{\em 
+\hypertarget{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fac9c7c1c0f8d1894792fbb71854002ebe}{ps\-Left}\label{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fac9c7c1c0f8d1894792fbb71854002ebe}
+}]Legend is vertically centered at the left of the axis rect with distance to the border corresponding to the currently set left margin. \end{description}
+\end{Desc}
+\hypertarget{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!Selectable\-Part@{Selectable\-Part}}
+\index{Selectable\-Part@{Selectable\-Part}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{Selectable\-Part}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-C\-P\-Legend\-::\-Selectable\-Part}}}\label{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1}
+Defines the selectable parts of a legend \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{sp\-None@{sp\-None}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!sp\-None@{sp\-None}}\item[{\em 
+\hypertarget{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7}{sp\-None}\label{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a378201c07d500af7126e3ec91652eed7}
+}]None. \index{sp\-Legend\-Box@{sp\-Legend\-Box}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!sp\-Legend\-Box@{sp\-Legend\-Box}}\item[{\em 
+\hypertarget{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4}{sp\-Legend\-Box}\label{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a0fa4758962a46fa1dc9da818abae23c4}
+}]The legend box (frame) \index{sp\-Items@{sp\-Items}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!sp\-Items@{sp\-Items}}\item[{\em 
+\hypertarget{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7}{sp\-Items}\label{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7}
+}]Legend items individually (see \hyperlink{classQCPLegend_ac93eaf236e911d67aa8b88942ef45c5e}{selected\-Items}) \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPLegend_a5dc42d73df80e7294414aee1170c4d2b}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!Q\-C\-P\-Legend@{Q\-C\-P\-Legend}}
+\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{Q\-C\-P\-Legend}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Legend\-::\-Q\-C\-P\-Legend (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classQCPLegend_a5dc42d73df80e7294414aee1170c4d2b}
+Constructs a new \hyperlink{classQCPLegend}{Q\-C\-P\-Legend} instance with {\itshape parent\-Plot} as the containing plot and default values. Under normal usage, \hyperlink{classQCPLegend}{Q\-C\-P\-Legend} needn't be instantiated outside of \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}. Access Q\-Custom\-Plot\-::legend to modify the legend (set to invisible by default, see \hyperlink{classQCPLayerable_a3bed99ddc396b48ce3ebfdc0418744f8}{set\-Visible}). 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPLegend_a3ab274de52d2951faea45a6d975e6b3f}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Legend\-::add\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Abstract\-Legend\-Item} $\ast$}]{item}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a3ab274de52d2951faea45a6d975e6b3f}
+Adds {\itshape item} to the legend, if it's not present already.
+
+Returns true on sucess, i.\-e. if the item wasn't in the list already and has been successfuly added.
+
+The legend takes ownership of the item. \hypertarget{classQCPLegend_a24795c7250eb5214fcea16b7217b4dfb}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!clear\-Items@{clear\-Items}}
+\index{clear\-Items@{clear\-Items}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{clear\-Items}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::clear\-Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a24795c7250eb5214fcea16b7217b4dfb}
+Removes all items from the legend. \hypertarget{classQCPLegend_a380dd19eb631592e1ebb9b24cc5b398a}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!has\-Item@{has\-Item}}
+\index{has\-Item@{has\-Item}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{has\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Legend\-::has\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Abstract\-Legend\-Item} $\ast$}]{item}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a380dd19eb631592e1ebb9b24cc5b398a}
+Returns whether the legend contains {\itshape item}. \hypertarget{classQCPLegend_a2eb1d24bdf5658e64962a656303fd61a}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!has\-Item\-With\-Plottable@{has\-Item\-With\-Plottable}}
+\index{has\-Item\-With\-Plottable@{has\-Item\-With\-Plottable}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{has\-Item\-With\-Plottable}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Legend\-::has\-Item\-With\-Plottable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\-C\-P\-Abstract\-Plottable} $\ast$}]{plottable}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a2eb1d24bdf5658e64962a656303fd61a}
+Returns whether the legend contains a \hyperlink{classQCPPlottableLegendItem}{Q\-C\-P\-Plottable\-Legend\-Item} which is associated with {\itshape plottable} (e.\-g. a \hyperlink{classQCPGraph}{Q\-C\-P\-Graph}$\ast$). If such an item isn't in the legend, returns false.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a5ee80cf83f65e3b6dd386942ee3cc1ee}{item\-With\-Plottable} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a454272d7094437beb3278a2294006da5}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!item@{item}}
+\index{item@{item}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ Q\-C\-P\-Legend\-::item (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a454272d7094437beb3278a2294006da5}
+Returns the item with index {\itshape i}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a198228e9cdc78d3a3c306fa6763d0404}{item\-Count} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a198228e9cdc78d3a3c306fa6763d0404}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!item\-Count@{item\-Count}}
+\index{item\-Count@{item\-Count}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{item\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Q\-C\-P\-Legend\-::item\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a198228e9cdc78d3a3c306fa6763d0404}
+Returns the number of items currently in the legend. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a454272d7094437beb3278a2294006da5}{item} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a5ee80cf83f65e3b6dd386942ee3cc1ee}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!item\-With\-Plottable@{item\-With\-Plottable}}
+\index{item\-With\-Plottable@{item\-With\-Plottable}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{item\-With\-Plottable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Plottable\-Legend\-Item} $\ast$ Q\-C\-P\-Legend\-::item\-With\-Plottable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Q\-C\-P\-Abstract\-Plottable} $\ast$}]{plottable}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a5ee80cf83f65e3b6dd386942ee3cc1ee}
+Returns the \hyperlink{classQCPPlottableLegendItem}{Q\-C\-P\-Plottable\-Legend\-Item} which is associated with {\itshape plottable} (e.\-g. a \hyperlink{classQCPGraph}{Q\-C\-P\-Graph}$\ast$). If such an item isn't in the legend, returns 0.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a2eb1d24bdf5658e64962a656303fd61a}{has\-Item\-With\-Plottable} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_ad7fd50e5478b0da477d9cc74b7204caf}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!re\-Arrange@{re\-Arrange}}
+\index{re\-Arrange@{re\-Arrange}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{re\-Arrange}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::re\-Arrange (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ad7fd50e5478b0da477d9cc74b7204caf}
+If \hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size} is true, the size needed to fit all legend contents is calculated and applied. Finally, the automatic positioning of the legend is performed, depending on the \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} setting. \hypertarget{classQCPLegend_ac91595c3eaa746fe6321d2eb952c63bb}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!remove\-Item@{remove\-Item}}
+\index{remove\-Item@{remove\-Item}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{remove\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Legend\-::remove\-Item (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ac91595c3eaa746fe6321d2eb952c63bb}
+Removes the item with index {\itshape index} from the legend.
+
+Returns true, if successful.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a198228e9cdc78d3a3c306fa6763d0404}{item\-Count}, \hyperlink{classQCPLegend_a24795c7250eb5214fcea16b7217b4dfb}{clear\-Items} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a2aea4ec6da2d454dd0b241a254d65082}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!remove\-Item@{remove\-Item}}
+\index{remove\-Item@{remove\-Item}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{remove\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Legend\-::remove\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Abstract\-Legend\-Item} $\ast$}]{item}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a2aea4ec6da2d454dd0b241a254d65082}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Removes {\itshape item} from the legend.
+
+Returns true, if successful.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a24795c7250eb5214fcea16b7217b4dfb}{clear\-Items} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_ac93eaf236e911d67aa8b88942ef45c5e}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!selected\-Items@{selected\-Items}}
+\index{selected\-Items@{selected\-Items}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{selected\-Items}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ {\bf Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ $>$ Q\-C\-P\-Legend\-::selected\-Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_ac93eaf236e911d67aa8b88942ef45c5e}
+Returns the legend items that are currently selected. If no items are selected, the list is empty.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractLegendItem_a6eed93b0ab99cb3eabb043fb08179c2b}{Q\-C\-P\-Abstract\-Legend\-Item\-::set\-Selected}, \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a286149b644d5f5c884a0140219d979f6}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!selection\-Changed@{selection\-Changed}}
+\index{selection\-Changed@{selection\-Changed}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{selection\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::selection\-Changed (
+\begin{DoxyParamCaption}
+\item[{Q\-C\-P\-Legend\-::\-Selectable\-Parts}]{selection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{classQCPLegend_a286149b644d5f5c884a0140219d979f6}
+This signal is emitted when the selection state of this legend has changed.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected}, \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a8bbb0b003cc93f07dff1d69416b606f0}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!select\-Test\-Item@{select\-Test\-Item}}
+\index{select\-Test\-Item@{select\-Test\-Item}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{select\-Test\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Abstract\-Legend\-Item} $\ast$ Q\-C\-P\-Legend\-::select\-Test\-Item (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point}]{pos}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a8bbb0b003cc93f07dff1d69416b606f0}
+When the point {\itshape pos} in pixels hits a legend item, the item is returned. If no item is hit, 0 is returned.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a6388446e0906b21ebf3a92310570e73e}{select\-Test\-Legend} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a6388446e0906b21ebf3a92310570e73e}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!select\-Test\-Legend@{select\-Test\-Legend}}
+\index{select\-Test\-Legend@{select\-Test\-Legend}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{select\-Test\-Legend}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Legend\-::select\-Test\-Legend (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pos}
+\end{DoxyParamCaption}
+) const}}\label{classQCPLegend_a6388446e0906b21ebf3a92310570e73e}
+Returns whether the point {\itshape pos} in pixels hits the legend rect.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a8bbb0b003cc93f07dff1d69416b606f0}{select\-Test\-Item} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Auto\-Size@{set\-Auto\-Size}}
+\index{set\-Auto\-Size@{set\-Auto\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Auto\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Auto\-Size (
+\begin{DoxyParamCaption}
+\item[{bool}]{on}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}
+Sets whether the size of the legend should be calculated automatically to fit all the content (plus padding), or whether the size must be specified manually with \hyperlink{classQCPLegend_ae1d42dbf91b0046f7324dd07a16dd43f}{set\-Size}.
+
+If the auto\-Size mechanism is enabled, the legend will have the smallest possible size to still display all its content. For items with text wrapping (\hyperlink{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}{Q\-C\-P\-Plottable\-Legend\-Item\-::set\-Text\-Wrap}) this means, they would become very compressed, i.\-e. wrapped at every word. To prevent this, set a reasonable \hyperlink{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{set\-Minimum\-Size} width. \hypertarget{classQCPLegend_a866a9e3f5267de7430a6c7f26a61db9f}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Border\-Pen@{set\-Border\-Pen}}
+\index{set\-Border\-Pen@{set\-Border\-Pen}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Border\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Border\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a866a9e3f5267de7430a6c7f26a61db9f}
+Sets the pen, the border of the entire legend is drawn with. \hypertarget{classQCPLegend_a497bbcd38baa3598c08e2b3f48103f23}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Brush@{set\-Brush}}
+\index{set\-Brush@{set\-Brush}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Brush (
+\begin{DoxyParamCaption}
+\item[{const Q\-Brush \&}]{brush}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a497bbcd38baa3598c08e2b3f48103f23}
+Sets the brush of the legend background. \hypertarget{classQCPLegend_aa4cda8499e3cb0f3be415edc02984c73}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Font@{set\-Font}}
+\index{set\-Font@{set\-Font}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Font}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Font (
+\begin{DoxyParamCaption}
+\item[{const Q\-Font \&}]{font}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_aa4cda8499e3cb0f3be415edc02984c73}
+Sets the default font of legend text. Legend items that draw text (e.\-g. the name of a graph) will use this font by default. However, a different font can be specified on a per-\/item-\/basis by accessing the specific legend item.
+
+This function will also set {\itshape font} on all already existing legend items.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractLegendItem_a409c53455d8112f71d70c0c43eb10265}{Q\-C\-P\-Abstract\-Legend\-Item\-::set\-Font} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a2f2c93d18a651f4ff294bb3f026f49b8}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Icon\-Border\-Pen@{set\-Icon\-Border\-Pen}}
+\index{set\-Icon\-Border\-Pen@{set\-Icon\-Border\-Pen}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Icon\-Border\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Icon\-Border\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a2f2c93d18a651f4ff294bb3f026f49b8}
+Sets the pen used to draw a border around each legend icon. Legend items that draw an icon (e.\-g. a visual representation of the graph) will use this pen by default.
+
+If no border is wanted, set this to {\itshape Qt\-::\-No\-Pen}. \hypertarget{classQCPLegend_a8b0740cce488bf7010da6beda6898984}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Icon\-Size@{set\-Icon\-Size}}
+\index{set\-Icon\-Size@{set\-Icon\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Icon\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Icon\-Size (
+\begin{DoxyParamCaption}
+\item[{const Q\-Size \&}]{size}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a8b0740cce488bf7010da6beda6898984}
+Sets the size of legend icons. Legend items that draw an icon (e.\-g. a visual representation of the graph) will use this size by default. \hypertarget{classQCPLegend_a96b1a37fd4ee6a9778e6e54fe56ab6c2}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Icon\-Size@{set\-Icon\-Size}}
+\index{set\-Icon\-Size@{set\-Icon\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Icon\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Icon\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a96b1a37fd4ee6a9778e6e54fe56ab6c2}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. \hypertarget{classQCPLegend_a62973bd69d5155e8ea3141366e8968f6}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Icon\-Text\-Padding@{set\-Icon\-Text\-Padding}}
+\index{set\-Icon\-Text\-Padding@{set\-Icon\-Text\-Padding}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Icon\-Text\-Padding}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Icon\-Text\-Padding (
+\begin{DoxyParamCaption}
+\item[{int}]{padding}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a62973bd69d5155e8ea3141366e8968f6}
+Sets the horizontal space in pixels between the legend icon and the text next to it. Legend items that draw an icon (e.\-g. a visual representation of the graph) and text (e.\-g. the name of the graph) will use this space by default.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a1bb966ee2b5f05b9d7e4866d2b1114c0}{set\-Item\-Spacing} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a1bb966ee2b5f05b9d7e4866d2b1114c0}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Item\-Spacing@{set\-Item\-Spacing}}
+\index{set\-Item\-Spacing@{set\-Item\-Spacing}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Item\-Spacing}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Item\-Spacing (
+\begin{DoxyParamCaption}
+\item[{int}]{spacing}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a1bb966ee2b5f05b9d7e4866d2b1114c0}
+Sets the vertical space between two legend items in the legend.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a62973bd69d5155e8ea3141366e8968f6}{set\-Icon\-Text\-Padding}, \hyperlink{classQCPLegend_a6dec710ef473c79c96e92feb7528ae7d}{set\-Padding} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_afa9e9681dbe3fa05302353a78cb34588}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Margin@{set\-Margin}}
+\index{set\-Margin@{set\-Margin}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Margin}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Margin (
+\begin{DoxyParamCaption}
+\item[{int}]{left, }
+\item[{int}]{right, }
+\item[{int}]{top, }
+\item[{int}]{bottom}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_afa9e9681dbe3fa05302353a78cb34588}
+Sets the margin of the legend. Margins are the distances the legend will keep to the axis rect, when \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} is not \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}. \hypertarget{classQCPLegend_a1b8f2a9d47982cd8d7a126be026b831a}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Margin\-Bottom@{set\-Margin\-Bottom}}
+\index{set\-Margin\-Bottom@{set\-Margin\-Bottom}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Margin\-Bottom}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Margin\-Bottom (
+\begin{DoxyParamCaption}
+\item[{int}]{margin}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a1b8f2a9d47982cd8d7a126be026b831a}
+Sets the bottom margin of the legend. Margins are the distances the legend will keep to the axis rect, when \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} is not \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}. \hypertarget{classQCPLegend_ab4993084ae32855a5b1d8436b5f90721}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Margin\-Left@{set\-Margin\-Left}}
+\index{set\-Margin\-Left@{set\-Margin\-Left}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Margin\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Margin\-Left (
+\begin{DoxyParamCaption}
+\item[{int}]{margin}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ab4993084ae32855a5b1d8436b5f90721}
+Sets the left margin of the legend. Margins are the distances the legend will keep to the axis rect, when \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} is not \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}. \hypertarget{classQCPLegend_a6da7cc21b66f427b7cebe2c180541f4b}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Margin\-Right@{set\-Margin\-Right}}
+\index{set\-Margin\-Right@{set\-Margin\-Right}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Margin\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Margin\-Right (
+\begin{DoxyParamCaption}
+\item[{int}]{margin}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a6da7cc21b66f427b7cebe2c180541f4b}
+Sets the right margin of the legend. Margins are the distances the legend will keep to the axis rect, when \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} is not \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}. \hypertarget{classQCPLegend_a264f28f7983dbc9e3a063001eebfff2d}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Margin\-Top@{set\-Margin\-Top}}
+\index{set\-Margin\-Top@{set\-Margin\-Top}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Margin\-Top}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Margin\-Top (
+\begin{DoxyParamCaption}
+\item[{int}]{margin}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a264f28f7983dbc9e3a063001eebfff2d}
+Sets the top margin of the legend. Margins are the distances the legend will keep to the axis rect, when \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} is not \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}. \hypertarget{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Minimum\-Size@{set\-Minimum\-Size}}
+\index{set\-Minimum\-Size@{set\-Minimum\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Minimum\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Minimum\-Size (
+\begin{DoxyParamCaption}
+\item[{const Q\-Size \&}]{size}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}
+Sets the minimum size of the legend when \hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size} is enabled.
+
+If text wrapping is enabled in the legend items (e.\-g. \hyperlink{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}{Q\-C\-P\-Plottable\-Legend\-Item\-::set\-Text\-Wrap}), this minimum {\itshape size} defines the width at which the wrapping will occur. Note that the wrapping will happen only at word boundaries, so the actual size might still be bigger than the {\itshape size} given here, but not smaller.
+
+If \hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size} is not enabled, the minimum {\itshape size} is ignored. Setting a smaller legend size with \hyperlink{classQCPLegend_ae1d42dbf91b0046f7324dd07a16dd43f}{set\-Size} manually, is not prevented.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size}, \hyperlink{classQCPLegend_ae1d42dbf91b0046f7324dd07a16dd43f}{set\-Size}, \hyperlink{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}{Q\-C\-P\-Plottable\-Legend\-Item\-::set\-Text\-Wrap} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_ae0e264950b0df9abd8e840e513df737b}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Minimum\-Size@{set\-Minimum\-Size}}
+\index{set\-Minimum\-Size@{set\-Minimum\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Minimum\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Minimum\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ae0e264950b0df9abd8e840e513df737b}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. \hypertarget{classQCPLegend_a6dec710ef473c79c96e92feb7528ae7d}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Padding@{set\-Padding}}
+\index{set\-Padding@{set\-Padding}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Padding}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Padding (
+\begin{DoxyParamCaption}
+\item[{int}]{left, }
+\item[{int}]{right, }
+\item[{int}]{top, }
+\item[{int}]{bottom}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a6dec710ef473c79c96e92feb7528ae7d}
+Sets the padding of the legend. Padding is the space by what the legend box is made larger than minimally needed for the content to fit. I.\-e. it's the space left blank on each side inside the legend. \hypertarget{classQCPLegend_a396fa209cb63f6fa650951c291af8d0f}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Padding\-Bottom@{set\-Padding\-Bottom}}
+\index{set\-Padding\-Bottom@{set\-Padding\-Bottom}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Padding\-Bottom}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Padding\-Bottom (
+\begin{DoxyParamCaption}
+\item[{int}]{padding}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a396fa209cb63f6fa650951c291af8d0f}
+Sets the bottom padding of the legend. Padding is the space by what the legend box is made larger than minimally needed for the content to fit. I.\-e. it's the space left blank on each side inside the legend. \hypertarget{classQCPLegend_afde46ae0e759e58380bdb01df4aab1ce}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Padding\-Left@{set\-Padding\-Left}}
+\index{set\-Padding\-Left@{set\-Padding\-Left}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Padding\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Padding\-Left (
+\begin{DoxyParamCaption}
+\item[{int}]{padding}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_afde46ae0e759e58380bdb01df4aab1ce}
+Sets the left padding of the legend. Padding is the space by what the legend box is made larger than minimally needed for the content to fit. I.\-e. it's the space left blank on each side inside the legend. \hypertarget{classQCPLegend_a6d8b14e2f92130f8af1d66dd28691736}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Padding\-Right@{set\-Padding\-Right}}
+\index{set\-Padding\-Right@{set\-Padding\-Right}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Padding\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Padding\-Right (
+\begin{DoxyParamCaption}
+\item[{int}]{padding}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a6d8b14e2f92130f8af1d66dd28691736}
+Sets the right padding of the legend. Padding is the space by what the legend box is made larger than minimally needed for the content to fit. I.\-e. it's the space left blank on each side inside the legend. \hypertarget{classQCPLegend_a6f8c6efe6a0a446ece7c1c44a7e31177}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Padding\-Top@{set\-Padding\-Top}}
+\index{set\-Padding\-Top@{set\-Padding\-Top}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Padding\-Top}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Padding\-Top (
+\begin{DoxyParamCaption}
+\item[{int}]{padding}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a6f8c6efe6a0a446ece7c1c44a7e31177}
+Sets the top padding of the legend. Padding is the space by what the legend box is made larger than minimally needed for the content to fit. I.\-e. it's the space left blank on each side inside the legend. \hypertarget{classQCPLegend_a228788ae4caa5b5b269309bb32b54046}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point \&}]{pixel\-Position}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a228788ae4caa5b5b269309bb32b54046}
+Sets the exact pixel Position of the legend inside the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} widget, if \hyperlink{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{set\-Position\-Style} is set to \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}. Margins have no effect in that case. \hypertarget{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Position\-Style@{set\-Position\-Style}}
+\index{set\-Position\-Style@{set\-Position\-Style}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Position\-Style}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Position\-Style (
+\begin{DoxyParamCaption}
+\item[{{\bf Position\-Style}}]{legend\-Position\-Style}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_aecfd20e956460d1bdc65b79f48db533d}
+Sets the position style of the legend. If the {\itshape legend\-Position\-Style} is not \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}, the position is found automatically depending on the specific {\itshape legend\-Position\-Style} and the legend margins. If {\itshape legend\-Position\-Style} is \hyperlink{classQCPLegend_aa61c3d82a6c7942dddefbf1ed1f7049fadfd57c395cae91cd95231c926c0a38ca}{ps\-Manual}, the exact pixel position of the legend must be specified via \hyperlink{classQCPLegend_a228788ae4caa5b5b269309bb32b54046}{set\-Position}. Margins have no effect in that case. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_afa9e9681dbe3fa05302353a78cb34588}{set\-Margin} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selectable@{set\-Selectable}}
+\index{set\-Selectable@{set\-Selectable}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selectable}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selectable (
+\begin{DoxyParamCaption}
+\item[{const Selectable\-Parts \&}]{selectable}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}
+Sets whether the user can (de-\/)select the parts in {\itshape selectable} by clicking on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. (When \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} contains i\-Select\-Legend.)
+
+However, even when {\itshape selectable} is set to a value not allowing the selection of a specific part, it is still possible to set the selection of this part manually, by calling \hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected} directly.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1}{Selectable\-Part}, \hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selected@{set\-Selected}}
+\index{set\-Selected@{set\-Selected}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selected}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selected (
+\begin{DoxyParamCaption}
+\item[{const Selectable\-Parts \&}]{selected}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a752c48b30f8ba870b55e79659385f107}
+Sets the selected state of the respective legend parts described by \hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1}{Selectable\-Part}. When a part is selected, it uses a different pen/font and brush. If some legend items are selected and {\itshape selected} doesn't contain \hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7}{sp\-Items}, those items become deselected.
+
+The entire selection mechanism is handled automatically when \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} contains i\-Select\-Legend. You only need to call this function when you wish to change the selection state manually.
+
+This function can change the selection state of a part even when \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable} was set to a value that actually excludes the part.
+
+emits the \hyperlink{classQCPLegend_a286149b644d5f5c884a0140219d979f6}{selection\-Changed} signal when {\itshape selected} is different from the previous selection state.
+
+Note that it doesn't make sense to set the selected state \hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1a768bfb95f323db4c66473375032c0af7}{sp\-Items} here when it wasn't set before, because there's no way to specify which exact items to newly select. Do this by calling \hyperlink{classQCPAbstractLegendItem_a6eed93b0ab99cb3eabb043fb08179c2b}{Q\-C\-P\-Abstract\-Legend\-Item\-::set\-Selected} directly on the legend item you wish to select.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a5404de8bc1e4a994ca4ae69e2c7072f1}{Selectable\-Part}, \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable}, select\-Test, \hyperlink{classQCPLegend_a2c35d262953a25d96b6112653fbefc88}{set\-Selected\-Border\-Pen}, \hyperlink{classQCPLegend_ade93aabe9bcccaf9cf46cec22c658027}{set\-Selected\-Icon\-Border\-Pen}, \hyperlink{classQCPLegend_a875227f3219c9799464631dec5e8f1bd}{set\-Selected\-Brush}, \hyperlink{classQCPLegend_ab580a01c3c0a239374ed66c29edf5ad2}{set\-Selected\-Font} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a2c35d262953a25d96b6112653fbefc88}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selected\-Border\-Pen@{set\-Selected\-Border\-Pen}}
+\index{set\-Selected\-Border\-Pen@{set\-Selected\-Border\-Pen}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selected\-Border\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selected\-Border\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a2c35d262953a25d96b6112653fbefc88}
+When the legend box is selected, this pen is used to draw the border instead of the normal pen set via \hyperlink{classQCPLegend_a866a9e3f5267de7430a6c7f26a61db9f}{set\-Border\-Pen}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected}, \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable}, \hyperlink{classQCPLegend_a875227f3219c9799464631dec5e8f1bd}{set\-Selected\-Brush} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a875227f3219c9799464631dec5e8f1bd}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selected\-Brush@{set\-Selected\-Brush}}
+\index{set\-Selected\-Brush@{set\-Selected\-Brush}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selected\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selected\-Brush (
+\begin{DoxyParamCaption}
+\item[{const Q\-Brush \&}]{brush}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a875227f3219c9799464631dec5e8f1bd}
+When the legend box is selected, this brush is used to draw the legend background instead of the normal brush set via \hyperlink{classQCPLegend_a497bbcd38baa3598c08e2b3f48103f23}{set\-Brush}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected}, \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable}, \hyperlink{classQCPLegend_a2c35d262953a25d96b6112653fbefc88}{set\-Selected\-Border\-Pen} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_ab580a01c3c0a239374ed66c29edf5ad2}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selected\-Font@{set\-Selected\-Font}}
+\index{set\-Selected\-Font@{set\-Selected\-Font}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selected\-Font}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selected\-Font (
+\begin{DoxyParamCaption}
+\item[{const Q\-Font \&}]{font}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ab580a01c3c0a239374ed66c29edf5ad2}
+Sets the default font that is used by legend items when they are selected.
+
+This function will also set {\itshape font} on all already existing legend items.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_aa4cda8499e3cb0f3be415edc02984c73}{set\-Font}, \hyperlink{classQCPAbstractLegendItem_a91db5aee48617a9d3206e61376807365}{Q\-C\-P\-Abstract\-Legend\-Item\-::set\-Selected\-Font} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_ade93aabe9bcccaf9cf46cec22c658027}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selected\-Icon\-Border\-Pen@{set\-Selected\-Icon\-Border\-Pen}}
+\index{set\-Selected\-Icon\-Border\-Pen@{set\-Selected\-Icon\-Border\-Pen}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selected\-Icon\-Border\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selected\-Icon\-Border\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ade93aabe9bcccaf9cf46cec22c658027}
+Sets the pen legend items will use to draw their icon borders, when they are selected.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a752c48b30f8ba870b55e79659385f107}{set\-Selected}, \hyperlink{classQCPLegend_aae042f6211e39305d13f7b18c1c301d9}{set\-Selectable}, \hyperlink{classQCPLegend_ab580a01c3c0a239374ed66c29edf5ad2}{set\-Selected\-Font} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a7674dfc7a1f30e1abd1018c0ed45e0bc}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Selected\-Text\-Color@{set\-Selected\-Text\-Color}}
+\index{set\-Selected\-Text\-Color@{set\-Selected\-Text\-Color}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Selected\-Text\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Selected\-Text\-Color (
+\begin{DoxyParamCaption}
+\item[{const Q\-Color \&}]{color}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a7674dfc7a1f30e1abd1018c0ed45e0bc}
+Sets the default text color that is used by legend items when they are selected.
+
+This function will also set {\itshape color} on all already existing legend items.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_ae1eb239ff4a4632fe1b6c3e668d845c6}{set\-Text\-Color}, \hyperlink{classQCPAbstractLegendItem_a4d01d008ee1a5bfe9905b0397a421936}{Q\-C\-P\-Abstract\-Legend\-Item\-::set\-Selected\-Text\-Color} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_ae1d42dbf91b0046f7324dd07a16dd43f}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Size@{set\-Size}}
+\index{set\-Size@{set\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Size (
+\begin{DoxyParamCaption}
+\item[{const Q\-Size \&}]{size}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ae1d42dbf91b0046f7324dd07a16dd43f}
+Sets the size of the legend. Setting the size manually with this function only has an effect, if \hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size} is set to false.
+
+If you want to control the minimum size (or the text-\/wrapping width) while still leaving the auto\-Size mechanism enabled, consider using \hyperlink{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{set\-Minimum\-Size}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{set\-Auto\-Size}, \hyperlink{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{set\-Minimum\-Size} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPLegend_a17d4fdebb8dd8a4b0afcd56555c78f6e}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Size@{set\-Size}}
+\index{set\-Size@{set\-Size}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_a17d4fdebb8dd8a4b0afcd56555c78f6e}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. \hypertarget{classQCPLegend_ae1eb239ff4a4632fe1b6c3e668d845c6}{\index{Q\-C\-P\-Legend@{Q\-C\-P\-Legend}!set\-Text\-Color@{set\-Text\-Color}}
+\index{set\-Text\-Color@{set\-Text\-Color}!QCPLegend@{Q\-C\-P\-Legend}}
+\subsubsection[{set\-Text\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Legend\-::set\-Text\-Color (
+\begin{DoxyParamCaption}
+\item[{const Q\-Color \&}]{color}
+\end{DoxyParamCaption}
+)}}\label{classQCPLegend_ae1eb239ff4a4632fe1b6c3e668d845c6}
+Sets the default color of legend text. Legend items that draw text (e.\-g. the name of a graph) will use this color by default. However, a different colors can be specified on a per-\/item-\/basis by accessing the specific legend item.
+
+This function will also set {\itshape color} on all already existing legend items.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractLegendItem_a6ebace6aaffaedcdab2d74e88acc2d1e}{Q\-C\-P\-Abstract\-Legend\-Item\-::set\-Text\-Color} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.\-cpp\end{DoxyCompactItemize}

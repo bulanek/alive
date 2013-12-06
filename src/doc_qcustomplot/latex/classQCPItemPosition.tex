@@ -1,0 +1,236 @@
+\hypertarget{classQCPItemPosition}{\section{Q\-C\-P\-Item\-Position Class Reference}
+\label{classQCPItemPosition}\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}
+}
+
+
+Manages the position of an item.  
+
+
+Inheritance diagram for Q\-C\-P\-Item\-Position\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classQCPItemPosition}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}{Position\-Type} \{ \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\-Absolute}, 
+\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a}{pt\-Viewport\-Ratio}, 
+\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75}{pt\-Axis\-Rect\-Ratio}, 
+\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPItemPosition_a3efc524f37fdcd22907545eb77555ce4}{Q\-C\-P\-Item\-Position} (\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$parent\-Plot, \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item} $\ast$parent\-Item, const Q\-String name)
+\item 
+\hypertarget{classQCPItemPosition_ad64a1a26fbed5b8917e0eb8843099fd6}{\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}{Position\-Type} {\bfseries type} () const }\label{classQCPItemPosition_ad64a1a26fbed5b8917e0eb8843099fd6}
+
+\item 
+\hypertarget{classQCPItemPosition_a0db87cc41efabc1cf94acee7ebe14eee}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$ {\bfseries parent\-Anchor} () const }\label{classQCPItemPosition_a0db87cc41efabc1cf94acee7ebe14eee}
+
+\item 
+\hypertarget{classQCPItemPosition_ac3cb2bddf5f89e5181830be30b93d090}{double {\bfseries key} () const }\label{classQCPItemPosition_ac3cb2bddf5f89e5181830be30b93d090}
+
+\item 
+\hypertarget{classQCPItemPosition_a6817f7356d3a2b63e8446c6b6106dae1}{double {\bfseries value} () const }\label{classQCPItemPosition_a6817f7356d3a2b63e8446c6b6106dae1}
+
+\item 
+\hypertarget{classQCPItemPosition_a253d7adbb6d46299bd6cbc31aa8819f1}{Q\-Point\-F {\bfseries coords} () const }\label{classQCPItemPosition_a253d7adbb6d46299bd6cbc31aa8819f1}
+
+\item 
+\hypertarget{classQCPItemPosition_ab99de7ae5766d246defb2de9f47eaf51}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries key\-Axis} () const }\label{classQCPItemPosition_ab99de7ae5766d246defb2de9f47eaf51}
+
+\item 
+\hypertarget{classQCPItemPosition_a8d3a039fb2e69df86b4015daa30dfd2d}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries value\-Axis} () const }\label{classQCPItemPosition_a8d3a039fb2e69df86b4015daa30dfd2d}
+
+\item 
+virtual Q\-Point\-F \hyperlink{classQCPItemPosition_ae490f9c76ee2ba33752c495d3b6e8fb5}{pixel\-Point} () const 
+\item 
+void \hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{set\-Type} (\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}{Position\-Type} type)
+\item 
+bool \hyperlink{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{set\-Parent\-Anchor} (\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$parent\-Anchor, bool keep\-Pixel\-Position=false)
+\item 
+void \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} (double key, double value)
+\item 
+void \hyperlink{classQCPItemPosition_acc70b3abc143287f806e5f154e5e07b0}{set\-Coords} (const Q\-Point\-F \&coords)
+\item 
+void \hyperlink{classQCPItemPosition_a2185f45c75ac8cb9be89daeaaad50e37}{set\-Axes} (\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$key\-Axis, \hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$value\-Axis)
+\item 
+void \hyperlink{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{set\-Pixel\-Point} (const Q\-Point\-F \&\hyperlink{classQCPItemPosition_ae490f9c76ee2ba33752c495d3b6e8fb5}{pixel\-Point})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemPosition_ac9c7bbca809601323d3ae2542ef2801a}{\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}{Position\-Type} {\bfseries m\-Position\-Type}}\label{classQCPItemPosition_ac9c7bbca809601323d3ae2542ef2801a}
+
+\item 
+\hypertarget{classQCPItemPosition_a05b13a027fd0b07663fd70b8ab1c8842}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries m\-Key\-Axis}}\label{classQCPItemPosition_a05b13a027fd0b07663fd70b8ab1c8842}
+
+\item 
+\hypertarget{classQCPItemPosition_acd281f6bd352758ff00d852f1f0fa06f}{\hyperlink{classQCPAxis}{Q\-C\-P\-Axis} $\ast$ {\bfseries m\-Value\-Axis}}\label{classQCPItemPosition_acd281f6bd352758ff00d852f1f0fa06f}
+
+\item 
+\hypertarget{classQCPItemPosition_a4ff3931ad115603dfb4c7000b24bb415}{double {\bfseries m\-Key}}\label{classQCPItemPosition_a4ff3931ad115603dfb4c7000b24bb415}
+
+\item 
+\hypertarget{classQCPItemPosition_a67bf5df69f587d53731724a7d61c6c3f}{double {\bfseries m\-Value}}\label{classQCPItemPosition_a67bf5df69f587d53731724a7d61c6c3f}
+
+\item 
+\hypertarget{classQCPItemPosition_a21e37c5a8cabe747a2c60773b23eddeb}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$ {\bfseries m\-Parent\-Anchor}}\label{classQCPItemPosition_a21e37c5a8cabe747a2c60773b23eddeb}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Manages the position of an item. 
+
+Every item has at least one public \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} member pointer which provides ways to position the item on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. Some items have multiple positions, for example \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect} has two\-: {\itshape top\-Left} and {\itshape bottom\-Right}.
+
+\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} has a type (\hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}{Position\-Type}) that can be set with \hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{set\-Type}. This type defines how coordinates passed to \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} are to be interpreted, e.\-g. as absolute pixel coordinates, as plot coordinates of certain axes, etc.
+
+Further, \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} may have a parent \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor}, see \hyperlink{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{set\-Parent\-Anchor}. (Note that every \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} inherits from \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} and thus can itself be used as parent anchor for other positions.) This way you can tie multiple items together. If the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} has a parent, the coordinates set with \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} are considered to be absolute values in the reference frame of the parent anchor, where (0, 0) means directly ontop of the parent anchor. For example, You could attach the {\itshape start} position of a \hyperlink{classQCPItemLine}{Q\-C\-P\-Item\-Line} to the {\itshape bottom} anchor of a \hyperlink{classQCPItemText}{Q\-C\-P\-Item\-Text} to make the starting point of the line always be centered under the text label, no matter where the text is moved to, or is itself tied to.
+
+To set the apparent pixel position on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface directly, use \hyperlink{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{set\-Pixel\-Point}. This works no matter what type this \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} is or what parent-\/child situation it is in, as \hyperlink{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{set\-Pixel\-Point} transforms the coordinates appropriately, to make the position appear at the specified pixel values. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!Position\-Type@{Position\-Type}}
+\index{Position\-Type@{Position\-Type}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{Position\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-C\-P\-Item\-Position\-::\-Position\-Type}}}\label{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8}
+Defines the ways an item position can be specified. Thus it defines what the numbers passed to \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} actually mean.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{set\-Type} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{pt\-Absolute@{pt\-Absolute}!Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!pt\-Absolute@{pt\-Absolute}}\item[{\em 
+\hypertarget{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\-Absolute}\label{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}
+}]Static positioning in pixels, starting from the top left corner of the viewport/widget. \index{pt\-Viewport\-Ratio@{pt\-Viewport\-Ratio}!Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!pt\-Viewport\-Ratio@{pt\-Viewport\-Ratio}}\item[{\em 
+\hypertarget{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a}{pt\-Viewport\-Ratio}\label{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a}
+}]Static positioning given by a ratio of the current viewport (coordinates 0 to 1). \index{pt\-Axis\-Rect\-Ratio@{pt\-Axis\-Rect\-Ratio}!Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!pt\-Axis\-Rect\-Ratio@{pt\-Axis\-Rect\-Ratio}}\item[{\em 
+\hypertarget{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75}{pt\-Axis\-Rect\-Ratio}\label{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75}
+}]Static positioning given by a ratio of the current axis rect (coordinates 0 to 1). \index{pt\-Plot\-Coords@{pt\-Plot\-Coords}!Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!pt\-Plot\-Coords@{pt\-Plot\-Coords}}\item[{\em 
+\hypertarget{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords}\label{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}
+}]Dynamic positioning at a plot coordinate defined by two axes (see \hyperlink{classQCPItemPosition_a2185f45c75ac8cb9be89daeaaad50e37}{set\-Axes}). \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPItemPosition_a3efc524f37fdcd22907545eb77555ce4}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}}
+\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{Q\-C\-P\-Item\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Item\-Position\-::\-Q\-C\-P\-Item\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot, }
+\item[{{\bf Q\-C\-P\-Abstract\-Item} $\ast$}]{parent\-Item, }
+\item[{const Q\-String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_a3efc524f37fdcd22907545eb77555ce4}
+Creates a new \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position}. You shouldn't create \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} instances directly, even if you want to make a new item subclass. Use Q\-C\-P\-Abstract\-Item\-::create\-Position instead, as explained in the subclassing section of the \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item} documentation. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPItemPosition_ae490f9c76ee2ba33752c495d3b6e8fb5}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!pixel\-Point@{pixel\-Point}}
+\index{pixel\-Point@{pixel\-Point}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{pixel\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Q\-C\-P\-Item\-Position\-::pixel\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classQCPItemPosition_ae490f9c76ee2ba33752c495d3b6e8fb5}
+Returns the final absolute pixel position of the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. It includes all effects of type (\hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{set\-Type}) and possible parent anchors (\hyperlink{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{set\-Parent\-Anchor}).
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{set\-Pixel\-Point} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classQCPItemAnchor_ae92def8f9297c5d73f5806c586517bb3}{Q\-C\-P\-Item\-Anchor}.
+
+\hypertarget{classQCPItemPosition_a2185f45c75ac8cb9be89daeaaad50e37}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!set\-Axes@{set\-Axes}}
+\index{set\-Axes@{set\-Axes}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{set\-Axes}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Position\-::set\-Axes (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{key\-Axis, }
+\item[{{\bf Q\-C\-P\-Axis} $\ast$}]{value\-Axis}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_a2185f45c75ac8cb9be89daeaaad50e37}
+When \hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{set\-Type} is pt\-Plot\-Coords, this function may be used to specify the axes the coordinates set with \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} relate to. \hypertarget{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!set\-Coords@{set\-Coords}}
+\index{set\-Coords@{set\-Coords}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{set\-Coords}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Position\-::set\-Coords (
+\begin{DoxyParamCaption}
+\item[{double}]{key, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}
+Sets the coordinates of this \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position}. What the coordinates mean, is defined by the type (\hyperlink{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{set\-Type}).
+
+For example, if the type is \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\-Absolute}, {\itshape key} and {\itshape value} mean the x and y pixel position on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface where the origin (0, 0) is in the top left corner of the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} viewport. If the type is \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords}, {\itshape key} and {\itshape value} mean a point in the plot coordinate system defined by the axes set by \hyperlink{classQCPItemPosition_a2185f45c75ac8cb9be89daeaaad50e37}{set\-Axes}. (By default the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}'s x-\/ and y\-Axis.)
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{set\-Pixel\-Point} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemPosition_acc70b3abc143287f806e5f154e5e07b0}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!set\-Coords@{set\-Coords}}
+\index{set\-Coords@{set\-Coords}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{set\-Coords}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Position\-::set\-Coords (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pos}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_acc70b3abc143287f806e5f154e5e07b0}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the coordinates as a Q\-Point\-F {\itshape pos} where pos.\-x has the meaning of {\itshape key} and pos.\-y the meaning of {\itshape value} of the \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords(double key, double value)} function. \hypertarget{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!set\-Parent\-Anchor@{set\-Parent\-Anchor}}
+\index{set\-Parent\-Anchor@{set\-Parent\-Anchor}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{set\-Parent\-Anchor}]{\setlength{\rightskip}{0pt plus 5cm}bool Q\-C\-P\-Item\-Position\-::set\-Parent\-Anchor (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Item\-Anchor} $\ast$}]{parent\-Anchor, }
+\item[{bool}]{keep\-Pixel\-Position = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}
+Sets the parent of this \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} to {\itshape parent\-Anchor}. This means the position will now follow any position changes of the anchor. The local coordinate system of positions with a parent anchor always is absolute with (0, 0) being exactly on top of the parent anchor. (Hence the type shouldn't be \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords} for positions with parent anchors.)
+
+if {\itshape keep\-Pixel\-Position} is true, the current pixel position of the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} is preserved during reparenting. If it's set to false, the coordinates are set to (0, 0), i.\-e. the position will be exactly on top of the parent anchor.
+
+To remove this \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} from any parent anchor, set {\itshape parent\-Anchor} to 0.
+
+\begin{DoxyNote}{Note}
+If the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} previously had no parent and the type is \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords}, the type is set to \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\-Absolute}, to keep the position in a valid state. 
+\end{DoxyNote}
+\hypertarget{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!set\-Pixel\-Point@{set\-Pixel\-Point}}
+\index{set\-Pixel\-Point@{set\-Pixel\-Point}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{set\-Pixel\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Position\-::set\-Pixel\-Point (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pixel\-Point}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}
+Sets the apparent pixel position. This works no matter what type this \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} is or what parent-\/child situation it is in, as \hyperlink{classQCPItemPosition_ab404e56d9ac2ac2df0382c57933a71ef}{set\-Pixel\-Point} transforms the coordinates appropriately, to make the position appear at the specified pixel values.
+
+Only if the type is \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\-Absolute} and no parent anchor is set, this function is identical to \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords}.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}{\index{Q\-C\-P\-Item\-Position@{Q\-C\-P\-Item\-Position}!set\-Type@{set\-Type}}
+\index{set\-Type@{set\-Type}!QCPItemPosition@{Q\-C\-P\-Item\-Position}}
+\subsubsection[{set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Position\-::set\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Item\-Position\-::\-Position\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemPosition_aa476abf71ed8fa4c537457ebb1a754ad}
+Sets the type of the position. The type defines how the coordinates passed to \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} should be handled and how the \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} should behave in the plot. Note that the position type \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords} is only available (and sensible) when the position has no parent anchor (\hyperlink{classQCPItemPosition_ac094d67a95d2dceafa0d50b9db3a7e51}{set\-Parent\-Anchor}).
+
+The possible values for {\itshape type} can be separated in two main categories\-:
+
+\begin{DoxyItemize}
+\item The position is regarded as a point in plot coordinates. This corresponds to \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ad5ffb8dc99ad73263f7010c77342294c}{pt\-Plot\-Coords} and requires two axes that define the plot coordinate system. They can be specified with \hyperlink{classQCPItemPosition_a2185f45c75ac8cb9be89daeaaad50e37}{set\-Axes}. By default, the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}'s x-\/ and y\-Axis are used.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item The position is fixed on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface, i.\-e. independant of axis ranges. This corresponds to all other types, i.\-e. \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a564f5e53e550ead1ec5fc7fc7d0b73e0}{pt\-Absolute}, \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8ac7d6aa89ceacb39658b0d6da061c789a}{pt\-Viewport\-Ratio} and \hyperlink{classQCPItemPosition_aad9936c22bf43e3d358552f6e86dbdc8a01080fd00eaf09fa238ef6b73bbfef75}{pt\-Axis\-Rect\-Ratio}. They differ only in the way the absolute position is described, see the documentation of Position\-Type for details.\end{DoxyItemize}
+\begin{DoxyNote}{Note}
+If the type is changed, the apparent pixel position on the plot is preserved. This means the coordinates as retrieved with coords() and set with \hyperlink{classQCPItemPosition_aa988ba4e87ab684c9021017dcaba945f}{set\-Coords} may change in the process. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+qcustomplot.\-cpp\end{DoxyCompactItemize}

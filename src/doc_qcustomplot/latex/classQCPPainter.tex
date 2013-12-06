@@ -1,0 +1,247 @@
+\hypertarget{classQCPPainter}{\section{Q\-C\-P\-Painter Class Reference}
+\label{classQCPPainter}\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}}
+}
+
+
+Q\-Painter subclass used internally.  
+
+
+Inheritance diagram for Q\-C\-P\-Painter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classQCPPainter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPPainter_a3c52cb0f43f34573d29bea487da28fe8}{Q\-C\-P\-Painter} ()
+\item 
+\hyperlink{classQCPPainter_ae58dbb1795ddc4351ab324dc9898aa22}{Q\-C\-P\-Painter} (Q\-Paint\-Device $\ast$device)
+\item 
+\hypertarget{classQCPPainter_a4bfe30a2c2391dd9ee387f366f4ee26f}{Q\-Pixmap {\bfseries scatter\-Pixmap} () const }\label{classQCPPainter_a4bfe30a2c2391dd9ee387f366f4ee26f}
+
+\item 
+\hypertarget{classQCPPainter_a13370d7996315a7150be2fc868da3d4a}{bool {\bfseries antialiasing} () const }\label{classQCPPainter_a13370d7996315a7150be2fc868da3d4a}
+
+\item 
+\hypertarget{classQCPPainter_ac272648ed66f0602f2250de45cbbeb33}{bool {\bfseries pdf\-Export\-Mode} () const }\label{classQCPPainter_ac272648ed66f0602f2250de45cbbeb33}
+
+\item 
+\hypertarget{classQCPPainter_ac888ac599da0583b29c8b687ff931530}{bool {\bfseries scaled\-Export\-Mode} () const }\label{classQCPPainter_ac888ac599da0583b29c8b687ff931530}
+
+\item 
+void \hyperlink{classQCPPainter_a0f636de68b40d2e169ab15a8ca067107}{set\-Scatter\-Pixmap} (const Q\-Pixmap pm)
+\item 
+void \hyperlink{classQCPPainter_aaba1deb9188244d9ea65b035112b4d05}{set\-Antialiasing} (bool enabled)
+\item 
+void \hyperlink{classQCPPainter_ae0931c24883ce8ea53103d3b80e0de56}{set\-Pdf\-Export\-Mode} (bool enabled)
+\item 
+void \hyperlink{classQCPPainter_a256e886e856ae696503aeacae91535cd}{set\-Scaled\-Export\-Mode} (bool enabled)
+\item 
+void \hyperlink{classQCPPainter_af9c7a4cd1791403901f8c5b82a150195}{set\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPPainter_a5c4d88f21564e156e88ef807f7cf0003}{set\-Pen} (const Q\-Color \&color)
+\item 
+void \hyperlink{classQCPPainter_a25e76095aae41da0d08035060e5f81ca}{set\-Pen} (Qt\-::\-Pen\-Style pen\-Style)
+\item 
+void \hyperlink{classQCPPainter_a0b4b1b9bd495e182c731774dc800e6e0}{draw\-Line} (const Q\-Line\-F \&line)
+\item 
+\hypertarget{classQCPPainter_ad1638db27929491b3f1beb74d6cbad5e}{void {\bfseries draw\-Line} (const Q\-Point\-F \&p1, const Q\-Point\-F \&p2)}\label{classQCPPainter_ad1638db27929491b3f1beb74d6cbad5e}
+
+\item 
+void \hyperlink{classQCPPainter_a8fd6821ee6fecbfa04444c9062912abd}{save} ()
+\item 
+void \hyperlink{classQCPPainter_a64908e6298d5bbd83457dc987cc3a022}{restore} ()
+\item 
+void \hyperlink{classQCPPainter_a27af07a62c335faf79191b797306b218}{fix\-Scaled\-Pen} ()
+\item 
+void \hyperlink{classQCPPainter_a3aa145eb9865752d583c40ef995c5049}{draw\-Scatter} (double x, double y, double size, \hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26f}{Q\-C\-P\-::\-Scatter\-Style} style)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPPainter_a20d67229e0977ad7ce3a3c7349cbd59c}{Q\-Pixmap {\bfseries m\-Scatter\-Pixmap}}\label{classQCPPainter_a20d67229e0977ad7ce3a3c7349cbd59c}
+
+\item 
+\hypertarget{classQCPPainter_a967991f4d003d1fca9f67d9152ef651e}{bool {\bfseries m\-Scaled\-Export\-Mode}}\label{classQCPPainter_a967991f4d003d1fca9f67d9152ef651e}
+
+\item 
+\hypertarget{classQCPPainter_ab73675954590388f0e170e6bc70efe2a}{bool {\bfseries m\-Pdf\-Export\-Mode}}\label{classQCPPainter_ab73675954590388f0e170e6bc70efe2a}
+
+\item 
+\hypertarget{classQCPPainter_a7055085da176aee0f6b23298f1003d08}{bool {\bfseries m\-Is\-Antialiasing}}\label{classQCPPainter_a7055085da176aee0f6b23298f1003d08}
+
+\item 
+\hypertarget{classQCPPainter_a0189e641bbf7dc31ac15aef7b36501fa}{Q\-Stack$<$ bool $>$ {\bfseries m\-Antialiasing\-Stack}}\label{classQCPPainter_a0189e641bbf7dc31ac15aef7b36501fa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Q\-Painter subclass used internally. 
+
+This internal class is used to provide some extended functionality e.\-g. for tweaking position consistency between antialiased and non-\/antialiased painting and drawing common shapes (like scatter symbols). Further it provides workarounds for Q\-Painter quirks.
+
+\begin{DoxyWarning}{Warning}
+This class intentionally hides non-\/virtual functions of Q\-Painter, e.\-g. set\-Pen, save and restore. So while it is possible to pass a \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} instance to a function that expects a Q\-Painter pointer, some of the workarounds and tweaks will be unavailable to the function (because it will call the base class implementations of the functions actually hidden by \hyperlink{classQCPPainter}{Q\-C\-P\-Painter}). 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPPainter_a3c52cb0f43f34573d29bea487da28fe8}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!Q\-C\-P\-Painter@{Q\-C\-P\-Painter}}
+\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{Q\-C\-P\-Painter}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Painter\-::\-Q\-C\-P\-Painter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a3c52cb0f43f34573d29bea487da28fe8}
+Creates a new \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} instance and sets default values \hypertarget{classQCPPainter_ae58dbb1795ddc4351ab324dc9898aa22}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!Q\-C\-P\-Painter@{Q\-C\-P\-Painter}}
+\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{Q\-C\-P\-Painter}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Painter\-::\-Q\-C\-P\-Painter (
+\begin{DoxyParamCaption}
+\item[{Q\-Paint\-Device $\ast$}]{device}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_ae58dbb1795ddc4351ab324dc9898aa22}
+Creates a new \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} instance on the specified paint {\itshape device} and sets default values. Just like the analogous Q\-Painter constructor, begins painting on {\itshape device} immediately. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPPainter_a0b4b1b9bd495e182c731774dc800e6e0}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!draw\-Line@{draw\-Line}}
+\index{draw\-Line@{draw\-Line}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{draw\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::draw\-Line (
+\begin{DoxyParamCaption}
+\item[{const Q\-Line\-F \&}]{line}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a0b4b1b9bd495e182c731774dc800e6e0}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Works around a Qt bug introduced with Qt 4.\-8 which makes drawing Q\-Line\-F unpredictable when antialiasing is disabled.
+
+\begin{DoxyNote}{Note}
+this function hides the non-\/virtual base class implementation. 
+\end{DoxyNote}
+\hypertarget{classQCPPainter_a3aa145eb9865752d583c40ef995c5049}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!draw\-Scatter@{draw\-Scatter}}
+\index{draw\-Scatter@{draw\-Scatter}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{draw\-Scatter}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::draw\-Scatter (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{size, }
+\item[{{\bf Q\-C\-P\-::\-Scatter\-Style}}]{style}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a3aa145eb9865752d583c40ef995c5049}
+Draws a single scatter point with the specified {\itshape style} and {\itshape size} in pixels at the pixel position {\itshape x} and {\itshape y}.
+
+If the {\itshape style} is ss\-Pixmap, make sure to pass the respective pixmap with \hyperlink{classQCPPainter_a0f636de68b40d2e169ab15a8ca067107}{set\-Scatter\-Pixmap} before calling this function. \hypertarget{classQCPPainter_a27af07a62c335faf79191b797306b218}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!fix\-Scaled\-Pen@{fix\-Scaled\-Pen}}
+\index{fix\-Scaled\-Pen@{fix\-Scaled\-Pen}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{fix\-Scaled\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::fix\-Scaled\-Pen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a27af07a62c335faf79191b797306b218}
+Provides a workaround for a Q\-Painter bug that prevents scaling of pen widths for pens with width 0, although the Q\-Painter\-::\-Non\-Cosmetic\-Default\-Pen render hint is set.
+
+Changes the pen width from 0 to 1, if appropriate.
+
+Does nothing if the \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} is not in scaled export mode (\hyperlink{classQCPPainter_a256e886e856ae696503aeacae91535cd}{set\-Scaled\-Export\-Mode}). \hypertarget{classQCPPainter_a64908e6298d5bbd83457dc987cc3a022}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!restore@{restore}}
+\index{restore@{restore}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{restore}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::restore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a64908e6298d5bbd83457dc987cc3a022}
+Restores the painter (see Q\-Painter\-::restore). Since \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} adds some new internal state to Q\-Painter, the save/restore functions are reimplemented to also save/restore those members.
+
+\begin{DoxyNote}{Note}
+this function hides the non-\/virtual base class implementation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPPainter_a8fd6821ee6fecbfa04444c9062912abd}{save} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPPainter_a8fd6821ee6fecbfa04444c9062912abd}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!save@{save}}
+\index{save@{save}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a8fd6821ee6fecbfa04444c9062912abd}
+Saves the painter (see Q\-Painter\-::save). Since \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} adds some new internal state to Q\-Painter, the save/restore functions are reimplemented to also save/restore those members.
+
+\begin{DoxyNote}{Note}
+this function hides the non-\/virtual base class implementation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPPainter_a64908e6298d5bbd83457dc987cc3a022}{restore} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPPainter_aaba1deb9188244d9ea65b035112b4d05}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Antialiasing@{set\-Antialiasing}}
+\index{set\-Antialiasing@{set\-Antialiasing}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Antialiasing}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Antialiasing (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_aaba1deb9188244d9ea65b035112b4d05}
+Sets whether painting uses antialiasing or not. Use this method instead of using set\-Render\-Hint with Q\-Painter\-::\-Antialiasing directly, as it allows \hyperlink{classQCPPainter}{Q\-C\-P\-Painter} to regain pixel exactness between antialiased and non-\/antialiased painting (Since Qt uses slightly different coordinate systems for A\-A/\-Non-\/\-A\-A painting). \hypertarget{classQCPPainter_ae0931c24883ce8ea53103d3b80e0de56}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Pdf\-Export\-Mode@{set\-Pdf\-Export\-Mode}}
+\index{set\-Pdf\-Export\-Mode@{set\-Pdf\-Export\-Mode}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Pdf\-Export\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Pdf\-Export\-Mode (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_ae0931c24883ce8ea53103d3b80e0de56}
+Sets whether the painter shall adjust its fixes/workarounds optimized for vectorized pdf export.
+
+This means for example, that the antialiasing/non-\/antialiasing fix introduced with \hyperlink{classQCPPainter_aaba1deb9188244d9ea65b035112b4d05}{set\-Antialiasing} is not used, since P\-D\-F is not rastered and thus works with floating point data natively. \hypertarget{classQCPPainter_af9c7a4cd1791403901f8c5b82a150195}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Pen@{set\-Pen}}
+\index{set\-Pen@{set\-Pen}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_af9c7a4cd1791403901f8c5b82a150195}
+Sets the pen of the painter and applies certain fixes to it, depending on the mode of this \hyperlink{classQCPPainter}{Q\-C\-P\-Painter}.
+
+\begin{DoxyNote}{Note}
+this function hides the non-\/virtual base class implementation. 
+\end{DoxyNote}
+\hypertarget{classQCPPainter_a5c4d88f21564e156e88ef807f7cf0003}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Pen@{set\-Pen}}
+\index{set\-Pen@{set\-Pen}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Color \&}]{color}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a5c4d88f21564e156e88ef807f7cf0003}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the pen (by color) of the painter and applies certain fixes to it, depending on the mode of this \hyperlink{classQCPPainter}{Q\-C\-P\-Painter}.
+
+\begin{DoxyNote}{Note}
+this function hides the non-\/virtual base class implementation. 
+\end{DoxyNote}
+\hypertarget{classQCPPainter_a25e76095aae41da0d08035060e5f81ca}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Pen@{set\-Pen}}
+\index{set\-Pen@{set\-Pen}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Pen (
+\begin{DoxyParamCaption}
+\item[{Qt\-::\-Pen\-Style}]{pen\-Style}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a25e76095aae41da0d08035060e5f81ca}
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the pen (by style) of the painter and applies certain fixes to it, depending on the mode of this \hyperlink{classQCPPainter}{Q\-C\-P\-Painter}.
+
+\begin{DoxyNote}{Note}
+this function hides the non-\/virtual base class implementation. 
+\end{DoxyNote}
+\hypertarget{classQCPPainter_a256e886e856ae696503aeacae91535cd}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Scaled\-Export\-Mode@{set\-Scaled\-Export\-Mode}}
+\index{set\-Scaled\-Export\-Mode@{set\-Scaled\-Export\-Mode}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Scaled\-Export\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Scaled\-Export\-Mode (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a256e886e856ae696503aeacae91535cd}
+Sets whether the painter shall adjust its fixes/workarounds optimized for scaled export to rastered image formats.
+
+For example this provides a workaround for a Q\-Painter bug that prevents scaling of pen widths for pens with width 0, although the Q\-Painter\-::\-Non\-Cosmetic\-Default\-Pen render hint is set. \hypertarget{classQCPPainter_a0f636de68b40d2e169ab15a8ca067107}{\index{Q\-C\-P\-Painter@{Q\-C\-P\-Painter}!set\-Scatter\-Pixmap@{set\-Scatter\-Pixmap}}
+\index{set\-Scatter\-Pixmap@{set\-Scatter\-Pixmap}!QCPPainter@{Q\-C\-P\-Painter}}
+\subsubsection[{set\-Scatter\-Pixmap}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Painter\-::set\-Scatter\-Pixmap (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pixmap}]{pm}
+\end{DoxyParamCaption}
+)}}\label{classQCPPainter_a0f636de68b40d2e169ab15a8ca067107}
+Sets the pixmap that will be used to draw scatters with \hyperlink{classQCPPainter_a3aa145eb9865752d583c40ef995c5049}{draw\-Scatter}, when the style is \hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa3046d385199d0903dd492322ba133e75}{Q\-C\-P\-::ss\-Pixmap}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+qcustomplot.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\contentsline {chapter}{\numberline {1}Alive Documentation}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}About the program}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Installation}{1}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Linux}{1}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Sqlite database}{2}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Program user guide}{2}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Overview}{2}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Algorithm}{2}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Running program}{3}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Plateau test}{3}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}Database tables}{4}{subsection.1.3.5}
+\contentsline {section}{\numberline {1.4}Developement of the program}{4}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Program structure overview}{4}{subsection.1.4.1}
+\contentsline {chapter}{\numberline {2}Namespace Index}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Namespace List}{7}{section.2.1}
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{9}{section.3.1}
+\contentsline {chapter}{\numberline {4}Data Structure Index}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Data Structures}{11}{section.4.1}
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}Ui Namespace Reference}{13}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{13}{subsection.5.1.1}
+\contentsline {chapter}{\numberline {6}Data Structure Documentation}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}Bin\discretionary {-}{}{}Reader Class Reference}{15}{section.6.1}
+\contentsline {section}{\numberline {6.2}Calibration Class Reference}{15}{section.6.2}
+\contentsline {section}{\numberline {6.3}Data Class Reference}{16}{section.6.3}
+\contentsline {section}{\numberline {6.4}Data\discretionary {-}{}{}Handle Class Reference}{18}{section.6.4}
+\contentsline {section}{\numberline {6.5}Info Class Reference}{19}{section.6.5}
+\contentsline {section}{\numberline {6.6}Main\discretionary {-}{}{}Window Class Reference}{20}{section.6.6}
+\contentsline {section}{\numberline {6.7}Main\discretionary {-}{}{}Window\discretionary {-}{}{}Data Struct Reference}{20}{section.6.7}
+\contentsline {section}{\numberline {6.8}Plateau Class Reference}{21}{section.6.8}
+\contentsline {section}{\numberline {6.9}Sql\discretionary {-}{}{}Connection Class Reference}{21}{section.6.9}
+\contentsline {section}{\numberline {6.10}Sql\discretionary {-}{}{}Handle Class Reference}{22}{section.6.10}
+\contentsline {part}{Index}{22}{section*.26}

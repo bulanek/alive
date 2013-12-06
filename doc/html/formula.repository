@@ -1,0 +1,30 @@
+\form#0:$a+bx$
+\form#1:$a=0$
+\form#2:$a+bx+cx^2$
+\form#3:$a+bx+cx^2+dx^3$
+\form#4:$a*\exp((x-b)/|c|)$
+\form#5:$a*\exp((x-b)/|c|)+d*x$
+\form#6:$\chi^2$
+\form#7:$\epsion(dose)=\epsilon(signal)/\frac{\partial f}{\partial x}_{f(x)=dose signal})$
+\form#8:$\epsion(dose)=\epsilon(signal)/\frac{\partial f}{\partial x} {f(x)=dose signal}$
+\form#9:$\epsion(dose)=\epsilon(signal)/\frac{\partial f(x)}{\partial x}_{f(x)=dose signal}$
+\form#10:$\epsilon(dose)=\epsilon(signal)/\frac{\partial f(x)}{\partial x}_{|f(x)=signal}$
+\form#11:$\delta(dose)=\delta(signal)/\frac{\partial f(x)}{\partial x}_{|f(x)=signal}$
+\form#12:$a-b\ln(t)$
+\form#13:$a*t^{-b}$
+\form#14:$t=time$
+\form#15:$t$
+\form#16:$N$
+\form#17:$N\=20$
+\form#18:$a$
+\form#19:$a=1$
+\form#20:$D$
+\form#21:$D_{corrected}=\frac{F_{natural}}{F_{calibration}}\cdot D_{uncorrected}$
+\form#22:$F$
+\form#23:$D_{corrected}=\frac{F_{calibration}}{F_{natural}}\cdot D_{uncorrected}$
+\form#24:$N=20$
+\form#25:$a,b$
+\form#26:$fad_0,fad_1$
+\form#27:$fad\_0,fad\_1$
+\form#28:$a,\dots ,d$
+\form#29:$[0],\dots ,[3]$

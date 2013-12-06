@@ -1,0 +1,219 @@
+\hypertarget{qcustomplot_8h}{\section{/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.h File Reference}
+\label{qcustomplot_8h}\index{/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.\-h@{/home/boris/\-Dropbox/dokumenty/\-S\-U\-R\-O/\-E\-U\-R\-A\-D\-O\-S\-\_\-school/intercomp/my\-\_\-program/qt\-\_\-application/alive/src/qcustomplot.\-h}}
+}
+{\ttfamily \#include $<$Q\-Object$>$}\\*
+{\ttfamily \#include $<$Q\-Widget$>$}\\*
+{\ttfamily \#include $<$Q\-Painter$>$}\\*
+{\ttfamily \#include $<$Q\-Paint\-Event$>$}\\*
+{\ttfamily \#include $<$Q\-Pixmap$>$}\\*
+{\ttfamily \#include $<$Q\-Vector$>$}\\*
+{\ttfamily \#include $<$Q\-String$>$}\\*
+{\ttfamily \#include $<$Q\-Printer$>$}\\*
+{\ttfamily \#include $<$Q\-Date\-Time$>$}\\*
+{\ttfamily \#include $<$Q\-Multi\-Map$>$}\\*
+{\ttfamily \#include $<$Q\-Flags$>$}\\*
+{\ttfamily \#include $<$Q\-Debug$>$}\\*
+{\ttfamily \#include $<$Q\-Vector2\-D$>$}\\*
+{\ttfamily \#include $<$Q\-Stack$>$}\\*
+{\ttfamily \#include $<$qmath.\-h$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classQCPData}{Q\-C\-P\-Data}
+\begin{DoxyCompactList}\small\item\em Holds the data of one single data point for \hyperlink{classQCPGraph}{Q\-C\-P\-Graph}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data}
+\begin{DoxyCompactList}\small\item\em Holds the data of one single data point for \hyperlink{classQCPCurve}{Q\-C\-P\-Curve}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data}
+\begin{DoxyCompactList}\small\item\em Holds the data of one single data point (one bar) for \hyperlink{classQCPBars}{Q\-C\-P\-Bars}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPPainter}{Q\-C\-P\-Painter}
+\begin{DoxyCompactList}\small\item\em Q\-Painter subclass used internally. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPLineEnding}{Q\-C\-P\-Line\-Ending}
+\begin{DoxyCompactList}\small\item\em Handles the different ending decorations for line-\/like items. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPLayer}{Q\-C\-P\-Layer}
+\begin{DoxyCompactList}\small\item\em A layer that may contain objects, to control the rendering order. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPLayerable}{Q\-C\-P\-Layerable}
+\begin{DoxyCompactList}\small\item\em Base class for all objects that can be placed on layers. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable}
+\begin{DoxyCompactList}\small\item\em The abstract base class for all data representing objects in a plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPGraph}{Q\-C\-P\-Graph}
+\begin{DoxyCompactList}\small\item\em A plottable representing a graph in a plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPCurve}{Q\-C\-P\-Curve}
+\begin{DoxyCompactList}\small\item\em A plottable representing a parametric curve in a plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPBars}{Q\-C\-P\-Bars}
+\begin{DoxyCompactList}\small\item\em A plottable representing a bar chart in a plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPStatisticalBox}{Q\-C\-P\-Statistical\-Box}
+\begin{DoxyCompactList}\small\item\em A plottable representing a single statistical box in a plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor}
+\begin{DoxyCompactList}\small\item\em An anchor of an item to which positions can be attached to. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position}
+\begin{DoxyCompactList}\small\item\em Manages the position of an item. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPAbstractItem}{Q\-C\-P\-Abstract\-Item}
+\begin{DoxyCompactList}\small\item\em The abstract base class for all items in a plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemStraightLine}{Q\-C\-P\-Item\-Straight\-Line}
+\begin{DoxyCompactList}\small\item\em A straight line that spans infinitely in both directions. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemLine}{Q\-C\-P\-Item\-Line}
+\begin{DoxyCompactList}\small\item\em A line from one point to another. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemEllipse}{Q\-C\-P\-Item\-Ellipse}
+\begin{DoxyCompactList}\small\item\em An ellipse. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect}
+\begin{DoxyCompactList}\small\item\em A rectangle. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemPixmap}{Q\-C\-P\-Item\-Pixmap}
+\begin{DoxyCompactList}\small\item\em An arbitrary pixmap. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemText}{Q\-C\-P\-Item\-Text}
+\begin{DoxyCompactList}\small\item\em A text label. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemCurve}{Q\-C\-P\-Item\-Curve}
+\begin{DoxyCompactList}\small\item\em A curved line from one point to another. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemBracket}{Q\-C\-P\-Item\-Bracket}
+\begin{DoxyCompactList}\small\item\em A bracket for referencing/highlighting certain parts in the plot. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPItemTracer}{Q\-C\-P\-Item\-Tracer}
+\begin{DoxyCompactList}\small\item\em Item that sticks to \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} data points. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPRange}{Q\-C\-P\-Range}
+\begin{DoxyCompactList}\small\item\em Represents the range an axis is encompassing. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item}
+\begin{DoxyCompactList}\small\item\em The abstract base class for all items in a \hyperlink{classQCPLegend}{Q\-C\-P\-Legend}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPPlottableLegendItem}{Q\-C\-P\-Plottable\-Legend\-Item}
+\begin{DoxyCompactList}\small\item\em A legend item representing a plottable with an icon and the plottable name. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPLegend}{Q\-C\-P\-Legend}
+\begin{DoxyCompactList}\small\item\em Manages a legend inside a \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPGrid}{Q\-C\-P\-Grid}
+\begin{DoxyCompactList}\small\item\em Responsible for drawing the grid of a \hyperlink{classQCPAxis}{Q\-C\-P\-Axis}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCPAxis}{Q\-C\-P\-Axis}
+\begin{DoxyCompactList}\small\item\em Manages a single axis inside a \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}. \end{DoxyCompactList}\item 
+class \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}
+\begin{DoxyCompactList}\small\item\em The central class of the library, the Q\-Widget which displays the plot and interacts with the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceQCP}{Q\-C\-P}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Q\-Map$<$ double, \hyperlink{classQCPData}{Q\-C\-P\-Data} $>$ \hyperlink{qcustomplot_8h_a84a9c4a4c2216ccfdcb5f3067cda76e3}{Q\-C\-P\-Data\-Map}
+\item 
+\hypertarget{qcustomplot_8h_a0fd9a83e0a1783a82f439b0e200b6ae5}{typedef Q\-Map\-Iterator$<$ double, \\*
+\hyperlink{classQCPData}{Q\-C\-P\-Data} $>$ {\bfseries Q\-C\-P\-Data\-Map\-Iterator}}\label{qcustomplot_8h_a0fd9a83e0a1783a82f439b0e200b6ae5}
+
+\item 
+\hypertarget{qcustomplot_8h_a4798b07422d0d4c46a8665c23958b0ea}{typedef Q\-Mutable\-Map\-Iterator\\*
+$<$ double, \hyperlink{classQCPData}{Q\-C\-P\-Data} $>$ {\bfseries Q\-C\-P\-Data\-Mutable\-Map\-Iterator}}\label{qcustomplot_8h_a4798b07422d0d4c46a8665c23958b0ea}
+
+\item 
+typedef Q\-Map$<$ double, \\*
+\hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data} $>$ \hyperlink{qcustomplot_8h_a444d37ec9cb2951b3a7fe443c34d1658}{Q\-C\-P\-Curve\-Data\-Map}
+\item 
+\hypertarget{qcustomplot_8h_aeb3dbc9f09e8ce9957be86dd6e8c803d}{typedef Q\-Map\-Iterator$<$ double, \\*
+\hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data} $>$ {\bfseries Q\-C\-P\-Curve\-Data\-Map\-Iterator}}\label{qcustomplot_8h_aeb3dbc9f09e8ce9957be86dd6e8c803d}
+
+\item 
+\hypertarget{qcustomplot_8h_ad85cf567575500cc8877fd65f4c5b9fb}{typedef Q\-Mutable\-Map\-Iterator\\*
+$<$ double, \hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data} $>$ {\bfseries Q\-C\-P\-Curve\-Data\-Mutable\-Map\-Iterator}}\label{qcustomplot_8h_ad85cf567575500cc8877fd65f4c5b9fb}
+
+\item 
+typedef Q\-Map$<$ double, \hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data} $>$ \hyperlink{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}{Q\-C\-P\-Bar\-Data\-Map}
+\item 
+\hypertarget{qcustomplot_8h_ad8f7e19ade25016f69f2ebedbd130f92}{typedef Q\-Map\-Iterator$<$ double, \\*
+\hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data} $>$ {\bfseries Q\-C\-P\-Bar\-Data\-Map\-Iterator}}\label{qcustomplot_8h_ad8f7e19ade25016f69f2ebedbd130f92}
+
+\item 
+\hypertarget{qcustomplot_8h_a5f61a38b8bb85ebfefa76ae0983f1c78}{typedef Q\-Mutable\-Map\-Iterator\\*
+$<$ double, \hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data} $>$ {\bfseries Q\-C\-P\-Bar\-Data\-Mutable\-Map\-Iterator}}\label{qcustomplot_8h_a5f61a38b8bb85ebfefa76ae0983f1c78}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26f}{Q\-C\-P\-::\-Scatter\-Style} \{ \\*
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa3ee9f603bc4623e9b98011e8829aad1d}{Q\-C\-P\-::ss\-None}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa56816c1386f1356417bcc013adf0367c}{Q\-C\-P\-::ss\-Dot}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fab1d52c10ee4b09fe17854be238055f30}{Q\-C\-P\-::ss\-Cross}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa82b8526e3bfa7d0cccc1fd5eb16505ac}{Q\-C\-P\-::ss\-Plus}, 
+\\*
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa13ed43d724ecefa84baae4179de3bd8d}{Q\-C\-P\-::ss\-Circle}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa6d1fd37ccd5f6fdea72992feb522a342}{Q\-C\-P\-::ss\-Disc}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fae613e80d80910579c17a5ed90e9137b0}{Q\-C\-P\-::ss\-Square}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa6daa1761cab7e529768b84460f2b5141}{Q\-C\-P\-::ss\-Diamond}, 
+\\*
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa8d380c3956b53e1d12d8248de77e4f3c}{Q\-C\-P\-::ss\-Star}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa71324858fe181ad5d5ff36b6eca4f448}{Q\-C\-P\-::ss\-Triangle}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa17fd9aa8f51529e09ecacdacbe920271}{Q\-C\-P\-::ss\-Triangle\-Inverted}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26faa830c1cd1028a60eece7b84768face5e}{Q\-C\-P\-::ss\-Cross\-Square}, 
+\\*
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa2322889660847e07337730222ee373c1}{Q\-C\-P\-::ss\-Plus\-Square}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa32c6bc5b7596ba0cca2342ef6e846fbe}{Q\-C\-P\-::ss\-Cross\-Circle}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa78f2658826f26f4d266962845a1bb827}{Q\-C\-P\-::ss\-Plus\-Circle}, 
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fae2ed4e86e8d0676b7c1476a1e8692070}{Q\-C\-P\-::ss\-Peace}, 
+\\*
+\hyperlink{namespaceQCP_af66d0711d42fe78d96c28abadc67f26fa3046d385199d0903dd492322ba133e75}{Q\-C\-P\-::ss\-Pixmap}
+ \}
+\item 
+enum \hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0c}{Q\-C\-P\-::\-Antialiased\-Element} \{ \\*
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0caefa92e89cd37f8a081fd2075aa1af73f}{Q\-C\-P\-::ae\-Axes} = 0x0001, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca4fbb37118d62288af0ca601ff2b07a2f}{Q\-C\-P\-::ae\-Grid} = 0x0002, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0caaedf83369188a15a69f92bb1d85ca97b}{Q\-C\-P\-::ae\-Sub\-Grid} = 0x0004, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca9e0127a6361b5d0596b031a482c5cf97}{Q\-C\-P\-::ae\-Legend} = 0x0008, 
+\\*
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca1aca7a50c1b95403958733a4acafe773}{Q\-C\-P\-::ae\-Legend\-Items} = 0x0010, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca4145e4251b0cf2dbedabeea0a38f84f6}{Q\-C\-P\-::ae\-Plottables} = 0x0020, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0caf7712a85d6b0c75b24301d2fe9484db3}{Q\-C\-P\-::ae\-Items} = 0x0040, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0cae45ed8cd167bffe27d7f40da4bc17e9c}{Q\-C\-P\-::ae\-Scatters} = 0x0080, 
+\\*
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca9dcf3882cb321bb305f71fdc0f09f63d}{Q\-C\-P\-::ae\-Error\-Bars} = 0x0100, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca788810f0aa930137de6ad6cc6d83d354}{Q\-C\-P\-::ae\-Fills} = 0x0200, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0ca261f8ea78cf3c9561726223ffa33dc12}{Q\-C\-P\-::ae\-Zero\-Line} = 0x0400, 
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0caa897c232a0ffc8368e7c100ffc59ef31}{Q\-C\-P\-::ae\-All} = 0x\-F\-F\-F\-F, 
+\\*
+\hyperlink{namespaceQCP_ae55dbe315d41fe80f29ba88100843a0caa9e90d81896358757d94275aeaa58f6a}{Q\-C\-P\-::ae\-None} = 0x0000
+ \}
+\item 
+enum \hyperlink{namespaceQCP_a5400e5fcb9528d92002ddb938c1f4ef4}{Q\-C\-P\-::\-Plotting\-Hint} \{ \hyperlink{namespaceQCP_a5400e5fcb9528d92002ddb938c1f4ef4ab7283c5bfc1ba9e597015389880bda42}{Q\-C\-P\-::ph\-None} = 0x000, 
+\hyperlink{namespaceQCP_a5400e5fcb9528d92002ddb938c1f4ef4aa5fd227bc878c56ad2a87ea32c74ee4d}{Q\-C\-P\-::ph\-Fast\-Polylines} = 0x001, 
+\hyperlink{namespaceQCP_a5400e5fcb9528d92002ddb938c1f4ef4aa3090dafa0e0f9a28c579c79d6c2d283}{Q\-C\-P\-::ph\-Force\-Repaint} = 0x002
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{qcustomplot_8h_ae6c02a20d51ce03bc5dfd27c25a1cc6a}{{\bfseries Q\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-T\-Y\-P\-E\-I\-N\-F\-O} (\hyperlink{classQCPData}{Q\-C\-P\-Data}, Q\-\_\-\-M\-O\-V\-A\-B\-L\-E\-\_\-\-T\-Y\-P\-E)}\label{qcustomplot_8h_ae6c02a20d51ce03bc5dfd27c25a1cc6a}
+
+\item 
+\hypertarget{qcustomplot_8h_a274cda11a63dec5b5796c0cf25efd5d7}{{\bfseries Q\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-T\-Y\-P\-E\-I\-N\-F\-O} (\hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data}, Q\-\_\-\-M\-O\-V\-A\-B\-L\-E\-\_\-\-T\-Y\-P\-E)}\label{qcustomplot_8h_a274cda11a63dec5b5796c0cf25efd5d7}
+
+\item 
+\hypertarget{qcustomplot_8h_a620613bd0461892b290f74997828edae}{{\bfseries Q\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-T\-Y\-P\-E\-I\-N\-F\-O} (\hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data}, Q\-\_\-\-M\-O\-V\-A\-B\-L\-E\-\_\-\-T\-Y\-P\-E)}\label{qcustomplot_8h_a620613bd0461892b290f74997828edae}
+
+\item 
+\hypertarget{qcustomplot_8h_a1376c7245cffa4c7a6b945a542473907}{{\bfseries Q\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-T\-Y\-P\-E\-I\-N\-F\-O} (\hyperlink{classQCPLineEnding}{Q\-C\-P\-Line\-Ending}, Q\-\_\-\-M\-O\-V\-A\-B\-L\-E\-\_\-\-T\-Y\-P\-E)}\label{qcustomplot_8h_a1376c7245cffa4c7a6b945a542473907}
+
+\item 
+\hypertarget{qcustomplot_8h_aed23afce99cb2c82db7540026f3b7af3}{{\bfseries Q\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-T\-Y\-P\-E\-I\-N\-F\-O} (\hyperlink{classQCPRange}{Q\-C\-P\-Range}, Q\-\_\-\-M\-O\-V\-A\-B\-L\-E\-\_\-\-T\-Y\-P\-E)}\label{qcustomplot_8h_aed23afce99cb2c82db7540026f3b7af3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}{\index{qcustomplot.\-h@{qcustomplot.\-h}!Q\-C\-P\-Bar\-Data\-Map@{Q\-C\-P\-Bar\-Data\-Map}}
+\index{Q\-C\-P\-Bar\-Data\-Map@{Q\-C\-P\-Bar\-Data\-Map}!qcustomplot.h@{qcustomplot.\-h}}
+\subsubsection[{Q\-C\-P\-Bar\-Data\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Bar\-Data\-Map}}}\label{qcustomplot_8h_aa846c77472cae93def9f1609d0c57191}
+Container for storing \hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data} items in a sorted fashion. The key of the map is the key member of the \hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data} instance.
+
+This is the container in which \hyperlink{classQCPBars}{Q\-C\-P\-Bars} holds its data. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPBarData}{Q\-C\-P\-Bar\-Data}, \hyperlink{classQCPBars_aa3435aab19e0a49e4e7b41bd36a8d96b}{Q\-C\-P\-Bars\-::set\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{qcustomplot_8h_a444d37ec9cb2951b3a7fe443c34d1658}{\index{qcustomplot.\-h@{qcustomplot.\-h}!Q\-C\-P\-Curve\-Data\-Map@{Q\-C\-P\-Curve\-Data\-Map}}
+\index{Q\-C\-P\-Curve\-Data\-Map@{Q\-C\-P\-Curve\-Data\-Map}!qcustomplot.h@{qcustomplot.\-h}}
+\subsubsection[{Q\-C\-P\-Curve\-Data\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Curve\-Data\-Map}}}\label{qcustomplot_8h_a444d37ec9cb2951b3a7fe443c34d1658}
+Container for storing \hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data} items in a sorted fashion. The key of the map is the t member of the \hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data} instance.
+
+This is the container in which \hyperlink{classQCPCurve}{Q\-C\-P\-Curve} holds its data. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPCurveData}{Q\-C\-P\-Curve\-Data}, \hyperlink{classQCPCurve_a631ac886708460013b30052f49cbc9da}{Q\-C\-P\-Curve\-::set\-Data} 
+\end{DoxySeeAlso}
+\hypertarget{qcustomplot_8h_a84a9c4a4c2216ccfdcb5f3067cda76e3}{\index{qcustomplot.\-h@{qcustomplot.\-h}!Q\-C\-P\-Data\-Map@{Q\-C\-P\-Data\-Map}}
+\index{Q\-C\-P\-Data\-Map@{Q\-C\-P\-Data\-Map}!qcustomplot.h@{qcustomplot.\-h}}
+\subsubsection[{Q\-C\-P\-Data\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\-C\-P\-Data\-Map}}}\label{qcustomplot_8h_a84a9c4a4c2216ccfdcb5f3067cda76e3}
+Container for storing \hyperlink{classQCPData}{Q\-C\-P\-Data} items in a sorted fashion. The key of the map is the key member of the \hyperlink{classQCPData}{Q\-C\-P\-Data} instance.
+
+This is the container in which \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} holds its data. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPData}{Q\-C\-P\-Data}, \hyperlink{classQCPGraph_a1df2fd710545c8ba3b2c99a39a27bf8b}{Q\-C\-P\-Graph\-::set\-Data} 
+\end{DoxySeeAlso}

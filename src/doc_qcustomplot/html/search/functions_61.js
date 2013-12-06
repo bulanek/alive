@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['adddata',['addData',['../classQCPGraph.html#aa5c6181d84db72ce4dbe9dc15a34ef4f',1,'QCPGraph::addData(const QCPDataMap &amp;dataMap)'],['../classQCPGraph.html#a80cc91e1e0ef77eb50afc5b366d0efd9',1,'QCPGraph::addData(const QCPData &amp;data)'],['../classQCPGraph.html#a0bf98b1972286cfb7b1c4b7dd6ae2012',1,'QCPGraph::addData(double key, double value)'],['../classQCPGraph.html#ab6da6377541fe80d892a9893a92db9c6',1,'QCPGraph::addData(const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values)'],['../classQCPCurve.html#a4e24023c3b9ac75440c7a260172c99af',1,'QCPCurve::addData(const QCPCurveDataMap &amp;dataMap)'],['../classQCPCurve.html#ad304326aba096911f92452d8bfe0470e',1,'QCPCurve::addData(const QCPCurveData &amp;data)'],['../classQCPCurve.html#a13398b236f6926014e404eeb5b9f415c',1,'QCPCurve::addData(double t, double key, double value)'],['../classQCPCurve.html#ada4762e793cd5707b33f35b8a4b0f8fb',1,'QCPCurve::addData(double key, double value)'],['../classQCPCurve.html#a27c8b3dddd4067d626397ee199626722',1,'QCPCurve::addData(const QVector&lt; double &gt; &amp;ts, const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values)'],['../classQCPBars.html#a1f29cf08615040993209147fa68de3f2',1,'QCPBars::addData(const QCPBarDataMap &amp;dataMap)'],['../classQCPBars.html#a142158b1addefd53259002dd3ab22c3a',1,'QCPBars::addData(const QCPBarData &amp;data)'],['../classQCPBars.html#a684dd105403a5497fda42f2094fecbb7',1,'QCPBars::addData(double key, double value)'],['../classQCPBars.html#a3679a0a9decab0fa03f8f4c6e3344d52',1,'QCPBars::addData(const QVector&lt; double &gt; &amp;keys, const QVector&lt; double &gt; &amp;values)']]],
+  ['addgraph',['addGraph',['../classQCustomPlot.html#a6fb2873d35a8a8089842d81a70a54167',1,'QCustomPlot']]],
+  ['additem',['addItem',['../classQCPLegend.html#a3ab274de52d2951faea45a6d975e6b3f',1,'QCPLegend::addItem()'],['../classQCustomPlot.html#aa500620379262321685cb7a7674cbd2a',1,'QCustomPlot::addItem()']]],
+  ['addlayer',['addLayer',['../classQCustomPlot.html#ad5255393df078448bb6ac83fa5db5f52',1,'QCustomPlot']]],
+  ['addplottable',['addPlottable',['../classQCustomPlot.html#ab7ad9174f701f9c6f64e378df77927a6',1,'QCustomPlot']]],
+  ['addtolegend',['addToLegend',['../classQCPAbstractPlottable.html#a70f8cabfd808f7d5204b9f18c45c13f5',1,'QCPAbstractPlottable']]],
+  ['afterreplot',['afterReplot',['../classQCustomPlot.html#a6f4fa624af060bc5919c5f266cf426a0',1,'QCustomPlot']]],
+  ['anchor',['anchor',['../classQCPAbstractItem.html#abed974cba7cc02608c71dad4638e008d',1,'QCPAbstractItem']]],
+  ['anchors',['anchors',['../classQCPAbstractItem.html#a8454b9941960b840608a5a1e00b1977d',1,'QCPAbstractItem']]],
+  ['axisclick',['axisClick',['../classQCustomPlot.html#abf635f8b56ab5c16d5de9f358543e82b',1,'QCustomPlot']]],
+  ['axisdoubleclick',['axisDoubleClick',['../classQCustomPlot.html#a6df35357460181a72da3e93d600f5256',1,'QCustomPlot']]]
+];

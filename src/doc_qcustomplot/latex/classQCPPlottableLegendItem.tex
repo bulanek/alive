@@ -1,0 +1,118 @@
+\hypertarget{classQCPPlottableLegendItem}{\section{Q\-C\-P\-Plottable\-Legend\-Item Class Reference}
+\label{classQCPPlottableLegendItem}\index{Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}}
+}
+
+
+A legend item representing a plottable with an icon and the plottable name.  
+
+
+Inheritance diagram for Q\-C\-P\-Plottable\-Legend\-Item\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQCPPlottableLegendItem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPPlottableLegendItem_ac1072591fe409d3dabad51b23ee4d6c5}{Q\-C\-P\-Plottable\-Legend\-Item} (\hyperlink{classQCPLegend}{Q\-C\-P\-Legend} $\ast$parent, \hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable} $\ast$plottable)
+\item 
+\hypertarget{classQCPPlottableLegendItem_af29e9a2c60b4cba0cac2447b8af7b488}{\hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable} $\ast$ {\bfseries plottable} ()}\label{classQCPPlottableLegendItem_af29e9a2c60b4cba0cac2447b8af7b488}
+
+\item 
+\hypertarget{classQCPPlottableLegendItem_a93d3d9ccfa537ff9935eef649ff52ebe}{bool {\bfseries text\-Wrap} () const }\label{classQCPPlottableLegendItem_a93d3d9ccfa537ff9935eef649ff52ebe}
+
+\item 
+void \hyperlink{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}{set\-Text\-Wrap} (bool wrap)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPPlottableLegendItem_ab36270e6b022a6961fa44136f35c0e4b}{Q\-Pen {\bfseries get\-Icon\-Border\-Pen} () const }\label{classQCPPlottableLegendItem_ab36270e6b022a6961fa44136f35c0e4b}
+
+\item 
+\hypertarget{classQCPPlottableLegendItem_ad762b07439c738660ba93e78c1d03667}{Q\-Color {\bfseries get\-Text\-Color} () const }\label{classQCPPlottableLegendItem_ad762b07439c738660ba93e78c1d03667}
+
+\item 
+\hypertarget{classQCPPlottableLegendItem_a8a85c8a25affb4895423d730164d61de}{Q\-Font {\bfseries get\-Font} () const }\label{classQCPPlottableLegendItem_a8a85c8a25affb4895423d730164d61de}
+
+\item 
+virtual void \hyperlink{classQCPPlottableLegendItem_ad5f15d26b1c7e2532455528a4c3c578b}{draw} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter, const Q\-Rect \&rect) const 
+\item 
+virtual Q\-Size \hyperlink{classQCPPlottableLegendItem_af79ab526cc79f4ea5d9c601d139b2166}{size} (const Q\-Size \&target\-Size) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPPlottableLegendItem_ada647fb4b22971a1a424e15b4f6af0d9}{\hyperlink{classQCPAbstractPlottable}{Q\-C\-P\-Abstract\-Plottable} $\ast$ {\bfseries m\-Plottable}}\label{classQCPPlottableLegendItem_ada647fb4b22971a1a424e15b4f6af0d9}
+
+\item 
+\hypertarget{classQCPPlottableLegendItem_a074d2372cb8954d30ff8ad533462ce96}{bool {\bfseries m\-Text\-Wrap}}\label{classQCPPlottableLegendItem_a074d2372cb8954d30ff8ad533462ce96}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A legend item representing a plottable with an icon and the plottable name. 
+
+This is the standard legend item for plottables. It displays an icon of the plottable next to the plottable name. The icon is drawn by the respective plottable itself (Q\-C\-P\-Abstract\-Plottable\-::draw\-Legend\-Icon), and tries to give an intuitive symbol for the plottable. For example, the \hyperlink{classQCPGraph}{Q\-C\-P\-Graph} draws a centered horizontal line with a single scatter point in the middle and filling (if enabled) below.
+
+Legend items of this type are always associated with one plottable (retrievable via the plottable() function and settable with the constructor). You may change the font of the plottable name with \hyperlink{classQCPAbstractLegendItem_a409c53455d8112f71d70c0c43eb10265}{set\-Font}. If \hyperlink{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}{set\-Text\-Wrap} is set to true, the plottable name will wrap at the right legend boundary (see \hyperlink{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{Q\-C\-P\-Legend\-::set\-Minimum\-Size}). Icon padding and border pen is taken from the parent \hyperlink{classQCPLegend}{Q\-C\-P\-Legend}, see \hyperlink{classQCPLegend_a2f2c93d18a651f4ff294bb3f026f49b8}{Q\-C\-P\-Legend\-::set\-Icon\-Border\-Pen} and \hyperlink{classQCPLegend_a62973bd69d5155e8ea3141366e8968f6}{Q\-C\-P\-Legend\-::set\-Icon\-Text\-Padding}.
+
+The function \hyperlink{classQCPAbstractPlottable_a70f8cabfd808f7d5204b9f18c45c13f5}{Q\-C\-P\-Abstract\-Plottable\-::add\-To\-Legend}/\hyperlink{classQCPAbstractPlottable_aa1f350e510326d012b9a9c9249736c83}{Q\-C\-P\-Abstract\-Plottable\-::remove\-From\-Legend} creates/removes legend items of this type in the default implementation. However, these functions may be reimplemented such that a different kind of legend item (e.\-g a direct subclass of \hyperlink{classQCPAbstractLegendItem}{Q\-C\-P\-Abstract\-Legend\-Item}) is used for that plottable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPPlottableLegendItem_ac1072591fe409d3dabad51b23ee4d6c5}{\index{Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}!Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}}
+\index{Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}!QCPPlottableLegendItem@{Q\-C\-P\-Plottable\-Legend\-Item}}
+\subsubsection[{Q\-C\-P\-Plottable\-Legend\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Plottable\-Legend\-Item\-::\-Q\-C\-P\-Plottable\-Legend\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Legend} $\ast$}]{parent, }
+\item[{{\bf Q\-C\-P\-Abstract\-Plottable} $\ast$}]{plottable}
+\end{DoxyParamCaption}
+)}}\label{classQCPPlottableLegendItem_ac1072591fe409d3dabad51b23ee4d6c5}
+Creates a new legend item associated with {\itshape plottable}.
+
+Once it's created, it can be added to the legend via \hyperlink{classQCPLegend_a3ab274de52d2951faea45a6d975e6b3f}{Q\-C\-P\-Legend\-::add\-Item}.
+
+A more convenient way of adding/removing a plottable to/from the legend is via the functions \hyperlink{classQCPAbstractPlottable_a70f8cabfd808f7d5204b9f18c45c13f5}{Q\-C\-P\-Abstract\-Plottable\-::add\-To\-Legend} and \hyperlink{classQCPAbstractPlottable_aa1f350e510326d012b9a9c9249736c83}{Q\-C\-P\-Abstract\-Plottable\-::remove\-From\-Legend}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPPlottableLegendItem_ad5f15d26b1c7e2532455528a4c3c578b}{\index{Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}!draw@{draw}}
+\index{draw@{draw}!QCPPlottableLegendItem@{Q\-C\-P\-Plottable\-Legend\-Item}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Plottable\-Legend\-Item\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-C\-P\-Painter} $\ast$}]{painter, }
+\item[{const Q\-Rect \&}]{rect}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classQCPPlottableLegendItem_ad5f15d26b1c7e2532455528a4c3c578b}
+Draws this legend item with {\itshape painter} inside the specified {\itshape rect}. The {\itshape rect} typically has the size which was returned from a preceding \hyperlink{classQCPPlottableLegendItem_af79ab526cc79f4ea5d9c601d139b2166}{size} call. 
+
+Implements \hyperlink{classQCPAbstractLegendItem_a2ef6ce9d39f166b387d505f7aa660c3c}{Q\-C\-P\-Abstract\-Legend\-Item}.
+
+\hypertarget{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}{\index{Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}!set\-Text\-Wrap@{set\-Text\-Wrap}}
+\index{set\-Text\-Wrap@{set\-Text\-Wrap}!QCPPlottableLegendItem@{Q\-C\-P\-Plottable\-Legend\-Item}}
+\subsubsection[{set\-Text\-Wrap}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Plottable\-Legend\-Item\-::set\-Text\-Wrap (
+\begin{DoxyParamCaption}
+\item[{bool}]{wrap}
+\end{DoxyParamCaption}
+)}}\label{classQCPPlottableLegendItem_ad5155ff022427947dc5c015cbf8e28b7}
+Sets whether the text of the legend item is wrapped at word boundaries to fit the with of the legend.
+
+To prevent the legend auto\-Size feature (\hyperlink{classQCPLegend_a067da0c0e2b0e9ee2c623f4d986c0d06}{Q\-C\-P\-Legend\-::set\-Auto\-Size}) from compressing the text too strong by wrapping it very often, set an appropriate minimum width with \hyperlink{classQCPLegend_a012c09cb070eabe01cfb598ab188a4fc}{Q\-C\-P\-Legend\-::set\-Minimum\-Size}. \hypertarget{classQCPPlottableLegendItem_af79ab526cc79f4ea5d9c601d139b2166}{\index{Q\-C\-P\-Plottable\-Legend\-Item@{Q\-C\-P\-Plottable\-Legend\-Item}!size@{size}}
+\index{size@{size}!QCPPlottableLegendItem@{Q\-C\-P\-Plottable\-Legend\-Item}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Size Q\-C\-P\-Plottable\-Legend\-Item\-::size (
+\begin{DoxyParamCaption}
+\item[{const Q\-Size \&}]{target\-Size}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classQCPPlottableLegendItem_af79ab526cc79f4ea5d9c601d139b2166}
+Returns the size this item occupies in the legend. The legend will adapt its layout with the help of this function. If this legend item can have a variable width (e.\-g. auto-\/wrapping text), this function tries to find a size with a width close to the width of {\itshape target\-Size}. The height of {\itshape target\-Size} only may have meaning in specific sublasses. Typically, it's ignored. 
+
+Implements \hyperlink{classQCPAbstractLegendItem_ab17c533ecf8ed0262c50eecd14c32b1f}{Q\-C\-P\-Abstract\-Legend\-Item}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+qcustomplot.\-cpp\end{DoxyCompactItemize}

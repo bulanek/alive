@@ -1,0 +1,210 @@
+\hypertarget{classQCPItemRect}{\section{Q\-C\-P\-Item\-Rect Class Reference}
+\label{classQCPItemRect}\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}}
+}
+
+
+A rectangle.  
+
+
+Inheritance diagram for Q\-C\-P\-Item\-Rect\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classQCPItemRect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQCPItemRect_a412ad1579f7a1fba453d0fa28c496cbc}{Q\-C\-P\-Item\-Rect} (\hyperlink{classQCustomPlot}{Q\-Custom\-Plot} $\ast$parent\-Plot)
+\item 
+\hypertarget{classQCPItemRect_a3cb7b6de5e82cc5a3c99e9de919a55e6}{Q\-Pen {\bfseries pen} () const }\label{classQCPItemRect_a3cb7b6de5e82cc5a3c99e9de919a55e6}
+
+\item 
+\hypertarget{classQCPItemRect_a7e701c34e72a4c25647e93fa369f395c}{Q\-Pen {\bfseries selected\-Pen} () const }\label{classQCPItemRect_a7e701c34e72a4c25647e93fa369f395c}
+
+\item 
+\hypertarget{classQCPItemRect_a03d2d26ffcac78b25b8e90915f9c4abe}{Q\-Brush {\bfseries brush} () const }\label{classQCPItemRect_a03d2d26ffcac78b25b8e90915f9c4abe}
+
+\item 
+\hypertarget{classQCPItemRect_a3b586228393f5c8efa78c4d2a4b25cbf}{Q\-Brush {\bfseries selected\-Brush} () const }\label{classQCPItemRect_a3b586228393f5c8efa78c4d2a4b25cbf}
+
+\item 
+void \hyperlink{classQCPItemRect_a483c0da5a17e1646cd17ddea2c124e7d}{set\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPItemRect_a52a1bcb2dc753a538e406a2ba3cf21ce}{set\-Selected\-Pen} (const Q\-Pen \&pen)
+\item 
+void \hyperlink{classQCPItemRect_abbd4e346a03513ee466afc25d9c75446}{set\-Brush} (const Q\-Brush \&brush)
+\item 
+void \hyperlink{classQCPItemRect_abd1792859844118dedee86223cede7af}{set\-Selected\-Brush} (const Q\-Brush \&brush)
+\item 
+virtual double \hyperlink{classQCPItemRect_a0406a7da87557006f63b5d98ee6c397b}{select\-Test} (const Q\-Point\-F \&pos) const 
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemRect_aa70feeef173489b03c3fbe906a5023c4}{\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$const {\bfseries top\-Left}}\label{classQCPItemRect_aa70feeef173489b03c3fbe906a5023c4}
+
+\item 
+\hypertarget{classQCPItemRect_a409f3bfe615a7e322bb3d4d193d85b26}{\hyperlink{classQCPItemPosition}{Q\-C\-P\-Item\-Position} $\ast$const {\bfseries bottom\-Right}}\label{classQCPItemRect_a409f3bfe615a7e322bb3d4d193d85b26}
+
+\item 
+\hypertarget{classQCPItemRect_a96e50db552fb297d6fb62614676217bc}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$const {\bfseries top}}\label{classQCPItemRect_a96e50db552fb297d6fb62614676217bc}
+
+\item 
+\hypertarget{classQCPItemRect_a77e0eb6e4aa6efee620d35e2c21bdad7}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$const {\bfseries top\-Right}}\label{classQCPItemRect_a77e0eb6e4aa6efee620d35e2c21bdad7}
+
+\item 
+\hypertarget{classQCPItemRect_a7979c1915f61ad2609a9cc179c2e445e}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$const {\bfseries right}}\label{classQCPItemRect_a7979c1915f61ad2609a9cc179c2e445e}
+
+\item 
+\hypertarget{classQCPItemRect_a99313bf2b338d9f81e19bd38082038aa}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$const {\bfseries bottom}}\label{classQCPItemRect_a99313bf2b338d9f81e19bd38082038aa}
+
+\item 
+\hypertarget{classQCPItemRect_abd8ee63fdf81f0c74bf7ccadee8603da}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$const {\bfseries bottom\-Left}}\label{classQCPItemRect_abd8ee63fdf81f0c74bf7ccadee8603da}
+
+\item 
+\hypertarget{classQCPItemRect_aad0ca1af0c8debfc20d7b47fc942764d}{\hyperlink{classQCPItemAnchor}{Q\-C\-P\-Item\-Anchor} $\ast$const {\bfseries left}}\label{classQCPItemRect_aad0ca1af0c8debfc20d7b47fc942764d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Anchor\-Index} \{ \\*
+{\bfseries ai\-Top}, 
+{\bfseries ai\-Top\-Right}, 
+{\bfseries ai\-Right}, 
+{\bfseries ai\-Bottom}, 
+\\*
+{\bfseries ai\-Bottom\-Left}, 
+{\bfseries ai\-Left}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemRect_a18cd583638b876cdd50f1a155ec182aa}{virtual void {\bfseries draw} (\hyperlink{classQCPPainter}{Q\-C\-P\-Painter} $\ast$painter)}\label{classQCPItemRect_a18cd583638b876cdd50f1a155ec182aa}
+
+\item 
+\hypertarget{classQCPItemRect_ae0973f8281fb52361b0c99ee899be07e}{virtual Q\-Point\-F {\bfseries anchor\-Pixel\-Point} (int anchor\-Id) const }\label{classQCPItemRect_ae0973f8281fb52361b0c99ee899be07e}
+
+\item 
+\hypertarget{classQCPItemRect_afa0fb7c6328a1e197ecd537de36daf8f}{Q\-Pen {\bfseries main\-Pen} () const }\label{classQCPItemRect_afa0fb7c6328a1e197ecd537de36daf8f}
+
+\item 
+\hypertarget{classQCPItemRect_ab0bd8e272e822ec851ba5b0c20e9200e}{Q\-Brush {\bfseries main\-Brush} () const }\label{classQCPItemRect_ab0bd8e272e822ec851ba5b0c20e9200e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classQCPItemRect_aa0d49323628d6752026056bfb52afd86}{Q\-Pen {\bfseries m\-Pen}}\label{classQCPItemRect_aa0d49323628d6752026056bfb52afd86}
+
+\item 
+\hypertarget{classQCPItemRect_a73cc0bee61de3c67221ec8c7a76a29ed}{Q\-Pen {\bfseries m\-Selected\-Pen}}\label{classQCPItemRect_a73cc0bee61de3c67221ec8c7a76a29ed}
+
+\item 
+\hypertarget{classQCPItemRect_a2d7f207fada27588b3a52b19234d3c2e}{Q\-Brush {\bfseries m\-Brush}}\label{classQCPItemRect_a2d7f207fada27588b3a52b19234d3c2e}
+
+\item 
+\hypertarget{classQCPItemRect_a21b70eee59b6e19ae0bbdf037b13508f}{Q\-Brush {\bfseries m\-Selected\-Brush}}\label{classQCPItemRect_a21b70eee59b6e19ae0bbdf037b13508f}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A rectangle. 
+
+ It has two positions, {\itshape top\-Left} and {\itshape bottom\-Right}, which define the rectangle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classQCPItemRect_a412ad1579f7a1fba453d0fa28c496cbc}{\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}}
+\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!QCPItemRect@{Q\-C\-P\-Item\-Rect}}
+\subsubsection[{Q\-C\-P\-Item\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}Q\-C\-P\-Item\-Rect\-::\-Q\-C\-P\-Item\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\-Custom\-Plot} $\ast$}]{parent\-Plot}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemRect_a412ad1579f7a1fba453d0fa28c496cbc}
+Creates a rectangle item and sets default values.
+
+The constructed item can be added to the plot with \hyperlink{classQCustomPlot_aa500620379262321685cb7a7674cbd2a}{Q\-Custom\-Plot\-::add\-Item}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classQCPItemRect_a0406a7da87557006f63b5d98ee6c397b}{\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!select\-Test@{select\-Test}}
+\index{select\-Test@{select\-Test}!QCPItemRect@{Q\-C\-P\-Item\-Rect}}
+\subsubsection[{select\-Test}]{\setlength{\rightskip}{0pt plus 5cm}double Q\-C\-P\-Item\-Rect\-::select\-Test (
+\begin{DoxyParamCaption}
+\item[{const Q\-Point\-F \&}]{pos}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classQCPItemRect_a0406a7da87557006f63b5d98ee6c397b}
+This function is used to decide whether a click hits an item or not.
+
+{\itshape pos} is a point in pixel coordinates on the \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} surface. This function returns the shortest pixel distance of this point to the item. If the item is either invisible or the distance couldn't be determined, -\/1.\-0 is returned. \hyperlink{classQCPAbstractItem_a8a8e32a55bc478b849756a78c2d87fd2}{set\-Selectable} has no influence on the return value of this function.
+
+If the item is represented not by single lines but by an area like \hyperlink{classQCPItemRect}{Q\-C\-P\-Item\-Rect} or \hyperlink{classQCPItemText}{Q\-C\-P\-Item\-Text}, a click inside the area returns a constant value greater zero (typically 99\% of the selection\-Tolerance of the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot}). If the click lies outside the area, this function returns -\/1.\-0.
+
+Providing a constant value for area objects allows selecting line objects even when they are obscured by such area objects, by clicking close to the lines (i.\-e. closer than 0.\-99$\ast$selection\-Tolerance).
+
+The actual setting of the selection state is not done by this function. This is handled by the parent \hyperlink{classQCustomPlot}{Q\-Custom\-Plot} when the mouse\-Release\-Event occurs.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected}, \hyperlink{classQCustomPlot_add9cc886ff5257f64fb4117cf6c135fe}{Q\-Custom\-Plot\-::set\-Interactions} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classQCPAbstractItem_a2e19e88f67f4ba9c13b7e33bd447c075}{Q\-C\-P\-Abstract\-Item}.
+
+\hypertarget{classQCPItemRect_abbd4e346a03513ee466afc25d9c75446}{\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!set\-Brush@{set\-Brush}}
+\index{set\-Brush@{set\-Brush}!QCPItemRect@{Q\-C\-P\-Item\-Rect}}
+\subsubsection[{set\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Rect\-::set\-Brush (
+\begin{DoxyParamCaption}
+\item[{const Q\-Brush \&}]{brush}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemRect_abbd4e346a03513ee466afc25d9c75446}
+Sets the brush that will be used to fill the rectangle. To disable filling, set {\itshape brush} to Qt\-::\-No\-Brush.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemRect_abd1792859844118dedee86223cede7af}{set\-Selected\-Brush}, \hyperlink{classQCPItemRect_a483c0da5a17e1646cd17ddea2c124e7d}{set\-Pen} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemRect_a483c0da5a17e1646cd17ddea2c124e7d}{\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!set\-Pen@{set\-Pen}}
+\index{set\-Pen@{set\-Pen}!QCPItemRect@{Q\-C\-P\-Item\-Rect}}
+\subsubsection[{set\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Rect\-::set\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemRect_a483c0da5a17e1646cd17ddea2c124e7d}
+Sets the pen that will be used to draw the line of the rectangle
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemRect_a52a1bcb2dc753a538e406a2ba3cf21ce}{set\-Selected\-Pen}, \hyperlink{classQCPItemRect_abbd4e346a03513ee466afc25d9c75446}{set\-Brush} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemRect_abd1792859844118dedee86223cede7af}{\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!set\-Selected\-Brush@{set\-Selected\-Brush}}
+\index{set\-Selected\-Brush@{set\-Selected\-Brush}!QCPItemRect@{Q\-C\-P\-Item\-Rect}}
+\subsubsection[{set\-Selected\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Rect\-::set\-Selected\-Brush (
+\begin{DoxyParamCaption}
+\item[{const Q\-Brush \&}]{brush}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemRect_abd1792859844118dedee86223cede7af}
+Sets the brush that will be used to fill the rectangle when selected. To disable filling, set {\itshape brush} to Qt\-::\-No\-Brush.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemRect_abbd4e346a03513ee466afc25d9c75446}{set\-Brush} 
+\end{DoxySeeAlso}
+\hypertarget{classQCPItemRect_a52a1bcb2dc753a538e406a2ba3cf21ce}{\index{Q\-C\-P\-Item\-Rect@{Q\-C\-P\-Item\-Rect}!set\-Selected\-Pen@{set\-Selected\-Pen}}
+\index{set\-Selected\-Pen@{set\-Selected\-Pen}!QCPItemRect@{Q\-C\-P\-Item\-Rect}}
+\subsubsection[{set\-Selected\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}void Q\-C\-P\-Item\-Rect\-::set\-Selected\-Pen (
+\begin{DoxyParamCaption}
+\item[{const Q\-Pen \&}]{pen}
+\end{DoxyParamCaption}
+)}}\label{classQCPItemRect_a52a1bcb2dc753a538e406a2ba3cf21ce}
+Sets the pen that will be used to draw the line of the rectangle when selected
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classQCPItemRect_a483c0da5a17e1646cd17ddea2c124e7d}{set\-Pen}, \hyperlink{classQCPAbstractItem_a203de94ad586cc44d16c9565f49d3378}{set\-Selected} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qcustomplot_8h}{qcustomplot.\-h}\item 
+qcustomplot.\-cpp\end{DoxyCompactItemize}

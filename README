@@ -1,0 +1,8 @@
+You can download the zip-packed code directly from the web page or using git
+by executing the statement in the directory where you want to store the code:
+    git clone https://github.com/bulanek/alive
+The single binary file for Windows users (Linux user with Wine software) is stored in folder "bin".
+The code is stored in src directory.
+All the documentation about the program, running and developement, is in  html file
+index.html in doc/html directory  or pdf file in doc/latex/refman.pdf.
+
