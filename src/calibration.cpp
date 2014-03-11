@@ -450,7 +450,7 @@ void Calibration::on_actionComputeDose_triggered(){
     try{
         if(usedMeasurements.find(whichLine)==usedMeasurements.end()){
             QMessageBox box;
-            box.setText("Wrong number of measurement to dose estimation");
+            box.setText("Wrong number of measurement for dose estimation");
             box.exec();
             return;
         }

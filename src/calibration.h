@@ -12,6 +12,7 @@
 #include <QDialog>
 #include <QFileDialog>
 #include <QTableWidget>
+#include	<QInputDialog>
 #include <QMessageBox>
 #include "qcustomplot.h"
 

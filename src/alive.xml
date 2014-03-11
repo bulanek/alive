@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
+
 <xml version="1.0">
-    <DatabasePath>/home/boris/dokumenty/SURO/EURADOS_school/intercomp/data/database</DatabasePath>
+    <DatabasePath>/home/boris/dokumenty/SURO/database/</DatabasePath>
     <DatabaseName>test</DatabaseName>
 </xml>
