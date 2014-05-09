@@ -19,6 +19,7 @@ DbSave::DbSave(QWidget *parent, const int ID) :
     connect(_myThread,SIGNAL(dbSaved(int)),this,SLOT(savedDbEntry(int)));
     _myThread->start();
     this->exec();
+
 }
 
 DbSave::~DbSave()

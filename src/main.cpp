@@ -33,10 +33,10 @@
 
  \section Installation
 
-  A single executable file \b alive.exe  is created for Windows (7 or XP) users using <a href="http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.prftungd%2Fdoc%2Fprftungd%2Fwhen_dyn_linking_static_linking.htm">static linking</a>. Linux users can execute \c alive.exe using program <a href="http://www.winehq.org/">wine</a>.
+  A single executable file \b alive.exe  with additional libraries needed for execution (Qt and gsl) is created for Windows users. 
   I haven't tried to install the program on Mac but I believe that the installation is similar to installation on Linux.
   \subsection Linux
-  All of needed packages have to be in official repositories of your distribution as all of them are open source programs.  For example in case of <a href="https://www.archlinux.org/"> Arch Linux</a> distribution, you have only to write down command like:\n <tt>sudo pacman -S cmake boost boost-build boost-libs gsl qt sqlite3 sqliteman</tt>.\n 
+  All of needed packages should be in official repositories of your distribution.  For example in case of <a href="https://www.archlinux.org/"> Arch Linux</a> distribution, you have only to write down command like:\n <tt>sudo pacman -S cmake boost boost-build boost-libs gsl qt sqlite3 sqliteman</tt>.\n 
   After installation you have to go to the src directory and  e.g. follow these steps:\n
   <tt>
   mkdir build\n
@@ -47,12 +47,10 @@
   </tt>
   This approach uses shared library linking where the size of the executable \c alive is considerably smaller and you can use all of additional packages mentioned in the beginning of the section.
 
-
   \subsection sql_win Sqlite database
 
   All the information from binary file and some additional parameters can be stored in a simple database called <a href="http://www.sqlite.org">Sqlite</a>.  
   There exist graphical tool for working with a Sqlite database called <a href="http://www.sqliteman.com">Sqliteman</a>. 
-
 
 \section running_code Program user guide
 \subsection algorithm Algorithm
@@ -164,7 +162,7 @@ You can see the table with variables needed to estimate uncorrected signal from 
     The code itself has not been documented until now. Everybody is welcome to help with the code developement.
     The developement of the code and documentation can and be managed using <a href="http://git-scm.com/">git</a> version system and all the code with possible developement branches stored in https://github.com/bulanek/alive. In order to commit your code and documentation changes to the web page which will be the storage of the newest code with all the history changes and possible branches you have to create (free) <a href="https://github.com/">GitHub</a> account and send me an email with your user name. I will then put yourself to the list of contributors. 
 
-    If you have any question, please send me a mail to: boris.bulanek@suro.cz
+    If you have any question, please send me an e-mail to: boris.bulanek@suro.cz
 
     */
 
