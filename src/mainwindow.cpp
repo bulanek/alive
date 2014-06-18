@@ -774,7 +774,6 @@ void MainWindow::selectionChanged()
 /*-----------------------------------------------------------------------------
  *
  *-----------------------------------------------------------------------------*/
-
 void MainWindow::mousePress()
 {
   // if an axis is selected, only allow the direction of that axis to be dragged
@@ -787,10 +786,11 @@ void MainWindow::mousePress()
   else
     ui->widget->axisRect()->setRangeDrag(Qt::Horizontal|Qt::Vertical);
 }
-
+/*-----------------------------------------------------------------------------
+ *
+ *-----------------------------------------------------------------------------*/
 void MainWindow::on_pushButton_8_clicked()
 {
-    vector<string> whatInVec;
     set<int> measurements;
     int position=ui->lineEdit_11->text().toDouble();
     const vector<Data> dataVec=_dataHandle->getData();
@@ -802,6 +802,4 @@ void MainWindow::on_pushButton_8_clicked()
     this->showPlot();
     this->showTable();
     this->getRangeSignalBackground();
-    this->getRangeSignalBackground();
-
 }
