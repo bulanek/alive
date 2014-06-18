@@ -787,3 +787,21 @@ void MainWindow::mousePress()
   else
     ui->widget->axisRect()->setRangeDrag(Qt::Horizontal|Qt::Vertical);
 }
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    vector<string> whatInVec;
+    set<int> measurements;
+    int position=ui->lineEdit_11->text().toDouble();
+    const vector<Data> dataVec=_dataHandle->getData();
+
+    for (unsigned i = 0; i < dataVec.size(); ++i) {
+        if(dataVec[i].Position==position) measurements.insert(i);
+    }
+    _dataHandle->setUsedMeasurements(measurements);
+    this->showPlot();
+    this->showTable();
+    this->getRangeSignalBackground();
+    this->getRangeSignalBackground();
+
+}

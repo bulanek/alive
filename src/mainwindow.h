@@ -84,6 +84,8 @@ private slots:
     void mousePress();
 
 
+    void on_pushButton_8_clicked();
+
 private:
     Ui::MainWindow *ui;
     DataHandle* _dataHandle;

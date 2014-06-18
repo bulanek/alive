@@ -52,7 +52,7 @@ public:
     const struct tm& getDateTime(const unsigned which) ;
     string getPascalString(FILE* inFile,const int aSize) const;
     inline const vector<Data>& getData() const{return _data;}
-    inline const int getNumberOfBytes() const {return _numOfBytes;}
+    inline int getNumberOfBytes() const {return _numOfBytes;}
     const static int LENGTH_OF_HEADER=272;
 
 private:
