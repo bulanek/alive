@@ -469,6 +469,9 @@ void Calibration::on_actionComputeDose_triggered(){
             pair<double,double> fadedSignal=_dataHandle->getSignal(fadedSignalMeas-1);
             fadCorrection.first=fadedSignal.first/signal.first;
             fadCorrection.second=sqrt(pow(fadCorrection.first,2)*(pow(signal.second/signal.first,2)+pow(fadedSignal.second/fadedSignal.first,2)));
+            cout<<"SignaL : "<<signal.first<<"+-"<<signal.second<<endl;
+            cout<<"fadedSig: "<<fadedSignal.first<<"+-"<<fadedSignal.second<<endl;
+            cout<<"fadCorrection: "<<fadCorrection.first<<"+-"<<fadCorrection.second<<endl;
 
 
             gsl_matrix* fadCovMatrix=gsl_matrix_alloc(2,2);

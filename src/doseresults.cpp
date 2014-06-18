@@ -17,7 +17,7 @@ DoseResults::DoseResults(QWidget *parent) :
     pair<double,double> signal=_dataHandle->getSignal(WHICH);
     pair<double,double> doseUnc = _dataHandle->computeGeneralDose(signal,_dataHandle->getFunction());
 
-    pair<double,double> fadCorrectionNatural=_dataHandle->computeFadCorr(WHICH,data[WHICH].fadFunction);
+    const pair<double,double> fadCorrectionNatural=_dataHandle->getFadCorrection();
     int whichCal=0;
     foreach(int i,_dataHandle->getUsedMeasurements()){
         if(Data::DTYPE[data[i].Dtype].find("Dose")!=string::npos ||Data::DTYPE[data[i].Dtype].find("dose")!=string::npos){
@@ -33,17 +33,17 @@ DoseResults::DoseResults(QWidget *parent) :
     const MainWindowData mainData=_dataHandle->getMainWindowData();
 
 
-    double corrDose=(fadCorrectionNatural.first/fadCorrectionDose.first)*doseUnc.first;
-    double eCorDose=pow(fadCorrectionNatural.second/fadCorrectionNatural.first,2)+pow(fadCorrectionDose.second/fadCorrectionDose.first,2)+pow(doseUnc.second/doseUnc.first,2);
-    eCorDose=sqrt(eCorDose)*corrDose;
+    double corrDose=(1/fadCorrectionNatural.first/fadCorrectionDose.first)*doseUnc.first;
+    double eCorDose=corrDose*sqrt(pow(doseUnc.second/doseUnc.first,2)+ pow(fadCorrectionNatural.second/fadCorrectionNatural.first,2)+
+                                  pow(fadCorrectionDose.second/fadCorrectionDose.first,2));
     pair<double,double> correctedDose=pair<double,double>(corrDose,eCorDose);
 
     stringstream str;
     str<<setprecision(6);
-    str<<1/fadCorrectionNatural.first;
+    str<<fadCorrectionNatural.first;
     ui->fad_v->setText(QString(str.str().c_str()));
     str.str("");
-    str<<pow(fadCorrectionNatural.first,2)*fadCorrectionNatural.second;
+    str<<fadCorrectionNatural.second;
     ui->fad_e->setText(QString(str.str().c_str()));
     str.str("");
     str<<fadCorrectionDose.first;

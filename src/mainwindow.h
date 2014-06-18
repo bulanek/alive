@@ -86,6 +86,8 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void computeCurrentIrrPower_clicked();
+
 private:
     Ui::MainWindow *ui;
     DataHandle* _dataHandle;

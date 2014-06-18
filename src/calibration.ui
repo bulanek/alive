@@ -251,6 +251,9 @@
           <property name="enabled">
            <bool>false</bool>
           </property>
+          <property name="toolTip">
+           <string>Dose signal</string>
+          </property>
           <property name="text">
            <string>Dose</string>
           </property>
@@ -260,6 +263,9 @@
          <widget class="QLineEdit" name="lineEdit_3">
           <property name="enabled">
            <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>Faded dose signal</string>
           </property>
           <property name="text">
            <string>Faded dose</string>
@@ -332,9 +338,6 @@
      <zorder>commandLinkButton_4</zorder>
      <zorder>commandLinkButton</zorder>
      <zorder>commandLinkButton_2</zorder>
-     <zorder>checkBox</zorder>
-     <zorder>lineEdit_2</zorder>
-     <zorder>lineEdit_3</zorder>
      <zorder>horizontalSpacer_6</zorder>
      <zorder>horizontalSpacer_7</zorder>
      <zorder>horizontalSpacer_8</zorder>
