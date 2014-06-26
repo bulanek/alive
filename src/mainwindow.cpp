@@ -70,7 +70,7 @@ MainWindow::MainWindow(QWidget *parent) :
     checkedTableVarMap.insert("Dtype");
     checkedTableVarMap.insert("IRR_Time");
     checkedTableVarMap.insert("Position");
-    this->computeCurrentIrrPower_clicked();
+    this->computeCurrentIrrPower();
 
 }
 
@@ -805,7 +805,7 @@ void MainWindow::on_pushButton_8_clicked()
     this->getRangeSignalBackground();
 }
 
-void MainWindow::computeCurrentIrrPower_clicked()
+void MainWindow::computeCurrentIrrPower()
 {
     double halfLife=ui->lineEdit_13->text().toDouble()*365*24*60*60; /* half life from years to seconds */
     double referencePower=ui->lineEdit_14->text().toDouble();
@@ -817,4 +817,10 @@ void MainWindow::computeCurrentIrrPower_clicked()
     MainWindowData data;
     data.IRR_Power=ui->lineEdit_4->text().toDouble();
     _dataHandle->setMainWindowData(data);
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    this->computeCurrentIrrPower();
 }
