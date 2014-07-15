@@ -11,9 +11,11 @@ QT += widgets
 QT += printsupport
 
 win32:DEPENDPATH += "C:\gsl-1.8\lib"
-DEPENDPATH += .
-win32:LIBS += C:"\gsl-1.8\lib\libgsl.a"
-win32:LIBS += C:"\gsl-1.8\lib\libgslcblas.a"
+#DEPENDPATH += .
+win32:LIBS += "C:\gsl-1.8\lib\libgsl.a"
+win32:LIBS += "C:\gsl-1.8\lib\libgslcblas.a"
+win32:INCLUDEPATH += "C:\Program Files\boost\boost_1_50"
+win32:INCLUDEPATH+="C:\gsl-1.8\include"
 #LIBS += -static
 unix:LIBS+= -lgsl -lgslcblas
 # Input
@@ -55,6 +57,3 @@ doseresults.cpp \
 tools.cpp \ 
 dbsave.cpp \
 mythread.cpp
-win32:INCLUDEPATH += "C:\Program Files\boost\boost_1_50"
-win32:INCLUDEPATH+="C:\gsl-1.8\include"
-
