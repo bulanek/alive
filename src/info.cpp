@@ -199,6 +199,7 @@ void Info::storeData(){
     data.IRR_Time=ui->lineEdit_17->text().toFloat();
     data.Sample=ui->lineEdit->text().toStdString();
 
+
     _dataHandle->setDataNotPoints(_which,data);
 }
 

@@ -138,8 +138,8 @@ public:
 
 
     FadFunction fadFunction;
-    double rangeSignal[2];
-    double rangeBackground[2];
+    int rangeSignal[2];
+    int rangeBackground[2];
 
     const static vector<string> VAR_NAMES;
     const static vector<string> USER_VAR_NAMES;

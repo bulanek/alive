@@ -318,7 +318,7 @@ int expLine_fdf(const gsl_vector * params, void *data,
      *
      *-----------------------------------------------------------------------------*/
 double fadLogaritmic(const double& x,const double* parameters ){
-    return parameters[0]-parameters[1]*log(x);
+    return parameters[0]+parameters[1]*log(x);
 }
 double fadExponential(const double& x,const double* parameters ){
     return parameters[0]*pow(x,-parameters[1]);

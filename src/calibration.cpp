@@ -12,8 +12,8 @@ struct OSLWindowData;
  *
  *-----------------------------------------------------------------------------*/
 Calibration::Calibration(QWidget *parent) :
-        QDialog(parent),
-        ui(new Ui::Calibration)
+    QDialog(parent),
+    ui(new Ui::Calibration)
 {
     ui->setupUi(this);
     this->setWindowTitle("Data graph");
@@ -23,8 +23,6 @@ Calibration::Calibration(QWidget *parent) :
         ui->comboBox->addItem(DataHandle::FIT_FUNCTIONS[i].c_str());
     }
     ui->comboBox->setCurrentIndex(0);
-    ui->comboBox_2->setCurrentIndex(2);
-    _dataHandle->setTimeUnit((TimeUnit)(2));
 
 
     this->getCalibrationParameters();
@@ -86,9 +84,9 @@ void Calibration::showData(){
 
     QCustomPlot* plotWidget=ui->widget;
     plotWidget->clearGraphs();
-//    plotWidget->legend->setPositionStyle((QCPLegend::PositionStyle)(1));
+    //    plotWidget->legend->setPositionStyle((QCPLegend::PositionStyle)(1));
     plotWidget->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
-                                  QCP::iSelectLegend | QCP::iSelectPlottables);
+                                QCP::iSelectLegend | QCP::iSelectPlottables);
 
     QCPAxisRect axis(plotWidget);
     axis.setRangeDrag(Qt::Horizontal | Qt::Vertical);
@@ -118,8 +116,10 @@ void Calibration::showData(){
         if(Data::DTYPE[data[i].Dtype].find("Dose")==string::npos && Data::DTYPE[data[i].Dtype].find("dose")==string::npos){
 
             measurementsV.push_back(pair<int,pair<double,double> >(i,_dataHandle->getSignal(i)));
+            cout<<"1"<<endl;
 
             y.push_back(_dataHandle->getSignal(i).first);
+            cout<<"2"<<endl;
             yErr.push_back(_dataHandle->getSignal(i).second);
             pair<double,double> doseUnc=_dataHandle->computeGeneralDose(_dataHandle->getSignal(i),(Function)(ui->comboBox->currentIndex()));
             x.push_back(doseUnc.first);
@@ -201,7 +201,7 @@ void Calibration::showData(){
 
     plotWidget->rescaleAxes();
     plotWidget->legend->setVisible(true);
-//    plotWidget->legend->setPositionStyle((QCPLegend::PositionStyle)(1));
+    //    plotWidget->legend->setPositionStyle((QCPLegend::PositionStyle)(1));
 
     plotWidget->replot();
 }
@@ -272,7 +272,7 @@ void Calibration::showResidualData(){
     resPlotWidget->graph(0)->setErrorType(QCPGraph::etValue);
     resPlotWidget->graph(0)->setDataValueError(X,Y,YErr);
 
-        /* draw 1 line */
+    /* draw 1 line */
     int NUM_POINTS=1000;
     QVector<double> lineX;
     QVector<double> lineY;
@@ -290,7 +290,7 @@ void Calibration::showResidualData(){
 
     resPlotWidget->rescaleAxes();
 
-//    resPlotWidget->legend->setVisible(true);
+    //    resPlotWidget->legend->setVisible(true);
 
 
 
@@ -440,9 +440,9 @@ void Calibration::on_commandLinkButton_4_clicked()
 void Calibration::on_actionComputeDose_triggered(){
 
     this->saveTableData();
+    MainWindowData mainWindowData=_dataHandle->getMainWindowData();
     QTableWidget* tableWidget=ui->tableWidget;
     const set<int> usedMeasurements=_dataHandle->getUsedMeasurements();
-    _dataHandle=DataHandle::getInstance();
 
     pair<double,double> fadCorrection;
     int whichLine=ui->lineEdit->text().toInt()-1;
@@ -469,9 +469,6 @@ void Calibration::on_actionComputeDose_triggered(){
             pair<double,double> fadedSignal=_dataHandle->getSignal(fadedSignalMeas-1);
             fadCorrection.first=fadedSignal.first/signal.first;
             fadCorrection.second=sqrt(pow(fadCorrection.first,2)*(pow(signal.second/signal.first,2)+pow(fadedSignal.second/fadedSignal.first,2)));
-            cout<<"SignaL : "<<signal.first<<"+-"<<signal.second<<endl;
-            cout<<"fadedSig: "<<fadedSignal.first<<"+-"<<fadedSignal.second<<endl;
-            cout<<"fadCorrection: "<<fadCorrection.first<<"+-"<<fadCorrection.second<<endl;
 
 
             gsl_matrix* fadCovMatrix=gsl_matrix_alloc(2,2);
@@ -479,8 +476,14 @@ void Calibration::on_actionComputeDose_triggered(){
             _dataHandle->setFadParameters(&fadCorrection.first,fadCovMatrix,Constant,whichLine);
             gsl_matrix_free(fadCovMatrix);
         }else{
-        fadCorrection=_dataHandle->computeFadCorr(whichLine ,
-                                                  (FadFunction)(((QComboBox*)tableWidget->cellWidget(whichLine,7))->currentIndex()));
+            if(_dataHandle->getMainWindowData().useGlobalNaturalFading){
+                cout<<"Use global natural fading!"<<endl;
+                _dataHandle->setFadParameters(mainWindowData.fadParameters,mainWindowData.eFadParameters,mainWindowData.fad_cov_0_1,whichLine);
+                fadCorrection=_dataHandle->computeFadCorr(whichLine , mainWindowData.fadFunction);
+            }else{
+                fadCorrection=_dataHandle->computeFadCorr(whichLine ,
+                                                          (FadFunction)(((QComboBox*)tableWidget->cellWidget(whichLine,3))->currentIndex()));
+            }
         }
         _dataHandle->setFadCorrection(fadCorrection);
     }catch(...){
@@ -491,7 +494,6 @@ void Calibration::on_actionComputeDose_triggered(){
         return;
     }
 
-    _dataHandle->setTimeUnit((TimeUnit)(ui->comboBox_2->currentIndex()));
     _dataHandle->setFunction((Function)(ui->comboBox->currentIndex()));
 
     DoseResults::WHICH=whichLine;
@@ -578,11 +580,9 @@ void Calibration::showTable(){
     unsigned numMeasurements=usedMeasurements.size();
     QTableWidget* tableWidget=ui->tableWidget;
     tableWidget->setRowCount(numMeasurements);
-    tableWidget->setColumnCount(3+2*2+1+2*2+1);
+    tableWidget->setColumnCount(9);
     QStringList horizontalList;
-    horizontalList<<"Num_m"<<"DType"<<"IRR_Time"<<"signalRange_0"<<"signalRange_1"
-                 <<"backgroundRangeL"<<"backgroundRangeR"
-                <<"fad_func"<<"fad_0"<<"fad_1"<<"eFad_0"<<"eFad_1"<<"fad_cov_0_1";
+    horizontalList<<"Num_m"<<"DType"<<"IRR_Time"<<"fad_func"<<"fad_0"<<"fad_1"<<"eFad_0"<<"eFad_1"<<"fad_cov_0_1";
     tableWidget->setHorizontalHeaderLabels(horizontalList);
     int counter=0;
     vector<Data> data=_dataHandle->getData();
@@ -597,23 +597,18 @@ void Calibration::showTable(){
         typeCombo->setCurrentIndex(data[i].Dtype);
 
         QComboBox* fadFunCombo=new QComboBox();
-        for (unsigned j  = 0; j  < Data::FAD_FUNCTIONS.size(); ++j ) {
-            fadFunCombo->addItem(Data::FAD_FUNCTIONS[j].c_str());
+        for (unsigned j  = 0; j  < Data::FAD_FUNCTIONS.size(); ++j ) { fadFunCombo->addItem(Data::FAD_FUNCTIONS[j].c_str());
         }
         fadFunCombo->setCurrentIndex(int(data[i].fadFunction));
         tableWidget->setCellWidget(counter,1,typeCombo);
-        tableWidget->setCellWidget(counter,7,fadFunCombo);
+        tableWidget->setCellWidget(counter,3,fadFunCombo);
         tableWidget->setItem(counter,0,new QTableWidgetItem(TOOLS::convertToString<int>(i+1).c_str()));
         tableWidget->setItem(counter,2,new QTableWidgetItem(TOOLS::convertToString<int>(data[i].IRR_Time).c_str()));
-        tableWidget->setItem(counter,3,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].rangeSignal[0]).c_str()));
-        tableWidget->setItem(counter,4,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].rangeSignal[1]).c_str()));
-        tableWidget->setItem(counter,5,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].rangeBackground[0]).c_str()));
-        tableWidget->setItem(counter,6,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].rangeBackground[1]).c_str()));
-        tableWidget->setItem(counter,8,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].fadParameters[0]).c_str()));
-        tableWidget->setItem(counter,9,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].fadParameters[1]).c_str()));
-        tableWidget->setItem(counter,10,new QTableWidgetItem(TOOLS::convertToString<double>(sqrt(gsl_matrix_get(data[i].fadCovariantMatrix,0,0))).c_str()));
-        tableWidget->setItem(counter,11,new QTableWidgetItem(TOOLS::convertToString<double>(sqrt(gsl_matrix_get(data[i].fadCovariantMatrix,1,1))).c_str()));
-        tableWidget->setItem(counter,12,new QTableWidgetItem(TOOLS::convertToString<double>(gsl_matrix_get(data[i].fadCovariantMatrix,0,1)).c_str()));
+        tableWidget->setItem(counter,4,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].fadParameters[0]).c_str()));
+        tableWidget->setItem(counter,5,new QTableWidgetItem(TOOLS::convertToString<double>(data[i].fadParameters[1]).c_str()));
+        tableWidget->setItem(counter,6,new QTableWidgetItem(TOOLS::convertToString<double>(sqrt(gsl_matrix_get(data[i].fadCovariantMatrix,0,0))).c_str()));
+        tableWidget->setItem(counter,7,new QTableWidgetItem(TOOLS::convertToString<double>(sqrt(gsl_matrix_get(data[i].fadCovariantMatrix,1,1))).c_str()));
+        tableWidget->setItem(counter,8,new QTableWidgetItem(TOOLS::convertToString<double>(gsl_matrix_get(data[i].fadCovariantMatrix,0,1)).c_str()));
 
         ++counter;
     }
@@ -640,18 +635,14 @@ void Calibration::saveTableData(){
         dtype=((QComboBox*)tableWidget->cellWidget(i,1))->currentIndex();
         irr_time=tableWidget->item(i,2)->text().toFloat();
 
-        rangeSignal[0]=tableWidget->item(i,3)->text().toInt();
-        rangeSignal[1]=tableWidget->item(i,4)->text().toInt();
-        rangeBackground[0]=tableWidget->item(i,5)->text().toInt();
-        rangeBackground[1]=tableWidget->item(i,6)->text().toInt();
-        fadFunction=(FadFunction)(((QComboBox*)tableWidget->cellWidget(i,7))->currentIndex());
-        fadParameters[0]=tableWidget->item(i,8)->text().toDouble();
-        fadParameters[1]=tableWidget->item(i,9)->text().toDouble();
+        fadFunction=(FadFunction)(((QComboBox*)tableWidget->cellWidget(i,3))->currentIndex());
+        fadParameters[0]=tableWidget->item(i,4)->text().toDouble();
+        fadParameters[1]=tableWidget->item(i,5)->text().toDouble();
 
-        gsl_matrix_set(fadCovariantMatrix,0,0,pow(tableWidget->item(i,10)->text().toDouble(),2));
-        gsl_matrix_set(fadCovariantMatrix,1,1,pow(tableWidget->item(i,11)->text().toDouble(),2));
-        gsl_matrix_set(fadCovariantMatrix,0,1,tableWidget->item(i,12)->text().toDouble());
-        gsl_matrix_set(fadCovariantMatrix,1,0,tableWidget->item(i,12)->text().toDouble());
+        gsl_matrix_set(fadCovariantMatrix,0,0,pow(tableWidget->item(i,6)->text().toDouble(),2));
+        gsl_matrix_set(fadCovariantMatrix,1,1,pow(tableWidget->item(i,7)->text().toDouble(),2));
+        gsl_matrix_set(fadCovariantMatrix,0,1,tableWidget->item(i,8)->text().toDouble());
+        gsl_matrix_set(fadCovariantMatrix,1,0,tableWidget->item(i,8)->text().toDouble());
 
         _dataHandle->setFadParameters(fadParameters,fadCovariantMatrix,fadFunction,which);
         _dataHandle->setRangeSignalBackground(rangeSignal,rangeBackground,which);
@@ -680,16 +671,16 @@ void Calibration::on_pushButton_2_clicked()
         //        if(Data::DTYPE[((QComboBox*)tableWidget->cellWidget(i,1))->currentIndex()]!="Dose") continue;
         if(isFirst==0){
             isFirst=1;
-            fadParameters[0]=tableWidget->item(i,8)->text().toDouble();
-            fadParameters[1]=tableWidget->item(i,9)->text().toDouble();
-            eFadParameters[0]=tableWidget->item(i,10)->text().toDouble();
-            eFadParameters[1]=tableWidget->item(i,11)->text().toDouble();
+            fadParameters[0]=tableWidget->item(i,4)->text().toDouble();
+            fadParameters[1]=tableWidget->item(i,5)->text().toDouble();
+            eFadParameters[0]=tableWidget->item(i,6)->text().toDouble();
+            eFadParameters[1]=tableWidget->item(i,7)->text().toDouble();
             continue;
         }
-        tableWidget->setItem(i,8,new QTableWidgetItem(TOOLS::convertToString<double>(fadParameters[0]).c_str()));
-        tableWidget->setItem(i,9,new QTableWidgetItem(TOOLS::convertToString<double>(fadParameters[1]).c_str()));
-        tableWidget->setItem(i,10,new QTableWidgetItem(TOOLS::convertToString<double>(eFadParameters[0]).c_str()));
-        tableWidget->setItem(i,11,new QTableWidgetItem(TOOLS::convertToString<double>(eFadParameters[1]).c_str()));
+        tableWidget->setItem(i,4,new QTableWidgetItem(TOOLS::convertToString<double>(fadParameters[0]).c_str()));
+        tableWidget->setItem(i,5,new QTableWidgetItem(TOOLS::convertToString<double>(fadParameters[1]).c_str()));
+        tableWidget->setItem(i,6,new QTableWidgetItem(TOOLS::convertToString<double>(eFadParameters[0]).c_str()));
+        tableWidget->setItem(i,7,new QTableWidgetItem(TOOLS::convertToString<double>(eFadParameters[1]).c_str()));
     }
 
     this->saveTableData();
@@ -721,10 +712,6 @@ void Calibration::on_pushButton_3_clicked()
 }
 
 
-void Calibration::on_comboBox_2_currentIndexChanged(int index)
-{
-    _dataHandle->setTimeUnit((TimeUnit)(index));
-}
 
 
 /*-----------------------------------------------------------------------------
@@ -732,20 +719,20 @@ void Calibration::on_comboBox_2_currentIndexChanged(int index)
  *-----------------------------------------------------------------------------*/
 void Calibration::legendDoubleClick(QCPLegend *legend, QCPAbstractLegendItem *item)
 {
-  // Rename a graph by double clicking on its legend item
-  Q_UNUSED(legend)
-  if (item) // only react if item was clicked (user could have clicked on border padding of legend where there is no item, then item is 0)
-  {
-    QCPPlottableLegendItem *plItem = qobject_cast<QCPPlottableLegendItem*>(item);
-    bool ok;
-    QString newName = QInputDialog::getText(this, "QCustomPlot example", "New graph name:", QLineEdit::Normal, plItem->plottable()->name(), &ok);
-    if (ok)
+    // Rename a graph by double clicking on its legend item
+    Q_UNUSED(legend)
+    if (item) // only react if item was clicked (user could have clicked on border padding of legend where there is no item, then item is 0)
     {
-      plItem->plottable()->setName(newName);
-      ui->widget->replot();
-      ui->widget_2->replot();
+        QCPPlottableLegendItem *plItem = qobject_cast<QCPPlottableLegendItem*>(item);
+        bool ok;
+        QString newName = QInputDialog::getText(this, "QCustomPlot example", "New graph name:", QLineEdit::Normal, plItem->plottable()->name(), &ok);
+        if (ok)
+        {
+            plItem->plottable()->setName(newName);
+            ui->widget->replot();
+            ui->widget_2->replot();
+        }
     }
-  }
 }
 /*-----------------------------------------------------------------------------
  *
@@ -753,7 +740,7 @@ void Calibration::legendDoubleClick(QCPLegend *legend, QCPAbstractLegendItem *it
 
 void Calibration::selectionChanged()
 {
-  /*
+    /*
    normally, axis base line, axis tick labels and axis labels are selectable separately, but we want
    the user only to be able to select the axis as a whole, so we tie the selected states of the tick labels
    and the axis base line together. However, the axis label shall be selectable individually.
@@ -766,32 +753,32 @@ void Calibration::selectionChanged()
    or on its legend item.
   */
 
-  // make top and bottom axes be selected synchronously, and handle axis and tick labels as one selectable object:
-  if (ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
-      ui->widget->xAxis2->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->xAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
-  {
-    ui->widget->xAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-    ui->widget->xAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-  }
-  // make left and right axes be selected synchronously, and handle axis and tick labels as one selectable object:
-  if (ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
-      ui->widget->yAxis2->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->yAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
-  {
-    ui->widget->yAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-    ui->widget->yAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-  }
-
-  // synchronize selection of graphs with selection of corresponding legend items:
-  for (int i=0; i<ui->widget->graphCount(); ++i)
-  {
-    QCPGraph *graph = ui->widget->graph(i);
-    QCPPlottableLegendItem *item = ui->widget->legend->itemWithPlottable(graph);
-    if (item->selected() || graph->selected())
+    // make top and bottom axes be selected synchronously, and handle axis and tick labels as one selectable object:
+    if (ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
+            ui->widget->xAxis2->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->xAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
     {
-      item->setSelected(true);
-      graph->setSelected(true);
+        ui->widget->xAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
+        ui->widget->xAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
     }
-  }
+    // make left and right axes be selected synchronously, and handle axis and tick labels as one selectable object:
+    if (ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
+            ui->widget->yAxis2->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->yAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
+    {
+        ui->widget->yAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
+        ui->widget->yAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
+    }
+
+    // synchronize selection of graphs with selection of corresponding legend items:
+    for (int i=0; i<ui->widget->graphCount(); ++i)
+    {
+        QCPGraph *graph = ui->widget->graph(i);
+        QCPPlottableLegendItem *item = ui->widget->legend->itemWithPlottable(graph);
+        if (item->selected() || graph->selected())
+        {
+            item->setSelected(true);
+            graph->setSelected(true);
+        }
+    }
 }
 /*-----------------------------------------------------------------------------
  *
@@ -799,15 +786,15 @@ void Calibration::selectionChanged()
 
 void Calibration::mousePress()
 {
-  // if an axis is selected, only allow the direction of that axis to be dragged
-  // if no axis is selected, both directions may be dragged
+    // if an axis is selected, only allow the direction of that axis to be dragged
+    // if no axis is selected, both directions may be dragged
 
-  if (ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spAxis))
-    ui->widget->axisRect()->setRangeDrag(ui->widget->xAxis->orientation());
-  else if (ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spAxis))
-    ui->widget->axisRect()->setRangeDrag(ui->widget->yAxis->orientation());
-  else
-    ui->widget->axisRect()->setRangeDrag(Qt::Horizontal|Qt::Vertical);
+    if (ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spAxis))
+        ui->widget->axisRect()->setRangeDrag(ui->widget->xAxis->orientation());
+    else if (ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spAxis))
+        ui->widget->axisRect()->setRangeDrag(ui->widget->yAxis->orientation());
+    else
+        ui->widget->axisRect()->setRangeDrag(Qt::Horizontal|Qt::Vertical);
 }
 /*-----------------------------------------------------------------------------
  *

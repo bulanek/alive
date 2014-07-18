@@ -18,6 +18,7 @@ DoseResults::DoseResults(QWidget *parent) :
     pair<double,double> doseUnc = _dataHandle->computeGeneralDose(signal,_dataHandle->getFunction());
 
     const pair<double,double> fadCorrectionNatural=_dataHandle->getFadCorrection();
+    cout<<"Fad correction natural: "<<fadCorrectionNatural.first<<"+-"<<fadCorrectionNatural.second<<endl;
     int whichCal=0;
     foreach(int i,_dataHandle->getUsedMeasurements()){
         if(Data::DTYPE[data[i].Dtype].find("Dose")!=string::npos ||Data::DTYPE[data[i].Dtype].find("dose")!=string::npos){
@@ -26,7 +27,7 @@ DoseResults::DoseResults(QWidget *parent) :
         }
     }
 
-    pair<double,double> fadCorrectionDose=_dataHandle->computeFadCorr(whichCal,data[whichCal].fadFunction);
+    pair<double,double> fadCorrectionDose=pair<double,double>(1,0);//_dataHandle->computeFadCorr(whichCal,data[whichCal].fadFunction); TODO..when the need will come
 
 
 

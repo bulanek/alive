@@ -77,8 +77,8 @@ void Plateau::on_actionShowPlateau_triggered()
     try{
         Function function=(Function)ui->comboBox->currentIndex();
         for (int i = startRange; i <= endRange; ++i) {
-            double rangeSignal[]={0,double(i)};
-            double rangeBackground[]={double(i+1),double(2*i+1)};
+            int rangeSignal[]={0,i};
+            int rangeBackground[]={i+1,2*i+1};
             _dataHandle->computeCalibration(rangeSignal,rangeBackground,function);
             pair<double,double> signal=_dataHandle->getSignal(which,rangeSignal,rangeBackground);
             pair<double,double> dose=_dataHandle->computeGeneralDose(signal,function);

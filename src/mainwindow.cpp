@@ -1,4 +1,3 @@
-
 #include	<fstream>
 #include "sqlconnection.h"
 #include "mainwindow.h"
@@ -47,23 +46,24 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setWindowTitle(TITLE);
     _dataHandle=DataHandle::getInstance();
 
+    QCustomPlot* graphWidget=(QCustomPlot*)ui->widget;
 
     /* graph interactions*/
-    ui->widget->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
-                                QCP::iSelectLegend | QCP::iSelectPlottables);
-    ui->widget->legend->setVisible(true);
+    graphWidget->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
+            QCP::iSelectLegend | QCP::iSelectPlottables);
+    graphWidget->legend->setVisible(true);
     QFont legendFont = font();
     legendFont.setPointSize(10);
-    ui->widget->legend->setFont(legendFont);
-    ui->widget->legend->setSelectedFont(legendFont);
-    ui->widget->legend->setSelectableParts(QCPLegend::spItems); // legend box shall not be selectable, only legend items
+    graphWidget->legend->setFont(legendFont);
+    graphWidget->legend->setSelectedFont(legendFont);
+    graphWidget->legend->setSelectableParts(QCPLegend::spItems); // legend box shall not be selectable, only legend items
 
 
-    ui->widget->addAction(ui->actionSavePlot);
-    connect(ui->widget, SIGNAL(legendDoubleClick(QCPLegend*,QCPAbstractLegendItem*,QMouseEvent*)), this, SLOT(legendDoubleClick(QCPLegend*,QCPAbstractLegendItem*)));
+    graphWidget->addAction(ui->actionSavePlot);
+    connect(graphWidget, SIGNAL(legendDoubleClick(QCPLegend*,QCPAbstractLegendItem*,QMouseEvent*)), this, SLOT(legendDoubleClick(QCPLegend*,QCPAbstractLegendItem*)));
     // connect slot that ties some axis selections together (especially opposite axes):
-    connect(ui->widget, SIGNAL(selectionChangedByUser()), this, SLOT(selectionChanged()));
-    connect(ui->widget, SIGNAL(mousePress(QMouseEvent*)), this, SLOT(mousePress()));
+    connect(graphWidget, SIGNAL(selectionChangedByUser()), this, SLOT(selectionChanged()));
+    connect(graphWidget, SIGNAL(mousePress(QMouseEvent*)), this, SLOT(mousePress()));
 
 
     checkedTableVarMap.insert("Run");
@@ -72,6 +72,10 @@ MainWindow::MainWindow(QWidget *parent) :
     checkedTableVarMap.insert("Position");
     this->computeCurrentIrrPower();
 
+    /*  combo box with fading function */
+   for (unsigned j  = 0; j  < Data::FAD_FUNCTIONS.size(); ++j ) {
+        ui->comboBox->addItem(Data::FAD_FUNCTIONS[j].c_str());
+   }
 }
 
 
@@ -93,7 +97,7 @@ void MainWindow::on_actionOpen_file_triggered()
     QString fname;
     try{
         fname=QFileDialog::getOpenFileName(this,"Open file",
-                                           "/home/boris/dokumenty/SURO/EURADOS_school/intercomp/data");
+                "/home/boris/dokumenty/SURO/EURADOS_school/intercomp/data");
         if (fname=="") return;
         this->setWindowTitle(TITLE+"; File: "+fname);
         cout.flush();
@@ -199,15 +203,15 @@ void MainWindow::on_actionOpen_db_triggered()
         ui->lineEdit_8->setEnabled(1);
         ui->lineEdit_9->setEnabled(1);
 
+        this->showUIData();
+
         const MainWindowData mainData=_dataHandle->getMainWindowData();
         this->setWindowTitle(TITLE+"; Database entry name: "+QString(mainData.dbName.c_str()));
         this->showPlot();
         this->showTable();
         //this->on_actionStoreData_triggered();
-        this->showUIData();
-        this->showUIData();
     }
-    this->getRangeSignalBackground();
+    //this->getRangeSignalBackground();
 }
 
 
@@ -281,9 +285,30 @@ void MainWindow::on_actionShowPlateau_triggered()
 void MainWindow::on_actionStoreData_triggered()
 {
     MainWindowData data;
+    const set<int> usedMeasurements=_dataHandle->getUsedMeasurements();
+    int NPoints= _dataHandle->getData()[*usedMeasurements.begin()].NPoints;
+
     data.name=ui->lineEdit->text().toStdString();
     data.IRR_Power=ui->lineEdit_4->text().toDouble();
+    data.rangeSignal[0]=ui->lineEdit_6->text().toDouble();
+    data.rangeSignal[1]=ui->lineEdit_7->text().toDouble();
+    data.rangeBackground[0]=ui->lineEdit_8->text().toDouble();
+    data.rangeBackground[1]=ui->lineEdit_9->text().toDouble();
+    data.fadParameters[0]=ui->lineEdit_12->text().toDouble();
+    data.fadParameters[1]=ui->lineEdit_15->text().toDouble();
+    data.eFadParameters[0]=ui->lineEdit_16->text().toDouble();
+    data.eFadParameters[1]=ui->lineEdit_17->text().toDouble();
+    data.fad_cov_0_1=ui->lineEdit_18->text().toDouble();
+    data.useGlobalNaturalFading=ui->checkBox->isChecked();
+    data.fadFunction=(FadFunction)(ui->comboBox->currentIndex());
+
+
     _dataHandle->setMainWindowData(data);
+
+    for(set<int>::const_iterator it=usedMeasurements.begin();it!=usedMeasurements.end();++it){
+        _dataHandle->setRangeSignalBackground(data.rangeSignal,data.rangeBackground,*it);
+    }
+
 }
 
 /*-----------------------------------------------------------------------------
@@ -307,9 +332,19 @@ void MainWindow::on_actionShowCalibration_triggered()
  *-----------------------------------------------------------------------------*/
 void MainWindow::showUIData(){
 
+    const MainWindowData mainWindowData=_dataHandle->getMainWindowData();
     const vector<Data> data=_dataHandle->getData();
     ui->lineEdit->setText(data[0].Sequence.c_str());
-    ui->lineEdit_5->setText(data[0].User.c_str());
+    ui->lineEdit_5->setText(mainWindowData.name.c_str());
+    ui->lineEdit_6->setText(TOOLS::convertToString(mainWindowData.rangeSignal[0]).c_str());
+    ui->lineEdit_7->setText(TOOLS::convertToString(mainWindowData.rangeSignal[1]).c_str());
+    ui->lineEdit_8->setText(TOOLS::convertToString(mainWindowData.rangeBackground[0]).c_str());
+    ui->lineEdit_9->setText(TOOLS::convertToString(mainWindowData.rangeBackground[1]).c_str());
+    ui->lineEdit_12->setText(TOOLS::convertToString(mainWindowData.fadParameters[0]).c_str());
+    ui->lineEdit_15->setText(TOOLS::convertToString(mainWindowData.fadParameters[1]).c_str());
+    ui->lineEdit_16->setText(TOOLS::convertToString(mainWindowData.eFadParameters[0]).c_str());
+    ui->lineEdit_17->setText(TOOLS::convertToString(mainWindowData.eFadParameters[1]).c_str());
+    ui->lineEdit_18->setText(TOOLS::convertToString(mainWindowData.fad_cov_0_1).c_str());
 }
 
 
@@ -360,7 +395,7 @@ void MainWindow::showTable(){
  *
  *-----------------------------------------------------------------------------*/
 void MainWindow::showPlot(){
-    QCustomPlot* plotWidget=ui->widget;
+    QCustomPlot* plotWidget=(QCustomPlot*)ui->widget;
     plotWidget->clearGraphs();
     const vector<Data> data=_dataHandle->getData();
     const set<int> usedMeasurements=_dataHandle->getUsedMeasurements();
@@ -438,10 +473,10 @@ void MainWindow::on_actionEditMeasurement_triggered()
 void MainWindow::about()
 {
     QMessageBox::about(this, tr("About"), tr("The OSL simple analysis software"
-                                             " for a dose reconstruction."
-                                             "You can find a detail information in doc\\html\\index.html "
-                                             "or doc\\latex\\refman.pdf or send me a "
-                                             "<a href=mailto:boris.bulanek@suro.cz>mail</a>."));
+                " for a dose reconstruction."
+                "You can find a detail information in doc\\html\\index.html "
+                "or doc\\latex\\refman.pdf or send me a "
+                "<a href=mailto:boris.bulanek@suro.cz>mail</a>."));
 }
 
 
@@ -482,7 +517,7 @@ void MainWindow::on_pushButton_5_clicked()
         this->showTable();
     }catch(...){
         cerr<<"Bad lexical cast in MainWindow::on_pushButton_5_clicked "
-           <<"or number not in range of measurements (1-"<<TOOLS::convertToString<unsigned>(_dataHandle->getData().size())<<")"<<endl;
+            <<"or number not in range of measurements (1-"<<TOOLS::convertToString<unsigned>(_dataHandle->getData().size())<<")"<<endl;
         QMessageBox box;
         box.setText("bad format (e.q. 1-3,4,5) or bad number scale");
         box.exec();
@@ -496,7 +531,7 @@ void MainWindow::on_pushButton_5_clicked()
  *
  *-----------------------------------------------------------------------------*/
 void MainWindow::savePlot(){
-    QCustomPlot* plotWidget=ui->widget;
+    QCustomPlot* plotWidget=(QCustomPlot*)ui->widget;
     QString fname;
     try{
         fname=QFileDialog::getSaveFileName(this,"Save file", "/home/boris/dokumenty/SURO/EURADOS_school/intercomp/data");
@@ -541,7 +576,7 @@ void MainWindow::on_actionDump_txt_triggered()
     QString fname;
     try{
         fname=QFileDialog::getSaveFileName(this,"Save file",
-                                           "/home/boris/dokumenty/SURO/EURADOS_school/intercomp/data");
+                "/home/boris/dokumenty/SURO/EURADOS_school/intercomp/data");
         if (fname=="") return;
         ofstream outFile(fname.toStdString().c_str());
         outFile<<_dataHandle<<endl;
@@ -679,17 +714,15 @@ void MainWindow::on_pushButton_7_clicked()
  *-----------------------------------------------------------------------------*/
 void MainWindow::on_actionSetSignalBackgroundRange_triggered()
 {
-
-    MainWindowData mainWindowData=_dataHandle->getMainWindowData();
-    int signalRange[2];
-    int backgroundRange[2];
-    signalRange[0]=ui->lineEdit_6->text().toInt();
-    signalRange[1]=ui->lineEdit_7->text().toInt();
-    backgroundRange[0]=ui->lineEdit_8->text().toInt();
-    backgroundRange[1]=ui->lineEdit_9->text().toInt();
     const set<int> usedMeasurements=_dataHandle->getUsedMeasurements();
     int NPoints= _dataHandle->getData()[*usedMeasurements.begin()].NPoints;
-    if(backgroundRange[1]>=NPoints){
+
+    MainWindowData mainWindowData=_dataHandle->getMainWindowData();
+    mainWindowData.rangeSignal[0]=ui->lineEdit_6->text().toInt();
+    mainWindowData.rangeSignal[1]=ui->lineEdit_7->text().toInt();
+    mainWindowData.rangeBackground[0]=ui->lineEdit_8->text().toInt();
+    mainWindowData.rangeBackground[1]=ui->lineEdit_9->text().toInt();
+    if(mainWindowData.rangeBackground[1]>=NPoints){
         string text= string("Background range outside of # points!");
         cerr<<text<<endl;
         QMessageBox box;
@@ -698,13 +731,10 @@ void MainWindow::on_actionSetSignalBackgroundRange_triggered()
         ui->lineEdit_9->setText(TOOLS::convertToString(mainWindowData.rangeBackground[1]).c_str());
         return;
     }
-    for(int i=0;i<2;++i){
-        mainWindowData.rangeSignal[i]=signalRange[i];
-        mainWindowData.rangeBackground[i]=backgroundRange[i];
-    }
+
     _dataHandle->setMainWindowData(mainWindowData);
     for(set<int>::const_iterator it=usedMeasurements.begin();it!=usedMeasurements.end();++it){
-        _dataHandle->setRangeSignalBackground(signalRange,backgroundRange,*it);
+        _dataHandle->setRangeSignalBackground(mainWindowData.rangeSignal,mainWindowData.rangeBackground,*it);
     }
 }
 /*-----------------------------------------------------------------------------
@@ -712,19 +742,20 @@ void MainWindow::on_actionSetSignalBackgroundRange_triggered()
  *-----------------------------------------------------------------------------*/
 void MainWindow::legendDoubleClick(QCPLegend *legend, QCPAbstractLegendItem *item)
 {
-  // Rename a graph by double clicking on its legend item
-  Q_UNUSED(legend)
-  if (item) // only react if item was clicked (user could have clicked on border padding of legend where there is no item, then item is 0)
-  {
-    QCPPlottableLegendItem *plItem = qobject_cast<QCPPlottableLegendItem*>(item);
-    bool ok;
-    QString newName = QInputDialog::getText(this, "QCustomPlot example", "New graph name:", QLineEdit::Normal, plItem->plottable()->name(), &ok);
-    if (ok)
-    {
-      plItem->plottable()->setName(newName);
-      ui->widget->replot();
-    }
-  }
+    QCustomPlot* graphWidget=(QCustomPlot*)ui->widget;
+    // Rename a graph by double clicking on its legend item
+    Q_UNUSED(legend)
+        if (item) // only react if item was clicked (user could have clicked on border padding of legend where there is no item, then item is 0)
+        {
+            QCPPlottableLegendItem *plItem = qobject_cast<QCPPlottableLegendItem*>(item);
+            bool ok;
+            QString newName = QInputDialog::getText(this, "QCustomPlot example", "New graph name:", QLineEdit::Normal, plItem->plottable()->name(), &ok);
+            if (ok)
+            {
+                plItem->plottable()->setName(newName);
+                graphWidget->replot();
+            }
+        }
 }
 /*-----------------------------------------------------------------------------
  *
@@ -732,60 +763,62 @@ void MainWindow::legendDoubleClick(QCPLegend *legend, QCPAbstractLegendItem *ite
 
 void MainWindow::selectionChanged()
 {
-  /*
-   normally, axis base line, axis tick labels and axis labels are selectable separately, but we want
-   the user only to be able to select the axis as a whole, so we tie the selected states of the tick labels
-   and the axis base line together. However, the axis label shall be selectable individually.
+    /*
+       normally, axis base line, axis tick labels and axis labels are selectable separately, but we want
+       the user only to be able to select the axis as a whole, so we tie the selected states of the tick labels
+       and the axis base line together. However, the axis label shall be selectable individually.
 
-   The selection state of the left and right axes shall be synchronized as well as the state of the
-   bottom and top axes.
+       The selection state of the left and right axes shall be synchronized as well as the state of the
+       bottom and top axes.
 
-   Further, we want to synchronize the selection of the graphs with the selection state of the respective
-   legend item belonging to that graph. So the user can select a graph by either clicking on the graph itself
-   or on its legend item.
-  */
+       Further, we want to synchronize the selection of the graphs with the selection state of the respective
+       legend item belonging to that graph. So the user can select a graph by either clicking on the graph itself
+       or on its legend item.
+       */
+    QCustomPlot* graphWidget=(QCustomPlot*)ui->widget;
 
-  // make top and bottom axes be selected synchronously, and handle axis and tick labels as one selectable object:
-  if (ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
-      ui->widget->xAxis2->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->xAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
-  {
-    ui->widget->xAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-    ui->widget->xAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-  }
-  // make left and right axes be selected synchronously, and handle axis and tick labels as one selectable object:
-  if (ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
-      ui->widget->yAxis2->selectedParts().testFlag(QCPAxis::spAxis) || ui->widget->yAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
-  {
-    ui->widget->yAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-    ui->widget->yAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
-  }
-
-  // synchronize selection of graphs with selection of corresponding legend items:
-  for (int i=0; i<ui->widget->graphCount(); ++i)
-  {
-    QCPGraph *graph = ui->widget->graph(i);
-    QCPPlottableLegendItem *item = ui->widget->legend->itemWithPlottable(graph);
-    if (item->selected() || graph->selected())
+    // make top and bottom axes be selected synchronously, and handle axis and tick labels as one selectable object:
+    if (graphWidget->xAxis->selectedParts().testFlag(QCPAxis::spAxis) || graphWidget->xAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
+            graphWidget->xAxis2->selectedParts().testFlag(QCPAxis::spAxis) || graphWidget->xAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
     {
-      item->setSelected(true);
-      graph->setSelected(true);
+        graphWidget->xAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
+        graphWidget->xAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
     }
-  }
+    // make left and right axes be selected synchronously, and handle axis and tick labels as one selectable object:
+    if (graphWidget->yAxis->selectedParts().testFlag(QCPAxis::spAxis) || graphWidget->yAxis->selectedParts().testFlag(QCPAxis::spTickLabels) ||
+            graphWidget->yAxis2->selectedParts().testFlag(QCPAxis::spAxis) || graphWidget->yAxis2->selectedParts().testFlag(QCPAxis::spTickLabels))
+    {
+        graphWidget->yAxis2->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
+        graphWidget->yAxis->setSelectedParts(QCPAxis::spAxis|QCPAxis::spTickLabels);
+    }
+
+    // synchronize selection of graphs with selection of corresponding legend items:
+    for (int i=0; i<graphWidget->graphCount(); ++i)
+    {
+        QCPGraph *graph = graphWidget->graph(i);
+        QCPPlottableLegendItem *item = graphWidget->legend->itemWithPlottable(graph);
+        if (item->selected() || graph->selected())
+        {
+            item->setSelected(true);
+            graph->setSelected(true);
+        }
+    }
 }
 /*-----------------------------------------------------------------------------
  *
  *-----------------------------------------------------------------------------*/
 void MainWindow::mousePress()
 {
-  // if an axis is selected, only allow the direction of that axis to be dragged
-  // if no axis is selected, both directions may be dragged
+    // if an axis is selected, only allow the direction of that axis to be dragged
+    // if no axis is selected, both directions may be dragged
+    QCustomPlot* graphWidget=(QCustomPlot*)ui->widget;
 
-  if (ui->widget->xAxis->selectedParts().testFlag(QCPAxis::spAxis))
-    ui->widget->axisRect()->setRangeDrag(ui->widget->xAxis->orientation());
-  else if (ui->widget->yAxis->selectedParts().testFlag(QCPAxis::spAxis))
-    ui->widget->axisRect()->setRangeDrag(ui->widget->yAxis->orientation());
-  else
-    ui->widget->axisRect()->setRangeDrag(Qt::Horizontal|Qt::Vertical);
+    if (graphWidget->xAxis->selectedParts().testFlag(QCPAxis::spAxis))
+        graphWidget->axisRect()->setRangeDrag(graphWidget->xAxis->orientation());
+    else if (graphWidget->yAxis->selectedParts().testFlag(QCPAxis::spAxis))
+        graphWidget->axisRect()->setRangeDrag(graphWidget->yAxis->orientation());
+    else
+        graphWidget->axisRect()->setRangeDrag(Qt::Horizontal|Qt::Vertical);
 }
 /*-----------------------------------------------------------------------------
  *
@@ -823,4 +856,14 @@ void MainWindow::computeCurrentIrrPower()
 void MainWindow::on_pushButton_9_clicked()
 {
     this->computeCurrentIrrPower();
+}
+
+void MainWindow::on_checkBox_stateChanged(int arg1)
+{
+    ui->comboBox->setEnabled(arg1);
+    ui->lineEdit_12->setEnabled(arg1);
+    ui->lineEdit_16->setEnabled(arg1);
+    ui->lineEdit_15->setEnabled(arg1);
+    ui->lineEdit_17->setEnabled(arg1);
+    ui->lineEdit_18->setEnabled(arg1);
 }

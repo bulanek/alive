@@ -350,6 +350,7 @@ string Data::getValue(const string aVar) const{
     else if(aVar=="fad_cov_0_1"){
         return TOOLS::convertToString<double>(gsl_matrix_get(fadCovariantMatrix,0,1));
     }
+    return "";
 }
 
 

@@ -42,10 +42,10 @@ SqlConnection::~SqlConnection()
  *
  *-----------------------------------------------------------------------------*/
 void SqlConnection::accept(){
-    const MainWindowData mainData=_dataHandle->getMainWindowData();
-    MainWindowData mainDataCopy=mainData;
-    mainDataCopy.name=ui->dbEntry->text().toStdString();
-    _dataHandle->setMainWindowData(mainDataCopy);
+//    const MainWindowData mainData=_dataHandle->getMainWindowData();
+//    MainWindowData mainDataCopy=mainData;
+//    mainDataCopy.name=ui->dbEntry->text().toStdString();
+//    _dataHandle->setMainWindowData(mainDataCopy);
 
 //    QDir directory(QString(_dataHandle->getDatabasePath().c_str()));
 //    QString path=directory.filePath(ui->dbName->text());
@@ -54,24 +54,24 @@ void SqlConnection::accept(){
 
     if(IS_SAVE==0){
         int size=this->getSqlEntry(ID);
-
+        cout<<"aaaaaaaaaaa open"<<endl;
         if(size==0){
             cerr<<"Warning: SqlConnection::accept with zero size of data!"<<endl;
             return;
         }
     }
     if(!_dataHandle->getDb().isOpen()) return;
-    QSqlQuery query;
-    query.exec("select id,name from INFO_1");
-    while(query.next()){
-        if(query.value(0).toInt()==ID){
-            const MainWindowData mainData=_dataHandle->getMainWindowData();
-            MainWindowData mainDataCopy=mainData;
-            mainDataCopy.dbName=query.value(1).toString().toStdString();
-            _dataHandle->setMainWindowData(mainDataCopy);
-            break;
-        }
-    }
+//    QSqlQuery query;
+//    query.exec("select id,name from INFO_1");
+//    while(query.next()){
+//        if(query.value(0).toInt()==ID){
+//            const MainWindowData mainData=_dataHandle->getMainWindowData();
+ //           MainWindowData mainDataCopy=mainData;
+ //           mainDataCopy.dbName=query.value(1).toString().toStdString();
+ //           _dataHandle->setMainWindowData(mainDataCopy);
+ //           break;
+ //       }
+ //   }
     this->done(1);
     this->hide();
 }

@@ -7,8 +7,8 @@ TARGET = alive
 QT += core gui
 QT += sql
 QT += xml
-QT += widgets
 QT += printsupport
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 win32:DEPENDPATH += "C:\gsl-1.8\lib"
 #DEPENDPATH += .
@@ -18,6 +18,7 @@ win32:INCLUDEPATH += "C:\Program Files\boost\boost_1_50"
 win32:INCLUDEPATH+="C:\gsl-1.8\include"
 #LIBS += -static
 unix:LIBS+= -lgsl -lgslcblas
+
 # Input
 HEADERS += \
 datahandle.h \

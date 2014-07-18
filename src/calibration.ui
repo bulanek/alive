@@ -81,41 +81,6 @@
        <item row="0" column="0">
         <widget class="QTableWidget" name="tableWidget"/>
        </item>
-       <item row="1" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_16">
-           <property name="text">
-            <string>Fad. function time unit</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_2">
-           <item>
-            <property name="text">
-             <string>seconds</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>minutes</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>hours</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>days</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
-       </item>
       </layout>
      </widget>
     </widget>

@@ -86,6 +86,10 @@ int DataHandle::getConfigurationData(const string& confDataName){
     return 1;
 }
 
+
+/*-----------------------------------------------------------------------------
+ *  
+ *-----------------------------------------------------------------------------*/
 void DataHandle::setRangeSignalBackground(const int* signal,const int* background,const int which){
     for (int i = 0; i < 2; ++i) {
         _data[which].rangeSignal[i]=signal[i];
@@ -196,7 +200,7 @@ void DataHandle::createDb(const QString dbName,const QString userName,const QStr
 /*-----------------------------------------------------------------------------
  *
  *-----------------------------------------------------------------------------*/
-double DataHandle::getIntegral(const int which, const double* integralRange) const{
+double DataHandle::getIntegral(const int which, const int* integralRange) const{
 
     double integral=0;
 
@@ -209,12 +213,12 @@ double DataHandle::getIntegral(const int which, const double* integralRange) con
 /*-----------------------------------------------------------------------------
  *
  *-----------------------------------------------------------------------------*/
-pair<double,double> DataHandle::getSignal(const int which,const double* signalRange,const double* backgroundRange){
-    const double* usedSignalRange=signalRange;
-    const double* usedBackgroundRange=backgroundRange;
+pair<double,double> DataHandle::getSignal(const int which,const int* signalRange,const int* backgroundRange){
+    const int* usedSignalRange=signalRange;
+    const int* usedBackgroundRange=backgroundRange;
     if (usedSignalRange==NULL){
-        usedSignalRange=_data[which].rangeSignal;
-        usedBackgroundRange=_data[which].rangeBackground;
+        usedSignalRange=_mainWindowData.rangeSignal;
+        usedBackgroundRange=_mainWindowData.rangeBackground;
     }
 
 
@@ -231,9 +235,9 @@ pair<double,double> DataHandle::getSignal(const int which,const double* signalRa
 /*-----------------------------------------------------------------------------
  *
  *-----------------------------------------------------------------------------*/
-const double* DataHandle::computeCalibration(const double* signalRange,const double* backgroundRange,Function function){
-    const double* usedSignalRange=signalRange;
-    const double* usedBackgroundRange=backgroundRange;
+const double* DataHandle::computeCalibration(const int* signalRange,const int* backgroundRange,Function function){
+    const int* usedSignalRange=signalRange;
+    const int* usedBackgroundRange=backgroundRange;
 
     vector<pair<pair<double,double>,pair<double,double> > > inputData;
 
@@ -244,8 +248,8 @@ const double* DataHandle::computeCalibration(const double* signalRange,const dou
         usedSignalRange=signalRange;
         usedBackgroundRange=backgroundRange;
         if (usedSignalRange==NULL){
-            usedSignalRange=_data[i].rangeSignal;
-            usedBackgroundRange=_data[i].rangeBackground;
+            usedSignalRange=_mainWindowData.rangeSignal;
+            usedBackgroundRange=_mainWindowData.rangeBackground;
         }
 
         if((Data::DTYPE[_data[i].Dtype].find("Dose")==string::npos && Data::DTYPE[_data[i].Dtype].find("dose")==string::npos) ||
@@ -269,37 +273,26 @@ const double* DataHandle::computeCalibration(const double* signalRange,const dou
 pair<double,double> DataHandle::computeFadCorr(const int which,FadFunction function) const{
 
     pair<double,double> fadCorr;
+
+    FadFunction usedFadFunction=function;
+    if(_mainWindowData.useGlobalNaturalFading) usedFadFunction=_mainWindowData.fadFunction;
     int timeIrrM_t=_data[which].mDateTime-_data[which].IRR_DateTime;
     double aTime=timeIrrM_t;
 
-    if(_timeUnit==Minutes){
-        aTime/=60.;
-    }else if(_timeUnit==Hours){
-        aTime/=60*60.;
-    }else if (_timeUnit==Days){
-        aTime/=60*60*24.;
-    }
     const double* fadPar=this->getFadParameters(which);
     const double* eFadPar=this->getEFadParameters(which);
 
-
-
-
-    TOOLS::fadFunc usedFunction=this->getFadFunction(function);
+    TOOLS::fadFunc usedFunction=this->getFadFunction(usedFadFunction);
     fadCorr.first=(*usedFunction)(aTime,fadPar);
 
-    TOOLS::eFadFunc eUsedFunction=this->getEFadFunction((EFadFunction)(function));
+    TOOLS::eFadFunc eUsedFunction=this->getEFadFunction((EFadFunction)(usedFadFunction));
     fadCorr.second=(*eUsedFunction)(aTime,fadPar,eFadPar);
-
-    fadCorr.first=1/fadCorr.first;
-    fadCorr.second=pow(fadCorr.first,2)*fadCorr.second;
 
     return fadCorr;
 }
 /*-----------------------------------------------------------------------------
  *
  *-----------------------------------------------------------------------------*/
-
 void DataHandle::setFadParameters(const double* parameters,gsl_matrix* fadCovariantMatrix,const FadFunction fadFunction, const int which){
     for(int i=0;i<2;++i)  _data[which].fadParameters[i]=parameters[i];
     for (int i = 0; i < 2; ++i){
@@ -309,6 +302,19 @@ void DataHandle::setFadParameters(const double* parameters,gsl_matrix* fadCovari
         _data[which].eFadParameters[i]=sqrt(gsl_matrix_get(fadCovariantMatrix,i,i));
     }
     _data[which].fadFunction=fadFunction;
+}
+
+/*-----------------------------------------------------------------------------
+ *  
+ *-----------------------------------------------------------------------------*/
+void DataHandle::setFadParameters(const double* parameters, const double* eParameters,const double& fad_cov_0_1,const int which){
+    for(int i=0;i<2;++i)  {
+        _data[which].fadParameters[i]=parameters[i];
+        _data[which].eFadParameters[i]=eParameters[i];
+        gsl_matrix_set(_data[which].fadCovariantMatrix,i,i,pow(eParameters[i],2));
+    }
+    gsl_matrix_set(_data[which].fadCovariantMatrix,0,1,fad_cov_0_1);
+    gsl_matrix_set(_data[which].fadCovariantMatrix,1,0,fad_cov_0_1);
 }
 
 /*-----------------------------------------------------------------------------
@@ -602,6 +608,7 @@ void DataHandle::setDataNotPoints(const int which ,const Data &data){
     _data[which].Bl_Unit=data.Bl_Unit;
     _data[which].LightSource=data.LightSource;
     _data[which].IRR_Time=data.IRR_Time;
+
 }
 /*-----------------------------------------------------------------------------
  *
@@ -624,6 +631,9 @@ ostream& operator<<(ostream& stream,const DataHandle& dataHandle){
     stream<<"\tName: "<<mainData.name<< endl;
     stream<<"\tNumber of measurements: "<<dataHandle._data.size()<<endl;
     stream<<"\tPower of calibration source: "<<mainData.IRR_Power<<" Gy/s"<<endl;
+    stream<<"\t Natural fading function:"<<endl;
+    stream<<"\t\t parameters: "<<mainData.fadParameters[0]<<","<<mainData.fadParameters[1]<<endl;
+
     stream<<"Informations of particular measurement: "<<endl;
     for (unsigned i = 0; i < dataHandle._data.size(); ++i) {
         stream<<" Information for measurement "<<i+1<<":"<<endl;
