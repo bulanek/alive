@@ -122,6 +122,7 @@ class DataHandle
         pair<double,double> getDoseCorrected(const pair<double,double>& doseUnc,const pair<double,double> fadCorrection=pair<double,double>(0,0));
 
 
+        inline void setIsExperimentalFading(const bool isExperimentalFading){_isExperimentalFading=isExperimentalFading;}
 
         static const vector<string> FIT_FUNCTIONS;
         static const vector<string> FIT_FORMULA;
@@ -155,6 +156,7 @@ class DataHandle
         pair<double,double> _fadCorrection;
         Function _function;
 
+        bool _isExperimentalFading;
 }   ;
 
 #endif // DATAHANDLE_H

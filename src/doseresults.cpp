@@ -47,12 +47,12 @@ DoseResults::DoseResults(QWidget *parent) :
     str<<fadCorrectionNatural.second;
     ui->fad_e->setText(QString(str.str().c_str()));
     str.str("");
-    str<<fadCorrectionDose.first;
-    ui->cal_fad_v->setText(QString(str.str().c_str()));
-    str.str("");
-    str<<fadCorrectionDose.second;
-    ui->cal_fad_e->setText(QString(str.str().c_str()));
-    str.str("");
+//    str<<fadCorrectionDose.first;
+//ui->cal_fad_v->setText(QString(str.str().c_str()));
+//    str.str("");
+//    str<<fadCorrectionDose.second;
+ //   ui->cal_fad_e->setText(QString(str.str().c_str()));
+ //   str.str("");
 
     str<<correctedDose.first*mainData.IRR_Power;
     ui->dose_fad_v->setText(QString(str.str().c_str()));

@@ -209,12 +209,15 @@
           <property name="text">
            <string>Use experinental fading</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QLineEdit" name="lineEdit_2">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="toolTip">
            <string>Dose signal</string>
@@ -227,7 +230,7 @@
         <item>
          <widget class="QLineEdit" name="lineEdit_3">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="toolTip">
            <string>Faded dose signal</string>

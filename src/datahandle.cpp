@@ -88,7 +88,7 @@ int DataHandle::getConfigurationData(const string& confDataName){
 
 
 /*-----------------------------------------------------------------------------
- *  
+ *
  *-----------------------------------------------------------------------------*/
 void DataHandle::setRangeSignalBackground(const int* signal,const int* background,const int which){
     for (int i = 0; i < 2; ++i) {
@@ -242,6 +242,7 @@ const double* DataHandle::computeCalibration(const int* signalRange,const int* b
     vector<pair<pair<double,double>,pair<double,double> > > inputData;
 
     //    double dim=1;
+    FadFunction usedFadFunction;
     int i=0;
     for(set<int>::iterator it=_usedMeasurements.begin();it!=_usedMeasurements.end();++it) {
         i=*it;
@@ -254,14 +255,26 @@ const double* DataHandle::computeCalibration(const int* signalRange,const int* b
 
         if((Data::DTYPE[_data[i].Dtype].find("Dose")==string::npos && Data::DTYPE[_data[i].Dtype].find("dose")==string::npos) ||
                 Data::DTYPE[_data[i].Dtype].find("Regenerative dose")!=string::npos) continue;
-        //        pair<double,double> fadCorr=computeFadCorr(i,_data[i].fadFunction);
+
+        usedFadFunction=_data[i].fadFunction;
+        if(_mainWindowData.useGlobalNaturalFading){
+            usedFadFunction=_mainWindowData.fadFunction;
+            this->setFadParameters(_mainWindowData.fadParameters,_mainWindowData.eFadParameters,_mainWindowData.fad_cov_0_1,i);
+        }
+
+
+        pair<double,double> fadCorr=computeFadCorr(i,usedFadFunction);
         //        dim=fadCorr.first;
         //    if (dim==0) dim=1;
+        pair<double,double> outputSignal=this->getSignal(i,usedSignalRange,usedBackgroundRange);
+        if(!_isExperimentalFading) outputSignal.first/=fadCorr.first;
+        cout<<"fading calibration: "<<fadCorr.first<<" "<<fadCorr.second<<endl;
+
         inputData.push_back(pair<pair<double,double>,pair<double,double> >(
-                    pair<double,double>(_data[i].IRR_Time,1),this->getSignal(i,usedSignalRange,usedBackgroundRange)));
+                                pair<double,double>(_data[i].IRR_Time,1),outputSignal));
     }
     if(inputData.size()==1) inputData.push_back(pair<pair<double,double>,pair<double,double> >(
-                pair<double,double>(0,1),pair<double,double>(0,1)));
+                                                    pair<double,double>(0,1),pair<double,double>(0,1)));
 
 
 
@@ -278,9 +291,12 @@ pair<double,double> DataHandle::computeFadCorr(const int which,FadFunction funct
     if(_mainWindowData.useGlobalNaturalFading) usedFadFunction=_mainWindowData.fadFunction;
     int timeIrrM_t=_data[which].mDateTime-_data[which].IRR_DateTime;
     double aTime=timeIrrM_t;
+    cout<<"in computeFadCorr, aTime: "<<aTime<<endl;
 
     const double* fadPar=this->getFadParameters(which);
     const double* eFadPar=this->getEFadParameters(which);
+    cout<<"fadPar: "<<fadPar[0]<<" "<<fadPar[1]<<endl;
+    cout<<"eFadPar: "<<eFadPar[0]<<" "<<eFadPar[1]<<endl;
 
     TOOLS::fadFunc usedFunction=this->getFadFunction(usedFadFunction);
     fadCorr.first=(*usedFunction)(aTime,fadPar);
@@ -305,7 +321,7 @@ void DataHandle::setFadParameters(const double* parameters,gsl_matrix* fadCovari
 }
 
 /*-----------------------------------------------------------------------------
- *  
+ *
  *-----------------------------------------------------------------------------*/
 void DataHandle::setFadParameters(const double* parameters, const double* eParameters,const double& fad_cov_0_1,const int which){
     for(int i=0;i<2;++i)  {
@@ -481,7 +497,7 @@ const double* DataHandle::chiSquareComputeGSL(const vector<pair<pair<double,doub
 
         print_state (iter, s);
         status = gsl_multifit_test_delta (s->dx, s->x,
-                1e-4, 1e-4);
+                                          1e-4, 1e-4);
 
     }
     while (iter < 500&& status==GSL_CONTINUE);

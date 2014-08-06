@@ -18,6 +18,8 @@ Calibration::Calibration(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("Data graph");
     _dataHandle=DataHandle::getInstance();
+    _dataHandle->setIsExperimentalFading(ui->checkBox->isChecked());
+
     ui->widget->addAction(ui->actionSavePlot);
     for (unsigned i  = 0; i  < DataHandle::FIT_FUNCTIONS.size(); ++i ) {
         ui->comboBox->addItem(DataHandle::FIT_FUNCTIONS[i].c_str());
@@ -47,7 +49,6 @@ Calibration::Calibration(QWidget *parent) :
     // connect slot that ties some axis selections together (especially opposite axes):
     connect(ui->widget, SIGNAL(selectionChangedByUser()), this, SLOT(selectionChanged()));
     connect(ui->widget, SIGNAL(mousePress(QMouseEvent*)), this, SLOT(mousePress()));
-
 
 }
 
@@ -443,6 +444,20 @@ void Calibration::on_actionComputeDose_triggered(){
     MainWindowData mainWindowData=_dataHandle->getMainWindowData();
     QTableWidget* tableWidget=ui->tableWidget;
     const set<int> usedMeasurements=_dataHandle->getUsedMeasurements();
+    _dataHandle->setIsExperimentalFading(ui->checkBox->isChecked());
+
+
+    try{
+        _dataHandle->computeCalibration(NULL,NULL,(Function)(ui->comboBox->currentIndex()));
+    }catch(int i){
+        if(i==1){
+            string message="More number of fit parameters then number of data points!";
+            QMessageBox box;
+            box.setText(message.c_str());
+            box.exec();
+            return;
+        }
+    }
 
     pair<double,double> fadCorrection;
     int whichLine=ui->lineEdit->text().toInt()-1;
